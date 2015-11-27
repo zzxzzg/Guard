@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BitmapFun</string>
+    <string name="no_network_connection_toast">Network connection failed!</string>
+</resources>
