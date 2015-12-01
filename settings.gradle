@@ -1,1 +1,1 @@
-include ':app', ':srclib', ':bitmapfun', ':bitmapfundemo'
+include ':app', ':srclib', ':bitmapfun', ':bitmapfundemo', ':volley'

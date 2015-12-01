@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/bitmapfun" />
             <option value="$PROJECT_DIR$/bitmapfundemo" />
             <option value="$PROJECT_DIR$/srclib" />
+            <option value="$PROJECT_DIR$/volley" />
           </set>
         </option>
       </GradleProjectSettings>

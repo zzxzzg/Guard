@@ -204,13 +204,19 @@ public class ImageFetcher extends ImageResizer {
                 try {
                     snapshot = mHttpDiskCache.get(key);
                     if (snapshot != null) {
+                        Bitmap bitmap=null;
                         fileInputStream =
                                 (FileInputStream) snapshot.getInputStream(DISK_CACHE_INDEX);
-                        Bitmap bitmap=null;
-                        try {
-                            bitmap = BitmapUtils.decodeSampleBitmapFromStream(fileInputStream,reqWidth,reqHeight);
-                        }catch(Exception e){
-                            e.printStackTrace();
+                        fileDescriptor = fileInputStream.getFD();
+                        if (fileDescriptor != null) {
+                            bitmap = decodeSampledBitmapFromDescriptor(fileDescriptor, reqWidth,
+                                    reqHeight, getImageCache());
+                        }
+                        if (fileInputStream != null) {
+                            try {
+                                fileInputStream.close();
+                            } catch (IOException e) {
+                            }
                         }
                         return bitmap;
                     }
