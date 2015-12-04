@@ -5,12 +5,14 @@
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="1.8" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/bitmapfun" />
             <option value="$PROJECT_DIR$/bitmapfundemo" />
+            <option value="$PROJECT_DIR$/httpstest" />
             <option value="$PROJECT_DIR$/imageview-zoom-demo" />
             <option value="$PROJECT_DIR$/imageview-zoom-lib" />
             <option value="$PROJECT_DIR$/srclib" />
@@ -21,4 +23,3 @@
     </option>
   </component>
 </project>
-
