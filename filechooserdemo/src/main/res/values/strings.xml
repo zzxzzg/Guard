@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">FileChooserDemo</string>
+    <string name="chooser_title">Lorem ipsum</string>
+</resources>

@@ -1,1 +1,1 @@
-include ':app', ':srclib', ':bitmapfun', ':bitmapfundemo', ':volley', ':imageview-zoom-demo', ':imageview-zoom-lib', ':httpstest'
+include ':app', ':srclib', ':bitmapfun', ':bitmapfundemo', ':volley', ':imageview-zoom-demo', ':imageview-zoom-lib', ':httpstest', ':filechooserlib', ':filechooserdemo'
