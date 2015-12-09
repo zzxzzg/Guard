@@ -17,6 +17,9 @@
 package com.guard.filechooserlib;
 
 import android.app.ActionBar;
+import android.app.Activity;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -25,11 +28,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentManager.BackStackEntry;
-import android.support.v4.app.FragmentManager.OnBackStackChangedListener;
-import android.support.v4.app.FragmentTransaction;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -44,8 +42,8 @@ import java.io.File;
  * @version 2013-06-25
  * @author paulburke (ipaulpro)
  */
-public class FileChooserActivity extends FragmentActivity implements
-        OnBackStackChangedListener, FileListFragment.Callbacks {
+public class FileChooserActivity extends Activity implements
+        FragmentManager.OnBackStackChangedListener, FileListFragment.Callbacks {
 
     public static final String PATH = "path";
     public static final String EXTERNAL_BASE_PATH = Environment
@@ -68,7 +66,7 @@ public class FileChooserActivity extends FragmentActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mFragmentManager = getSupportFragmentManager();
+        mFragmentManager = getFragmentManager();
         mFragmentManager.addOnBackStackChangedListener(this);
 
         if (savedInstanceState == null) {
@@ -107,7 +105,7 @@ public class FileChooserActivity extends FragmentActivity implements
 
         int count = mFragmentManager.getBackStackEntryCount();
         if (count > 0) {
-            BackStackEntry fragment = mFragmentManager.getBackStackEntryAt(count - 1);
+            FragmentManager.BackStackEntry fragment = mFragmentManager.getBackStackEntryAt(count - 1);
             mPath = fragment.getName();
         } else {
             mPath = EXTERNAL_BASE_PATH;

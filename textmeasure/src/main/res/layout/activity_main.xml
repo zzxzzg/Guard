@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.guard.textmeasure.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tx"
+        android:textScaleX="2"
+        android:text="Hello World!" />
+
+    <TextView
+        android:id="@+id/line_tx"
+        android:layout_below="@id/tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:textSize="18sp"
+        android:textColor="@android:color/holo_red_dark"
+        android:text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        android:lineSpacingExtra="1dp"
+        android:lineSpacingMultiplier="1.5"
+        />
+    <!--lineSpaceingExtra 额外的行间距   lineSpacingMultiplier 行间距倍数  都会影响getLineHeight方法返回的行高-->
+
+    <com.guard.textmeasure.MeasureTextView
+        android:layout_below="@id/line_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        />
+
+
+
+
+
+
+</RelativeLayout>

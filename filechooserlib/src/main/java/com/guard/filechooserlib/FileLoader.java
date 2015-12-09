@@ -16,9 +16,9 @@
 
 package com.guard.filechooserlib;
 
+import android.content.AsyncTaskLoader;
 import android.content.Context;
 import android.os.FileObserver;
-import android.support.v4.content.AsyncTaskLoader;
 
 
 import java.io.File;

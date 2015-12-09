@@ -36,7 +36,7 @@ import com.guard.filechooserlib.FileUtils;
  */
 public class FileChooserExampleActivity extends Activity {
 
-    private static final String TAG = "FileChooserExampleActivity";
+    private static final String TAG = "FileChooser";
 
     private static final int REQUEST_CODE = 6384; // onActivityResult request
                                                   // code
@@ -88,7 +88,7 @@ public class FileChooserExampleActivity extends Activity {
                             Toast.makeText(FileChooserExampleActivity.this,
                                     "File Selected: " + path, Toast.LENGTH_LONG).show();
                         } catch (Exception e) {
-                            Log.e("FileSelectorTestActivity", "File select error", e);
+                            Log.e("FileSelector", "File select error", e);
                         }
                     }
                 }
