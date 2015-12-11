@@ -3,10 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Guard.iml" filepath="$PROJECT_DIR$/Guard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ainimationdemo/ainimationdemo.iml" filepath="$PROJECT_DIR$/ainimationdemo/ainimationdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/animationlib/animationlib.iml" filepath="$PROJECT_DIR$/animationlib/animationlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/bitmapfun/bitmapfun.iml" filepath="$PROJECT_DIR$/bitmapfun/bitmapfun.iml" />
       <module fileurl="file://$PROJECT_DIR$/bitmapfundemo/bitmapfundemo.iml" filepath="$PROJECT_DIR$/bitmapfundemo/bitmapfundemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/camerademo/camerademo.iml" filepath="$PROJECT_DIR$/camerademo/camerademo.iml" />
       <module fileurl="file://$PROJECT_DIR$/filechooserdemo/filechooserdemo.iml" filepath="$PROJECT_DIR$/filechooserdemo/filechooserdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/filechooserlib/filechooserlib.iml" filepath="$PROJECT_DIR$/filechooserlib/filechooserlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/httpstest/httpstest.iml" filepath="$PROJECT_DIR$/httpstest/httpstest.iml" />

@@ -9,10 +9,11 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/ainimationdemo" />
+            <option value="$PROJECT_DIR$/animationlib" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/bitmapfun" />
             <option value="$PROJECT_DIR$/bitmapfundemo" />
-            <option value="$PROJECT_DIR$/camerademo" />
             <option value="$PROJECT_DIR$/filechooserdemo" />
             <option value="$PROJECT_DIR$/filechooserlib" />
             <option value="$PROJECT_DIR$/httpstest" />
