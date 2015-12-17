@@ -15,6 +15,20 @@
             </intent-filter>
         </activity>
         <activity android:name=".CrossfadingActivity"/>
+        <activity android:name=".CirculAnimatorL"/>
+        <activity android:name=".CirculAnimatorPreL"/>
+        <activity android:name=".ViewpagerActivity"/>
+        <activity android:name=".CardFlipActivity"
+            android:theme="@style/DarkTheme"
+            />
+        <activity android:name=".ZoomActivity"
+            android:theme="@style/DarkTheme"
+            />
+        <activity android:name=".RippleLActivity"/>
+
+        <activity android:name=".RipplePreLActivity"/>
+
+        <activity android:name=".xmeetting.LoginButtonActivity"/>
 
     </application>
 

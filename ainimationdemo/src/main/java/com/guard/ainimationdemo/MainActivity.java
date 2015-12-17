@@ -10,14 +10,18 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.guard.ainimationdemo.xmeetting.LoginButtonActivity;
+
 /**
  * Created by yxwang on 15-12-11.
  */
 public class MainActivity extends Activity {
     private ListView mListView;
 
-    private static String[] FUNCTION=new String[]{"Crossfading"};
-    private static Class[] CLASSES=new Class[]{CrossfadingActivity.class};
+    private static String[] FUNCTION=new String[]{"Crossfading","CirculAnimator_PRE_L","CirculAnimator_L","ViewPagerActivity",
+    "CardFlipActivity","ZoomActivity","RippleL","RipplePreL","XMEETING_LoginButton"};
+    private static Class[] CLASSES=new Class[]{CrossfadingActivity.class,CirculAnimatorPreL.class,CirculAnimatorL.class,ViewpagerActivity.class,CardFlipActivity.class,ZoomActivity.class,
+    RippleLActivity.class,RipplePreLActivity.class, LoginButtonActivity.class};
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="ripple_default"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="ripple_1"
+        android:background="@drawable/ripple1"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="ripple_2"
+        android:background="@drawable/ripple2"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="ripple_3"
+        android:background="@drawable/ripple3"
+        />
+
+</LinearLayout>

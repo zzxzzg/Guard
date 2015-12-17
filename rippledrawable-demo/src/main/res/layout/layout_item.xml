@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dreamers.sample.CardViewWithBackgroundSupport
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/background_placeholder"
+    android:layout_gravity="center"
+    android:layout_width="192dp"
+    android:layout_height="192dp"/>

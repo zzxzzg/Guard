@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.guard.animationlib.view.RevealFrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#0000aa"
+        >
+
+        <!-- Put more views here if you want, it's stock frame layout  -->
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:background="#007777"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </com.guard.animationlib.view.RevealFrameLayout>
+
+</LinearLayout>
