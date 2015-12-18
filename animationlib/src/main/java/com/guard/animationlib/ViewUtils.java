@@ -23,8 +23,10 @@ public final class ViewUtils {
     }
 
     public static void setDrawableHotspotTouch(View view){
-        view.setOnTouchListener(
-                new DrawableHotspotTouch((LollipopDrawable) view.getBackground()));
+        if(!Android.isLollipop()) {
+            view.setOnTouchListener(
+                    new DrawableHotspotTouch((LollipopDrawable) view.getBackground()));
+        }
     }
 
     public static Drawable getDrawable2(Resources res,int id,Resources.Theme theme){

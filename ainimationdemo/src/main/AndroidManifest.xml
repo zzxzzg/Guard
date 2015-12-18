@@ -30,6 +30,8 @@
 
         <activity android:name=".xmeetting.LoginButtonActivity"/>
 
+        <activity android:name=".VectorLActivity"/>
+
     </application>
 
 </manifest>

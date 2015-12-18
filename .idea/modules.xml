@@ -13,8 +13,6 @@
       <module fileurl="file://$PROJECT_DIR$/httpstest/httpstest.iml" filepath="$PROJECT_DIR$/httpstest/httpstest.iml" />
       <module fileurl="file://$PROJECT_DIR$/imageview-zoom-demo/imageview-zoom-demo.iml" filepath="$PROJECT_DIR$/imageview-zoom-demo/imageview-zoom-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/imageview-zoom-lib/imageview-zoom-lib.iml" filepath="$PROJECT_DIR$/imageview-zoom-lib/imageview-zoom-lib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/rippledrawable-demo/rippledrawable-demo.iml" filepath="$PROJECT_DIR$/rippledrawable-demo/rippledrawable-demo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/rippledrawablelib/rippledrawablelib.iml" filepath="$PROJECT_DIR$/rippledrawablelib/rippledrawablelib.iml" />
       <module fileurl="file://$PROJECT_DIR$/srclib/srclib.iml" filepath="$PROJECT_DIR$/srclib/srclib.iml" />
       <module fileurl="file://$PROJECT_DIR$/textmeasure/textmeasure.iml" filepath="$PROJECT_DIR$/textmeasure/textmeasure.iml" />
       <module fileurl="file://$PROJECT_DIR$/utillib/utillib.iml" filepath="$PROJECT_DIR$/utillib/utillib.iml" />
