@@ -1,0 +1,37 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.guard.animationdemo">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.guard.animationdemo.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.guard.animationdemo.CrossfadingActivity"/>
+        <activity android:name="com.guard.animationdemo.CirculAnimatorL"/>
+        <activity android:name="com.guard.animationdemo.CirculAnimatorPreL"/>
+        <activity android:name="com.guard.animationdemo.ViewpagerActivity"/>
+        <activity android:name="com.guard.animationdemo.CardFlipActivity"
+            android:theme="@style/DarkTheme"
+            />
+        <activity android:name="com.guard.animationdemo.ZoomActivity"
+            android:theme="@style/DarkTheme"
+            />
+        <activity android:name="com.guard.animationdemo.RippleLActivity"/>
+
+        <activity android:name="com.guard.animationdemo.RipplePreLActivity"/>
+
+        <activity android:name="com.guard.animationdemo.xmeetting.LoginButtonActivity"/>
+
+        <activity android:name="com.guard.animationdemo.VectorLActivity"/>
+
+    </application>
+
+</manifest>

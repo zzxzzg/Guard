@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Guard.iml" filepath="$PROJECT_DIR$/Guard.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ainimationdemo/ainimationdemo.iml" filepath="$PROJECT_DIR$/ainimationdemo/ainimationdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/animationdemo/animationdemo.iml" filepath="$PROJECT_DIR$/animationdemo/animationdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/animationlib/animationlib.iml" filepath="$PROJECT_DIR$/animationlib/animationlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/bitmapfun/bitmapfun.iml" filepath="$PROJECT_DIR$/bitmapfun/bitmapfun.iml" />
@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/httpstest/httpstest.iml" filepath="$PROJECT_DIR$/httpstest/httpstest.iml" />
       <module fileurl="file://$PROJECT_DIR$/imageview-zoom-demo/imageview-zoom-demo.iml" filepath="$PROJECT_DIR$/imageview-zoom-demo/imageview-zoom-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/imageview-zoom-lib/imageview-zoom-lib.iml" filepath="$PROJECT_DIR$/imageview-zoom-lib/imageview-zoom-lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/listanimationdemo/listanimationdemo.iml" filepath="$PROJECT_DIR$/listanimationdemo/listanimationdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/srclib/srclib.iml" filepath="$PROJECT_DIR$/srclib/srclib.iml" />
       <module fileurl="file://$PROJECT_DIR$/textmeasure/textmeasure.iml" filepath="$PROJECT_DIR$/textmeasure/textmeasure.iml" />
       <module fileurl="file://$PROJECT_DIR$/utillib/utillib.iml" filepath="$PROJECT_DIR$/utillib/utillib.iml" />

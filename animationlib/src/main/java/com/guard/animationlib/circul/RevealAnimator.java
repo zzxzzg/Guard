@@ -1,12 +1,11 @@
 package com.guard.animationlib.circul;
 
+import android.animation.Animator;
 import android.annotation.TargetApi;
 import android.graphics.Rect;
 import android.os.Build;
 import android.view.View;
 
-import com.nineoldandroids.animation.Animator;
-import com.nineoldandroids.util.FloatProperty;
 
 import java.lang.ref.WeakReference;
 
@@ -15,8 +14,6 @@ import java.lang.ref.WeakReference;
  * @hide
  */
 public interface RevealAnimator{
-
-    RevealRadius CLIP_RADIUS = new RevealRadius();
 
     /**
      * Listen when animation start/end/cancel
@@ -165,20 +162,4 @@ public interface RevealAnimator{
         }
     }
 
-    class RevealRadius extends FloatProperty<RevealAnimator> {
-
-        public RevealRadius() {
-            super("revealRadius");
-        }
-
-        @Override
-        public void setValue(RevealAnimator object, float value) {
-            object.setRevealRadius(value);
-        }
-
-        @Override
-        public Float get(RevealAnimator object) {
-            return object.getRevealRadius();
-        }
-    }
 }
