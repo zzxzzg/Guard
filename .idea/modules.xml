@@ -14,6 +14,9 @@
       <module fileurl="file://$PROJECT_DIR$/imageview-zoom-demo/imageview-zoom-demo.iml" filepath="$PROJECT_DIR$/imageview-zoom-demo/imageview-zoom-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/imageview-zoom-lib/imageview-zoom-lib.iml" filepath="$PROJECT_DIR$/imageview-zoom-lib/imageview-zoom-lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/listanimationdemo/listanimationdemo.iml" filepath="$PROJECT_DIR$/listanimationdemo/listanimationdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/listcontroldemo/listcontroldemo.iml" filepath="$PROJECT_DIR$/listcontroldemo/listcontroldemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/listcontrollib/listcontrollib.iml" filepath="$PROJECT_DIR$/listcontrollib/listcontrollib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/listcontrollib-manipulation/listcontrollib-manipulation.iml" filepath="$PROJECT_DIR$/listcontrollib-manipulation/listcontrollib-manipulation.iml" />
       <module fileurl="file://$PROJECT_DIR$/srclib/srclib.iml" filepath="$PROJECT_DIR$/srclib/srclib.iml" />
       <module fileurl="file://$PROJECT_DIR$/textmeasure/textmeasure.iml" filepath="$PROJECT_DIR$/textmeasure/textmeasure.iml" />
       <module fileurl="file://$PROJECT_DIR$/utillib/utillib.iml" filepath="$PROJECT_DIR$/utillib/utillib.iml" />

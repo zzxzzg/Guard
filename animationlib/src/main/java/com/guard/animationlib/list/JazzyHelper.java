@@ -35,6 +35,7 @@ import com.guard.animationlib.list.effects.FlyEffect;
 import com.guard.animationlib.list.effects.GrowEffect;
 import com.guard.animationlib.list.effects.HelixEffect;
 import com.guard.animationlib.list.effects.ReverseFlyEffect;
+import com.guard.animationlib.list.effects.SlideInEffect;
 import com.guard.animationlib.list.effects.StandardEffect;
 import com.guard.animationlib.list.effects.TiltEffect;
 import com.guard.animationlib.list.effects.TwirlEffect;
