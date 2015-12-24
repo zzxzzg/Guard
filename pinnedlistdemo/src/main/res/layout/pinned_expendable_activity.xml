@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+
+    <com.guard.pinnedlistlib.pinnedlist.pinnedexpendablelist.StickyLayout
+        android:id="@+id/sticky_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/sticky_header"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:background="#78A524"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sticky_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <com.guard.pinnedlistlib.pinnedlist.pinnedexpendablelist.PinnedHeaderExpandableListView
+                android:id="@+id/expandablelist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@null"
+                android:childIndicatorLeft="0dp"
+                android:dividerHeight="1dp"
+                android:groupIndicator="@null"
+                android:scrollbarAlwaysDrawHorizontalTrack="false" >
+            </com.guard.pinnedlistlib.pinnedlist.pinnedexpendablelist.PinnedHeaderExpandableListView>
+        </LinearLayout>
+    </com.guard.pinnedlistlib.pinnedlist.pinnedexpendablelist.StickyLayout>
+
+
+    <!--<com.guard.pinnedlistlib.pinnedlist.pinnedexpendablelist.PinnedHeaderExpandableListView-->
+        <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:id="@+id/expandable_lv"-->
+    <!--android:animateLayoutChanges="true"-->
+        <!-- -->
+        <!--/>-->
+    
+
+</LinearLayout>

@@ -20,11 +20,10 @@ ADDED from AndroidManifest.xml:23:5
 MERGED from com.android.support:support-v4:20.0.0:16:5
 MERGED from se.emilsjolander:stickylistheaders:2.5.0:7:5
 MERGED from Guard:listcontrollib:unspecified:22:5
-MERGED from Guard:listcontrollib-slh:unspecified:22:5
-MERGED from Guard:listcontrollib:unspecified:22:5
 MERGED from se.emilsjolander:stickylistheaders:2.5.0:7:5
 MERGED from Guard:listcontrollib-manipulation:unspecified:22:5
 MERGED from Guard:listcontrollib:unspecified:22:5
+MERGED from se.emilsjolander:stickylistheaders:2.5.0:7:5
 	android:targetSdkVersion
 		ADDED from AndroidManifest.xml:25:9
 		INJECTED from AndroidManifest.xml:0:0
@@ -38,8 +37,6 @@ MERGED from Guard:listcontrollib:unspecified:22:5
 application
 ADDED from AndroidManifest.xml:28:5
 MERGED from com.android.support:support-v4:20.0.0:17:5
-MERGED from Guard:listcontrollib:unspecified:26:5
-MERGED from Guard:listcontrollib-slh:unspecified:26:5
 MERGED from Guard:listcontrollib:unspecified:26:5
 MERGED from Guard:listcontrollib-manipulation:unspecified:26:5
 MERGED from Guard:listcontrollib:unspecified:26:5
