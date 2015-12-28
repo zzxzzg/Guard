@@ -22,6 +22,7 @@
       <module fileurl="file://$PROJECT_DIR$/srclib/srclib.iml" filepath="$PROJECT_DIR$/srclib/srclib.iml" />
       <module fileurl="file://$PROJECT_DIR$/textmeasure/textmeasure.iml" filepath="$PROJECT_DIR$/textmeasure/textmeasure.iml" />
       <module fileurl="file://$PROJECT_DIR$/utillib/utillib.iml" filepath="$PROJECT_DIR$/utillib/utillib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vector-drawable-lib/vector-drawable-lib.iml" filepath="$PROJECT_DIR$/vector-drawable-lib/vector-drawable-lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/volley/volley.iml" filepath="$PROJECT_DIR$/volley/volley.iml" />
     </modules>
   </component>

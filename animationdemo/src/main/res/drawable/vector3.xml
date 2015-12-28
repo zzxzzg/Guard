@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportHeight="100"
+    android:viewportWidth="100"
+
+    app:vc_viewportHeight="100"
+    app:vc_viewportWidth="100"
+    >
+    <path
+        android:name="search"
+        android:fillColor="@android:color/holo_blue_bright"
+        android:pathData="M 50 0 A 50 50 0 1 0 100 50"
+        android:strokeAlpha="1"
+        android:strokeColor="#000000"
+        android:strokeLineCap="round"
+        android:strokeWidth="1"
+
+        app:vc_pathData="M 50 0 A 50 50 0 1 0 100 50"
+        app:vc_strokeWidth="1"
+        app:vc_strokeColor="#000000"
+        app:vc_strokeAlpha="1"
+        app:vc_fillColor="@android:color/holo_blue_bright"
+        app:vc_strokeLineCap="round"
+        />
+
+</vector>

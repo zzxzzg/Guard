@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<set xmlns:android="http://schemas.android.com/apk/res/android">
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
     <objectAnimator
         android:duration="3000"
         android:valueType="floatType"
@@ -7,6 +9,9 @@
         android:valueFrom="0"
         android:valueTo="1"
         android:interpolator="@android:anim/accelerate_interpolator"
+
+        app:vc_valueType="floatType"
+
         >
     </objectAnimator>
 </set>

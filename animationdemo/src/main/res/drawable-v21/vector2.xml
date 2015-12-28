@@ -3,7 +3,9 @@
     android:width="100dp"
     android:height="100dp"
     android:viewportHeight="100"
-    android:viewportWidth="100">
+    android:viewportWidth="100"
+
+    >
     <path
         android:name="search"
         android:fillColor="@android:color/holo_blue_bright"
@@ -29,6 +31,10 @@
         android:strokeAlpha="1"
         android:strokeColor="#000000"
         android:strokeLineCap="round"
-        android:strokeWidth="1" />
+        android:strokeWidth="1"
+
+
+
+        />
 
 </vector>

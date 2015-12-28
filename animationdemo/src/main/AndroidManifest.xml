@@ -32,6 +32,8 @@
 
         <activity android:name="com.guard.animationdemo.VectorLActivity"/>
 
+        <activity android:name=".VectorPreLActivity"/>
+
     </application>
 
 </manifest>

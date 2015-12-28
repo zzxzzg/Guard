@@ -2,7 +2,6 @@ package com.guard.animationdemo;
 
 import android.app.Activity;
 import android.graphics.drawable.Animatable;
-import android.graphics.drawable.AnimatedVectorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;

@@ -12,4 +12,6 @@ android common lib
 6.资源库
 7.常用工具库
 8.网络请求库
-9.stickylistheaders库 (github上的一个库)
+9.悬浮分组listview
+10. 添加vector 低版本支持库
+
