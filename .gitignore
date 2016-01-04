@@ -4,3 +4,6 @@
 /.idea/libraries
 .DS_Store
 /build
+listcontrollib/build
+listcontroldemo/build
+listcontrollib-manipulation/build
