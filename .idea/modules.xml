@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/bitmapfundemo/bitmapfundemo.iml" filepath="$PROJECT_DIR$/bitmapfundemo/bitmapfundemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/filechooserdemo/filechooserdemo.iml" filepath="$PROJECT_DIR$/filechooserdemo/filechooserdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/filechooserlib/filechooserlib.iml" filepath="$PROJECT_DIR$/filechooserlib/filechooserlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guardlistdemo/guardlistdemo.iml" filepath="$PROJECT_DIR$/guardlistdemo/guardlistdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/httpstest/httpstest.iml" filepath="$PROJECT_DIR$/httpstest/httpstest.iml" />
       <module fileurl="file://$PROJECT_DIR$/imageview-zoom-demo/imageview-zoom-demo.iml" filepath="$PROJECT_DIR$/imageview-zoom-demo/imageview-zoom-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/imageview-zoom-lib/imageview-zoom-lib.iml" filepath="$PROJECT_DIR$/imageview-zoom-lib/imageview-zoom-lib.iml" />
