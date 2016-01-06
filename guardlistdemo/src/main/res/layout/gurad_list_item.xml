@@ -6,25 +6,23 @@
     >
 
     <LinearLayout
-        android:layout_below="@+id/content"
+        android:layout_below="@+id/item_content"
         android:layout_width="fill_parent"
         android:layout_height="60dp"
         android:id="@+id/expand"
         android:orientation="horizontal"
         android:background="@color/abc_search_url_text_normal"
         >
-
     </LinearLayout>
 
-    <LinearLayout
+    <zzxzzg.com.guardlistdemo.swipemenulistview.SwipeMenuLayout
         android:layout_width="fill_parent"
-        android:layout_height="40dp"
-        android:id="@id/content"
-        android:orientation="horizontal"
+        android:layout_height="80dp"
+        android:id="@id/item_content"
         android:background="@color/button_material_dark"
         >
 
-    </LinearLayout>
+    </zzxzzg.com.guardlistdemo.swipemenulistview.SwipeMenuLayout>
 
 
 

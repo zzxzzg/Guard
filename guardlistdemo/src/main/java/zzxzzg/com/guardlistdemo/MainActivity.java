@@ -4,13 +4,38 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
+
+    private ListView mListView;
+
+    private GuardAdapter mGuardAdapter=new GuardAdapter(MainActivity.this) {
+        @Override
+        public View getContentView(int position, View convertView, ViewGroup parent) {
+            return null;
+        }
+
+        @Override
+        public View getExpandView(int position, View convertView, ViewGroup parent) {
+            return null;
+        }
+
+        @Override
+        public int getCount() {
+            return 100;
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mListView= (ListView) findViewById(R.id.list);
+        mListView.setAdapter(mGuardAdapter);
+
     }
 
     @Override
