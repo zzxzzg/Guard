@@ -16,6 +16,24 @@ public class SwipeMenu {
 	private Context mContext;
 	private List<SwipeMenuItem> mItems;
 	private int mViewType;
+	private OnSwipeItemClickListener onItemClickListener;
+	private int mItemPosition;
+
+	public int getItemPosition() {
+		return mItemPosition;
+	}
+
+	public void setItemPosition(int position) {
+		this.mItemPosition = position;
+	}
+
+	public OnSwipeItemClickListener getOnSwipeItemClickListener() {
+		return onItemClickListener;
+	}
+
+	public void setOnSwipeItemClickListener(OnSwipeItemClickListener onItemClickListener) {
+		this.onItemClickListener = onItemClickListener;
+	}
 
 	public SwipeMenu(Context context) {
 		mContext = context;
@@ -50,4 +68,7 @@ public class SwipeMenu {
 		this.mViewType = viewType;
 	}
 
+	public static interface OnSwipeItemClickListener {
+		void onItemClick(SwipeMenuView view, SwipeMenu menu, int index);
+	}
 }

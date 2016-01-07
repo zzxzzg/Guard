@@ -3,6 +3,7 @@ package zzxzzg.com.guardlistdemo.swipemenulistview;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.view.ViewGroup;
 
 /**
  * 
@@ -19,7 +20,7 @@ public class SwipeMenuItem {
 	private Drawable background;
 	private int titleColor;
 	private int titleSize;
-	private int width;
+	private int width= ViewGroup.LayoutParams.WRAP_CONTENT;
 
 	public SwipeMenuItem(Context context) {
 		mContext = context;

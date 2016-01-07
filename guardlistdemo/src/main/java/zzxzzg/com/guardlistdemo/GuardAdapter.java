@@ -7,6 +7,7 @@ import android.widget.BaseAdapter;
 
 import java.util.BitSet;
 
+import zzxzzg.com.guardlistdemo.swipemenulistview.SwipeMenu;
 import zzxzzg.com.guardlistdemo.swipemenulistview.SwipeMenuLayout;
 
 /**
@@ -48,20 +49,34 @@ public abstract class GuardAdapter extends BaseAdapter {
         ((GuardListItem)convertView).setOnModeChangeListener(new GuardListItem.OnModeChangeListener() {
             @Override
             public void onModeChange(int mode) {
-                if(mode == GuardListItem.STATE_EXPANDED || mode == GuardListItem.STATE_EXPANDING){
-                    mModeSet.set(position,true);
-                }else{
-                    mModeSet.set(position,false);
+                if (mode == GuardListItem.STATE_EXPANDED || mode == GuardListItem.STATE_EXPANDING) {
+                    mModeSet.set(position, true);
+                } else {
+                    mModeSet.set(position, false);
                 }
             }
         });
         convertView.setTag(holder);
 
-//        View content=getContentView(position,holder.mContentView.getChildAt(0),parent);
-//        holder.mContentView.removeAllViews();
-//        if(content!=null) {
-//            holder.mContentView.addView(content);
-//        }
+        View content=getContentView(position, holder.mContentView.getContent(), parent);
+        holder.mContentView.clearContent();
+        if(content!=null) {
+            holder.mContentView.addContent(content);
+        }
+
+        SwipeMenu menu=holder.mContentView.getMenu();
+        if(needChangeMenu(position,menu)){
+            menu=getSwipeMenu(position,menu);
+            if(menu!=null){
+                menu.setItemPosition(position);
+            }
+            holder.mContentView.setMenu(menu);
+        }else{
+            if(menu!=null){
+                menu.setItemPosition(position);
+            }
+        }
+
 
         View expand=getExpandView(position,holder.mExpandView.getChildAt(0),parent);
         holder.mExpandView.removeAllViews();
@@ -78,30 +93,10 @@ public abstract class GuardAdapter extends BaseAdapter {
         return convertView;
     }
 
-//    private void test(){
-//        SwipeMenuLayout layout = null;
-//        if (convertView == null) {
-//            View contentView = mAdapter.getView(position, convertView, parent);
-//            SwipeMenu menu = new SwipeMenu(mContext);
-//            menu.setViewType(mAdapter.getItemViewType(position));
-//            createMenu(menu);
-//            SwipeMenuView menuView = new SwipeMenuView(menu,
-//                    (SwipeMenuListView) parent);
-//            menuView.setOnSwipeItemClickListener(this);
-//            SwipeMenuListView listView = (SwipeMenuListView) parent;
-//            layout = new SwipeMenuLayout(contentView, menuView,
-//                    listView.getCloseInterpolator(),
-//                    listView.getOpenInterpolator());
-//            layout.setPosition(position);
-//        } else {
-//            layout = (SwipeMenuLayout) convertView;
-//            layout.closeMenu();
-//            layout.setPosition(position);
-//            View view = mAdapter.getView(position, layout.getContentView(),
-//                    parent);
-//        }
-//        return layout;
-//    }
+    public boolean needChangeMenu(int position,SwipeMenu menu){
+        return true;
+    }
+    public abstract SwipeMenu getSwipeMenu(int position,SwipeMenu menu);
 
     public abstract View getContentView(int position,View convertView,ViewGroup parent);
 

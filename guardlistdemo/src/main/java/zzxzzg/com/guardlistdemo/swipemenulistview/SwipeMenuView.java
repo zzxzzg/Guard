@@ -24,8 +24,6 @@ import android.widget.TextView;
 public class SwipeMenuView extends LinearLayout implements OnClickListener {
 
 	private SwipeMenu mMenu;
-	private OnSwipeItemClickListener onItemClickListener;
-	private int position;
 
 	public SwipeMenuView(Context context) {
 		super(context);
@@ -44,21 +42,23 @@ public class SwipeMenuView extends LinearLayout implements OnClickListener {
 		super(context, attrs, defStyleAttr, defStyleRes);
 	}
 
-	public int getPosition() {
-		return position;
-	}
-
-	public void setPosition(int position) {
-		this.position = position;
-	}
 
 	public void setMenu(SwipeMenu menu){
+		removeAllViews();
 		mMenu = menu;
+		if(menu==null){
+			return;
+		}
 		List<SwipeMenuItem> items = menu.getMenuItems();
 		int id = 0;
 		for (SwipeMenuItem item : items) {
 			addItem(item, id++);
+
 		}
+	}
+
+	public SwipeMenu getMenu(){
+		return mMenu;
 	}
 
 //	public SwipeMenuView(SwipeMenu menu) {
@@ -109,21 +109,10 @@ public class SwipeMenuView extends LinearLayout implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
-		Log.d("sss", "menu item click");
-		if (onItemClickListener != null) {
-			onItemClickListener.onItemClick(this, mMenu, v.getId());
+		if (mMenu.getOnSwipeItemClickListener() != null) {
+			mMenu.getOnSwipeItemClickListener().onItemClick(this, mMenu, v.getId());
 		}
 	}
 
-	public OnSwipeItemClickListener getOnSwipeItemClickListener() {
-		return onItemClickListener;
-	}
 
-	public void setOnSwipeItemClickListener(OnSwipeItemClickListener onItemClickListener) {
-		this.onItemClickListener = onItemClickListener;
-	}
-
-	public static interface OnSwipeItemClickListener {
-		void onItemClick(SwipeMenuView view, SwipeMenu menu, int index);
-	}
 }

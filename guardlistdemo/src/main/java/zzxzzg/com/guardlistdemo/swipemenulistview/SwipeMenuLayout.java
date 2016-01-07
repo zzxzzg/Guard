@@ -15,6 +15,7 @@ import android.util.TypedValue;
 import android.view.GestureDetector.OnGestureListener;
 import android.view.GestureDetector.SimpleOnGestureListener;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -79,7 +80,29 @@ public class SwipeMenuLayout extends FrameLayout {
 		init();
 	}
 
+	public void clearContent(){
+		if(mContentView!=null){
+			((ViewGroup)mContentView).removeAllViews();
+		}
+	}
+
+	public View getContent(){
+		if(mContentView!=null){
+			return ((ViewGroup)mContentView).getChildAt(0);
+		}
+		return null;
+	}
+
+	public void addContent(View v){
+		if(mContentView!=null){
+			((ViewGroup)mContentView).addView(v);
+		}
+	}
+
 	private void init() {
+//		LayoutInflater.from(getContext()).inflate(R.layout.swipe_layout,this,false);
+//		mContentView=findViewById(R.id.swipe_content);
+//		mMenuView= (SwipeMenuView)findViewById(R.id.swipe_menu);
 
 		ViewGroup v= (ViewGroup) inflate(getContext(), R.layout.swipe_layout, null);
 		mContentView=v.findViewById(R.id.swipe_content);
@@ -88,23 +111,32 @@ public class SwipeMenuLayout extends FrameLayout {
 		addView(mMenuView);
 		addView(mContentView);
 
-		SwipeMenu menu = new SwipeMenu(getContext());
-//		menu.setViewType(mAdapter.getItemViewType(position));
-		SwipeMenuItem item = new SwipeMenuItem(getContext());
-		item.setTitle("Item 1");
-		item.setBackground(new ColorDrawable(Color.RED));
-		item.setWidth(300);
-		menu.addMenuItem(item);
-
-		item = new SwipeMenuItem(getContext());
-		item.setTitle("Item 2");
-		item.setBackground(new ColorDrawable(Color.GREEN));
-		item.setWidth(300);
-		menu.addMenuItem(item);
-		mMenuView.setMenu(menu);
-		mMenuView.setOnSwipeItemClickListener(null);
+//		SwipeMenu menu = new SwipeMenu(getContext());
+//		SwipeMenuItem item = new SwipeMenuItem(getContext());
+//		item.setTitle("Item 1");
+//		item.setBackground(new ColorDrawable(Color.RED));
+//		item.setWidth(300);
+//		menu.addMenuItem(item);
+//
+//		item = new SwipeMenuItem(getContext());
+//		item.setTitle("Item 2");
+//		item.setBackground(new ColorDrawable(Color.GREEN));
+//		item.setWidth(300);
+//		menu.addMenuItem(item);
+//		mMenuView.setMenu(menu);
+//		mMenuView.setOnSwipeItemClickListener(null);
 
 	}
+
+	public void setMenu(SwipeMenu menu){
+		mMenuView.setMenu(menu);
+		requestLayout();
+	}
+
+	public SwipeMenu getMenu(){
+		return mMenuView.getMenu();
+	}
+
 
 	public void onFling(){
 		if(mCurrentDis==0 || mCurrentDis==mMenuView.getMeasuredWidth()){
@@ -208,6 +240,13 @@ public class SwipeMenuLayout extends FrameLayout {
 
 	public SwipeMenuView getMenuView() {
 		return mMenuView;
+	}
+
+	@Override
+	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+		measureChildWithMargins(mContentView, widthMeasureSpec, 0, heightMeasureSpec, 0);
+		int newHeightMeasureSpec=MeasureSpec.makeMeasureSpec(mContentView.getMeasuredHeight(),MeasureSpec.EXACTLY);
+		super.onMeasure(widthMeasureSpec, newHeightMeasureSpec);
 	}
 
 	@Override

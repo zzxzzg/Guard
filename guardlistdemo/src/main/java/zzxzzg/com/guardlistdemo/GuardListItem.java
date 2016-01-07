@@ -93,6 +93,18 @@ public class GuardListItem extends RelativeLayout {
         mContentLayout.smoothClose();
     }
 
+    public void clearContent(){
+        if(mContentLayout!=null){
+            mContentLayout.clearContent();
+        }
+    }
+
+    public void addContent(View v){
+        if(mContentLayout!=null){
+            mContentLayout.addContent(v);
+        }
+    }
+
 //    public boolean onGuardTouchEvent(MotionEvent e){
 //        Rect rect=new Rect();
 //        mContentLayout.getHitRect(rect);
