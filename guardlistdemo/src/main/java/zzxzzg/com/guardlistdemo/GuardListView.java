@@ -12,27 +12,27 @@ import android.widget.ListView;
 /**
  * Created by yxwang on 16-1-6.
  */
-public class GuradListView extends ListView {
+public class GuardListView extends ListView {
 
     public boolean mHideMenu=true;
 
     private int mTouchPosition;
     private GuardListItem mTouchView;
 
-    public GuradListView(Context context) {
+    public GuardListView(Context context) {
         super(context);
     }
 
-    public GuradListView(Context context, AttributeSet attrs) {
+    public GuardListView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public GuradListView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public GuardListView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public GuradListView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public GuardListView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
     }
 
