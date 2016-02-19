@@ -4,7 +4,7 @@ android {
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
     defaultConfig {
-        applicationId "com.guard.mediademo"
+        applicationId "com.guard.harddecoderdemo"
         minSdkVersion 17
         targetSdkVersion 23
         versionCode 1
