@@ -72,7 +72,6 @@ public class DecoderManager {
 	public byte[] getData() {
 
 		try {
-			Log.d("sss","getData");
 			return mPreviewData.take();
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block

@@ -377,22 +377,46 @@ public class EncoderController {
 				if(mCurrentCameraFace==CameraInfo.CAMERA_FACING_BACK){
 					mCameraOrientation = 90;
 				}else{
-					mCameraOrientation = 270;
+					if(mCameraDefaultOrientation ==270){
+						mCameraOrientation=270;
+					}else if (mCameraDefaultOrientation ==90){
+						mCameraOrientation=90;
+					}
 				}
 
 			}
 			if (requestedOrientation == ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE) {
-				mCameraOrientation = 0;
+				if(mCurrentCameraFace==CameraInfo.CAMERA_FACING_BACK) {
+					mCameraOrientation = 0;
+				}else{
+					if(mCameraDefaultOrientation ==270){
+						mCameraOrientation=0;
+					}else if (mCameraDefaultOrientation ==90){
+						mCameraOrientation=180;
+					}
+				}
 			}
 			if (requestedOrientation == ActivityInfo.SCREEN_ORIENTATION_REVERSE_PORTRAIT) {
 				if(mCurrentCameraFace==CameraInfo.CAMERA_FACING_BACK){
 					mCameraOrientation = 270;
 				}else{
-					mCameraOrientation = 90;
+					if(mCameraDefaultOrientation ==270){
+						mCameraOrientation=90;
+					}else if (mCameraDefaultOrientation ==90){
+						mCameraOrientation=270;
+					}
 				}
 			}
 			if (requestedOrientation == ActivityInfo.SCREEN_ORIENTATION_REVERSE_LANDSCAPE) {
-				mCameraOrientation = 180;
+				if(mCurrentCameraFace==CameraInfo.CAMERA_FACING_BACK) {
+					mCameraOrientation = 180;
+				}else{
+					if(mCameraDefaultOrientation ==270){
+						mCameraOrientation=180;
+					}else if (mCameraDefaultOrientation ==90){
+						mCameraOrientation=0;
+					}
+				}
 			}
 		} else {
 			if (requestedOrientation == ActivityInfo.SCREEN_ORIENTATION_PORTRAIT) {
