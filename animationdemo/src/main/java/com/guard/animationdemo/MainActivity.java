@@ -18,9 +18,9 @@ public class MainActivity extends Activity {
     private ListView mListView;
 
     private static String[] FUNCTION=new String[]{"Crossfading","CirculAnimator_PRE_L","CirculAnimator_L","ViewPagerActivity",
-    "CardFlipActivity","ZoomActivity","RippleL","RipplePreL","vector_L","vector_pre_L","XMEETING_LoginButton"};
+    "CardFlipActivity","ZoomActivity","RippleL","RipplePreL","vector_L","vector_pre_L","XMEETING_LoginButton","WaveView"};
     private static Class[] CLASSES=new Class[]{CrossfadingActivity.class,CirculAnimatorPreL.class,CirculAnimatorL.class,ViewpagerActivity.class,CardFlipActivity.class,ZoomActivity.class,
-    RippleLActivity.class,RipplePreLActivity.class, VectorLActivity.class,VectorPreLActivity.class,LoginButtonActivity.class};
+    RippleLActivity.class,RipplePreLActivity.class, VectorLActivity.class,VectorPreLActivity.class,LoginButtonActivity.class,WaveActivity.class};
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

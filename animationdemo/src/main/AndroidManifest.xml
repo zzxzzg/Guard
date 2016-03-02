@@ -33,6 +33,7 @@
         <activity android:name="com.guard.animationdemo.VectorLActivity"/>
 
         <activity android:name=".VectorPreLActivity"/>
+        <activity android:name=".WaveActivity"/>
 
     </application>
 
