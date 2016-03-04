@@ -14,4 +14,18 @@
 
         >
     </objectAnimator>
+
+    <objectAnimator
+        android:duration="5000"
+        android:valueType="floatType"
+        android:propertyName="trimPathStart"
+        android:valueFrom="0"
+        android:valueTo="1"
+        android:interpolator="@android:anim/accelerate_interpolator"
+
+        app:vc_valueType="floatType"
+
+        >
+    </objectAnimator>
+
 </set>

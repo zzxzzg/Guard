@@ -23,6 +23,8 @@
       <module fileurl="file://$PROJECT_DIR$/listcontrollib-manipulation/listcontrollib-manipulation.iml" filepath="$PROJECT_DIR$/listcontrollib-manipulation/listcontrollib-manipulation.iml" />
       <module fileurl="file://$PROJECT_DIR$/pinnedlistdemo/pinnedlistdemo.iml" filepath="$PROJECT_DIR$/pinnedlistdemo/pinnedlistdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/pinnedlistlib/pinnedlistlib.iml" filepath="$PROJECT_DIR$/pinnedlistlib/pinnedlistlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/puremvc_standard_demo/puremvc_standard_demo.iml" filepath="$PROJECT_DIR$/puremvc_standard_demo/puremvc_standard_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/puremvc_standard_lib/puremvc_standard_lib.iml" filepath="$PROJECT_DIR$/puremvc_standard_lib/puremvc_standard_lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/srclib/srclib.iml" filepath="$PROJECT_DIR$/srclib/srclib.iml" />
       <module fileurl="file://$PROJECT_DIR$/textmeasure/textmeasure.iml" filepath="$PROJECT_DIR$/textmeasure/textmeasure.iml" />
       <module fileurl="file://$PROJECT_DIR$/touchdispatchdemo/touchdispatchdemo.iml" filepath="$PROJECT_DIR$/touchdispatchdemo/touchdispatchdemo.iml" />
