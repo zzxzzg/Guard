@@ -3,13 +3,12 @@ package com.guard.puremvc.standard.demo;
 import org.puremvc.java.patterns.proxy.Proxy;
 
 /**
- * Created by yxwang on 16-3-4.
+ * Created by yxwang on 16-3-7.
  */
-public class LoginProxy extends Proxy {
+public class RegisterProxy extends Proxy{
+    public static final String NAME="RegisterProxy";
 
-    public static final String NAME="LoginProxy";
-
-    public LoginProxy(){
+    public RegisterProxy(){
         super(NAME);
     }
 
@@ -20,5 +19,4 @@ public class LoginProxy extends Proxy {
             return false;
         }
     }
-
 }

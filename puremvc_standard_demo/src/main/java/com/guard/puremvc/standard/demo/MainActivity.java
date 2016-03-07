@@ -12,12 +12,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //MainFacade.getInstance().registerMediator(new MainMediator(this));
+        MainFacade.getInstance().registerMediator(new MainMediator(this));
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        //MainFacade.getInstance().removeMediator(MainMediator.NAME);
+        MainFacade.getInstance().removeMediator(MainMediator.NAME);
     }
 }
