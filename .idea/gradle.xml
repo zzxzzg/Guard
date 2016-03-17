@@ -14,7 +14,9 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/bitmapfun" />
             <option value="$PROJECT_DIR$/bitmapfundemo" />
+            <option value="$PROJECT_DIR$/databindingdemo" />
             <option value="$PROJECT_DIR$/dlopendemo" />
+            <option value="$PROJECT_DIR$/eventbusdemo" />
             <option value="$PROJECT_DIR$/filechooserdemo" />
             <option value="$PROJECT_DIR$/filechooserlib" />
             <option value="$PROJECT_DIR$/gof-example" />
