@@ -1,14 +1,8 @@
-package com.guard.harddecoderdemo;
-
-import java.io.IOException;
-import java.security.Permission;
-import java.util.List;
-import java.util.jar.Manifest;
+package com.guard.openh264demo;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
-import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.graphics.ImageFormat;
 import android.graphics.SurfaceTexture;
@@ -16,15 +10,14 @@ import android.hardware.Camera;
 import android.hardware.Camera.CameraInfo;
 import android.hardware.Camera.PreviewCallback;
 import android.media.MediaCodec;
-import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.Surface;
 import android.view.TextureView;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.view.TextureView.SurfaceTextureListener;
-import android.widget.Toast;
+import android.view.WindowManager;
+
+import java.io.IOException;
+import java.util.List;
 
 public class EncoderController {
 	private TextureView mEncoderTextureView;
@@ -38,7 +31,6 @@ public class EncoderController {
 	private int mHeight;
 	private int mFramerate = 15;
 	private byte[] mPreviewPuffer;
-	private EncodeManager mEncoderManager;
 	int mBitrate=512*1024;
 	//private long mInstance=-1;
 
@@ -71,36 +63,34 @@ public class EncoderController {
 	}
 
 
-	public EncoderController(Context context,TextureView textureView){
+	public EncoderController(Context context, TextureView textureView){
 		if(context==null || textureView==null){
 			throw new RuntimeException("context and textureview can't be null");
 		}
 		mContext=context;
 		mEncoderTextureView=textureView;
 		mEncoderTextureView.setSurfaceTextureListener(mPreViewListener);
-		mEncoderManager = new EncodeManager();
 	}
 
 
-	public void changeCamear() {
-		if (mCamera == null) {
-			return;
-		}
-		mCamera.stopPreview();
-		mCamera.setPreviewCallback(null);
-		mCamera.release();
-		mCamera = null;
-		mEncoderManager.stopEncoder();
-		if (mCurrentCameraFace == CameraInfo.CAMERA_FACING_BACK) {
-			mCurrentCameraFace = CameraInfo.CAMERA_FACING_FRONT;
-		} else {
-			mCurrentCameraFace = CameraInfo.CAMERA_FACING_BACK;
-		}
-
-		openCamera();
-		setupCamear(mEncoderTextureView.getSurfaceTexture());
-
-	}
+//	public void changeCamear() {
+//		if (mCamera == null) {
+//			return;
+//		}
+//		mCamera.stopPreview();
+//		mCamera.setPreviewCallback(null);
+//		mCamera.release();
+//		mCamera = null;
+//		if (mCurrentCameraFace == CameraInfo.CAMERA_FACING_BACK) {
+//			mCurrentCameraFace = CameraInfo.CAMERA_FACING_FRONT;
+//		} else {
+//			mCurrentCameraFace = CameraInfo.CAMERA_FACING_BACK;
+//		}
+//
+//		openCamera();
+//		setupCamear(mEncoderTextureView.getSurfaceTexture());
+//
+//	}
 
 	public void resetCamera() {
 		if (mCamera != null) {
@@ -111,10 +101,7 @@ public class EncoderController {
 				e.printStackTrace();
 				mCamera = null;
 			}
-			mEncoderManager.stopEncoder();
-			mEncoderManager = null;
 		}
-		mEncoderManager = new EncodeManager();
 		setupCamear(mEncoderTextureView.getSurfaceTexture());
 	}
 
@@ -144,8 +131,6 @@ public class EncoderController {
 					e.printStackTrace();
 					mCamera = null;
 				}
-				mEncoderManager.stopEncoder();
-				mEncoderManager = null;
 			}
 //			if(mInstance!=-1){
 //			    NewVideoController.getInstance().nativeStopEncoder(mInstance);
@@ -242,14 +227,12 @@ public class EncoderController {
 		}else{
 			mCamera.setDisplayOrientation(mCameraDefaultOrientation);
 		}
-		Log.d("sss", "set camera thread id is " + Thread.currentThread().getId());
 		mCamera.setPreviewCallbackWithBuffer(new PreviewCallback() {
 
 			@Override
 			public void onPreviewFrame(byte[] data, Camera camera) {
 				// mController.setLocalData();
-				Log.d("sss", "PreviewCallback thread id is " + Thread.currentThread().getId());
-				mEncoderManager.putData(data);
+				// mEncoderManager.putData(data);
 				mCamera.addCallbackBuffer(mPreviewPuffer);
 			}
 		});
@@ -298,31 +281,6 @@ public class EncoderController {
 		mCamera.setParameters(para);
 
 		mPreviewPuffer = new byte[mWidth * mHeight * 3 / 2];
-
-		if (mEncoderManager == null) {
-			mEncoderManager = new EncodeManager();
-		}
-
-		mEncoderManager=new EncodeManager();
-		mEncoderManager.init(mWidth, mHeight, para.getPreviewFormat(), mCameraOrientation);
-		mEncoderManager.startEncoder(mFramerate, mBitrate);
-
-		mEncoderManager.setCallBack(new EncodeManager.DateCallBack() {
-			@Override
-			public void callback(byte[] data, MediaCodec.BufferInfo info) {
-				int width=mWidth;
-				int height=mHeight;
-				if(mScreenOrientation==ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE||mScreenOrientation==ActivityInfo.SCREEN_ORIENTATION_REVERSE_LANDSCAPE){
-					width=mHeight;
-					height=mWidth;
-				}
-
-
-				if(mH264DateListener!=null){
-					mH264DateListener.h264DateCallback(data, width, height);
-				}
-			}
-		});
 
 		mCamera.addCallbackBuffer(mPreviewPuffer);
 		try {
@@ -461,226 +419,3 @@ public class EncoderController {
 
 }
 
-
-//package com.guard.harddecoderdemo;
-//
-//import java.io.IOException;
-//import java.util.List;
-//
-//
-//import android.app.Activity;
-//import android.content.Context;
-//import android.content.res.Configuration;
-//import android.graphics.ImageFormat;
-//import android.graphics.SurfaceTexture;
-//import android.hardware.Camera;
-//import android.hardware.Camera.CameraInfo;
-//import android.hardware.Camera.PreviewCallback;
-//import android.media.MediaCodec.BufferInfo;
-//import android.util.Log;
-//import android.view.Surface;
-//import android.view.TextureView;
-//import android.view.WindowManager;
-//import android.view.TextureView.SurfaceTextureListener;
-//
-//public class EncoderController {
-//	private TextureView mEncoderTextureView;
-//	private Context mContext;
-//
-//	private Camera mCamera;
-//	private int mOrientation;
-//	private int mCurrentCameraFace = CameraInfo.CAMERA_FACING_BACK;
-//	private byte[] mPreviewBuffer;
-//	int mWidth;
-//	int mHeight;
-//	int mFrameRate = 15;
-//	int mBitrate=512*1024;
-//	private EncodeManager mEncodeManager;
-//
-//	public EncoderController(Context context,TextureView textureView){
-//		if(context==null || textureView==null){
-//			throw new RuntimeException("context and textureview can't be null");
-//		}
-//		mContext=context;
-//		mEncoderTextureView=textureView;
-//		mEncoderTextureView.setSurfaceTextureListener(mPreViewListener);
-//		mEncodeManager = new EncodeManager();
-//	}
-//
-//	private SurfaceTextureListener mPreViewListener=new SurfaceTextureListener() {
-//
-//		@Override
-//		public void onSurfaceTextureUpdated(SurfaceTexture surface) {
-//
-//		}
-//
-//		@Override
-//		public void onSurfaceTextureSizeChanged(SurfaceTexture surface, int width,
-//				int height) {
-//			   setupCamear(surface);
-//		}
-//
-//		@Override
-//		public boolean onSurfaceTextureDestroyed(SurfaceTexture surface) {
-//			if (mCamera != null) {
-//				mCamera.stopPreview();
-//				mCamera.setPreviewCallback(null);
-//				mCamera.release();
-//				mCamera = null;
-//				mEncodeManager.stopEncoder();
-//				mEncodeManager = null;
-//			}
-//
-//			return true;
-//		}
-//
-//		@Override
-//		public void onSurfaceTextureAvailable(SurfaceTexture surface, int width,
-//				int height) {
-//			openCamera();
-//			setupCamear(surface);
-//		}
-//	};
-//
-//
-//	private void setupCamear(SurfaceTexture surface) {
-//		if (mCamera == null) {
-//			return;
-//		}
-//		Camera.Parameters para = mCamera.getParameters();
-//		List<Integer> formats = para.getSupportedPreviewFormats();
-//		if (formats.contains(ImageFormat.NV21)) {
-//			para.setPreviewFormat(ImageFormat.NV21);
-//			if ("ZTE N909".equals(android.os.Build.MODEL)) {
-//			}
-//		} else if (formats.contains(ImageFormat.YV12)) {
-//			para.setPreviewFormat(ImageFormat.YV12);
-//		} else {
-//			para.setPreviewFormat(formats.get(0));
-//		}
-//
-//		mCamera.setParameters(para);
-//		mCamera.setDisplayOrientation(90);
-//		mCamera.setPreviewCallbackWithBuffer(new PreviewCallback() {
-//
-//			@Override
-//			public void onPreviewFrame(byte[] data, Camera camera) {
-//				// mController.setLocalData();
-//				mEncodeManager.putData(data);
-//				mCamera.addCallbackBuffer(mPreviewBuffer);
-//			}
-//		});
-////		List<android.hardware.Camera.Size> sizes = para
-////				.getSupportedPreviewSizes();
-//		para.setPreviewSize(640, 480);
-//
-//		mWidth = para.getPreviewSize().width;
-//		mHeight = para.getPreviewSize().height;
-//		List<int[]> fpsRange = para.getSupportedPreviewFpsRange();
-//		int[] fps = null;
-//		for (int i = 0; i < fpsRange.size(); i++) {
-//			if (fpsRange.get(i)[1] == mFrameRate) {
-//				if (fps == null) {
-//					fps = fpsRange.get(i);
-//				} else {
-//					if (fps[0] < fpsRange.get(i)[0]) {
-//						fps = fpsRange.get(i);
-//					}
-//				}
-//			}
-//		}
-//		if (fps != null) {
-//			para.setPreviewFpsRange(fps[0], fps[1]);
-//		}
-//
-//		// para.setFocusMode(Camera.Parameters.FOCUS_MODE_CONTINUOUS_VIDEO);//1连续对焦
-//		mCamera.setParameters(para);
-//
-//		mPreviewBuffer = new byte[mWidth * mHeight * 3 / 2];
-//		if (mEncodeManager == null) {
-//			mEncodeManager = new EncodeManager();
-//		}
-//		mEncodeManager.init(mWidth, mHeight, para.getPreviewFormat(), mOrientation);
-//		mEncodeManager.startEncoder(mFrameRate, mBitrate);
-//        mEncodeManager.mDateCallBack=new EncodeManager.DateCallBack() {
-//
-//			@Override
-//			public void callback(byte[] data, BufferInfo info) {
-//				if(mH264DateListener!=null){
-//					mH264DateListener.h264DateCallback(data,mWidth,mHeight);
-//				}
-//			}
-//		};
-//		mCamera.addCallbackBuffer(mPreviewBuffer);
-//		try {
-//			mCamera.setPreviewTexture(surface);
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		mCamera.startPreview();
-//		// mCamera.cancelAutoFocus();// 2如果要实现连续的自动对焦，这一句必须加上
-//	}
-//
-//	private H264DateListener mH264DateListener;
-//
-//	interface H264DateListener{
-//		void h264DateCallback(byte[] data, int width, int height);
-//	}
-//
-//
-//
-//	private void openCamera() {
-//		int cameraCount = 0;
-//		CameraInfo cameraInfo = new CameraInfo();
-//		cameraCount = Camera.getNumberOfCameras(); // get cameras number
-//
-//		for (int camIdx = 0; camIdx < cameraCount; camIdx++) {
-//			Camera.getCameraInfo(camIdx, cameraInfo); // get camerainfo
-//			if (cameraInfo.facing == mCurrentCameraFace) {
-//				try {
-//					mCamera = Camera.open(camIdx);
-//					Log.d("sss",cameraInfo.orientation+"    "+mOrientation);
-//					mOrientation = cameraInfo.orientation;
-//					if(getDeviceDefaultOrientation() == Configuration.ORIENTATION_LANDSCAPE){
-//						if(mCurrentCameraFace == CameraInfo.CAMERA_FACING_FRONT){
-//							mOrientation+=180;
-//							mOrientation=mOrientation%360;
-//						}
-//					}
-//
-//				} catch (RuntimeException e) {
-//					e.printStackTrace();
-//				}
-//
-//			}
-//		}
-//	}
-//
-//	private int getDeviceDefaultOrientation() {
-//
-//		WindowManager windowManager = (WindowManager)mContext.getSystemService(Activity.WINDOW_SERVICE);
-//
-//		Configuration config = mContext.getResources().getConfiguration();
-//
-//		int rotation = windowManager.getDefaultDisplay().getRotation();
-//
-//		if (((rotation == Surface.ROTATION_0 || rotation == Surface.ROTATION_180) && config.orientation == Configuration.ORIENTATION_LANDSCAPE)
-//				|| ((rotation == Surface.ROTATION_90 || rotation == Surface.ROTATION_270) && config.orientation == Configuration.ORIENTATION_PORTRAIT)) {
-//			return Configuration.ORIENTATION_LANDSCAPE;
-//		} else {
-//			return Configuration.ORIENTATION_PORTRAIT;
-//		}
-//	}
-//
-//	public H264DateListener getH264DateListener() {
-//		return mH264DateListener;
-//	}
-//
-//	public void setH264DateListener(H264DateListener mH264DateListener) {
-//		this.mH264DateListener = mH264DateListener;
-//	}
-//
-//
-//
-//}
