@@ -112,6 +112,7 @@
  /home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/sched.h \
  /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/assert.h \
  /home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/../include/assert.h \
+ /home/yxwang/git/Guard/openh264demo/src/main/jni/util.h \
  /home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/android/log.h \
  /home/yxwang/git/Guard/openh264demo/src/main/jni/include/svc/codec_api.h \
  /home/yxwang/git/Guard/openh264demo/src/main/jni/include/svc/codec_app_def.h \
@@ -342,6 +343,8 @@
 /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/assert.h:
 
 /home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/../include/assert.h:
+
+/home/yxwang/git/Guard/openh264demo/src/main/jni/util.h:
 
 /home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/android/log.h:
 

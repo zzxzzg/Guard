@@ -1,13 +1,10 @@
 #include <jni.h>
 #include <assert.h>
-#include <android/log.h>
 #include <stdio.h>
 #include <pthread.h>
 #include "YUVBuffer.h"
 #include "EncoderManager.h"
-
-#define LOG_TAG "sss"
-#define LOGI(...) __android_log_print(ANDROID_LOG_INFO,LOG_TAG,__VA_ARGS__)
+#include "util.h"
 
 
 EncoderManager *manager;
@@ -25,9 +22,14 @@ static void nativePutLocalDate(JNIEnv *env, jobject thiz,jbyteArray yuvData, jin
     env->ReleaseByteArrayElements(yuvData, (jbyte*) byteBuf, 0);
 }
 
+static void nativeStop(JNIEnv *env, jobject thiz){
+
+}
+
 static JNINativeMethod gMethods[] = {
         { "init", "(II)V",(void *) init },
         { "nativePutLocalDate", "([BII)V", (void *) nativePutLocalDate },
+        {"nativeStop","()V",(void*)nativeStop}
 };
 
 static const char* const CONNECT_JAVA_PACKAGE =

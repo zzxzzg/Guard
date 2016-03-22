@@ -16,6 +16,14 @@ EncoderManager::EncoderManager() {
 
 }
 
+void EncoderManager::stop() {
+    isStart=false;
+    if (encoder_) {
+        encoder_->Uninitialize();
+        WelsDestroySVCEncoder (encoder_);
+    }
+}
+
 void EncoderManager::setParam(int width, int height) {
     //step2
     SEncParamBase param;
@@ -30,8 +38,12 @@ void EncoderManager::setParam(int width, int height) {
 
 void EncoderManager::putDate(unsigned char *byteBuf, jint width,
                              jint height) {
+    if(!isStart){
+        return;
+    }
     YUVBuffer *buffer=new YUVBuffer(byteBuf,width,height);
     pthread_mutex_lock(&_mutex);
+    LOGI("put date   %n",_data_queue.size());
     if( _data_queue.size()>10){
         YUVBuffer *data = NULL;
         data = _data_queue.front();

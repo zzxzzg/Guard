@@ -20,7 +20,6 @@
  /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_config_compat_post.h \
  /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/assert.h \
  /home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/../include/assert.h \
- /home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/android/log.h \
  /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stdio.h \
  /home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/../include/stdio.h \
  /home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/sys/types.h \
@@ -114,6 +113,8 @@
  /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_heap.h \
  /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_heap.c \
  /home/yxwang/git/Guard/openh264demo/src/main/jni/YUVBuffer.h \
+ /home/yxwang/git/Guard/openh264demo/src/main/jni/util.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/android/log.h \
  /home/yxwang/git/Guard/openh264demo/src/main/jni/include/svc/codec_api.h \
  /home/yxwang/git/Guard/openh264demo/src/main/jni/include/svc/codec_app_def.h \
  /home/yxwang/git/Guard/openh264demo/src/main/jni/include/svc/codec_def.h \
@@ -159,8 +160,6 @@
 /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/assert.h:
 
 /home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/../include/assert.h:
-
-/home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/android/log.h:
 
 /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stdio.h:
 
@@ -347,6 +346,10 @@
 /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_heap.c:
 
 /home/yxwang/git/Guard/openh264demo/src/main/jni/YUVBuffer.h:
+
+/home/yxwang/git/Guard/openh264demo/src/main/jni/util.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/android/log.h:
 
 /home/yxwang/git/Guard/openh264demo/src/main/jni/include/svc/codec_api.h:
 

@@ -12,4 +12,5 @@ public enum OpenH264Model {
 
     public native void init(int width,int height);
     public native void nativePutLocalDate(byte[] bytes,int width,int height);
+    public native void nativeStop();
 }

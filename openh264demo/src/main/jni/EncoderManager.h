@@ -9,7 +9,7 @@
 #include <YUVBuffer.h>
 #include <pthread.h>
 #include <assert.h>
-#include <android/log.h>
+#include "util.h"
 
 #include "include/svc/codec_api.h"
 #include "include/svc/codec_ver.h"
@@ -21,10 +21,13 @@ public:
     ~EncoderManager();
     void putDate(unsigned char* yuvData, jint width, jint height);
     void setParam(int width,int height);
+    void stop();
     pthread_mutex_t _mutex;
     std::queue<YUVBuffer*> _data_queue;
 
     ISVCEncoder* encoder_;
+
+    bool isStart=true;
 
 };
 

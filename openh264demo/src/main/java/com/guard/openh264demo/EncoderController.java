@@ -50,7 +50,7 @@ public class EncoderController {
 
 	private H264DateListener mH264DateListener;
 
-	public static interface H264DateListener{
+	public interface H264DateListener{
 		void h264DateCallback(byte[] data, int width, int height);
 	}
 
@@ -132,6 +132,8 @@ public class EncoderController {
 					mCamera = null;
 				}
 			}
+
+			OpenH264Model.INSTAICE.nativeStop();
 //			if(mInstance!=-1){
 //			    NewVideoController.getInstance().nativeStopEncoder(mInstance);
 //			    mInstance=-1;
@@ -233,6 +235,7 @@ public class EncoderController {
 			public void onPreviewFrame(byte[] data, Camera camera) {
 				// mController.setLocalData();
 				// mEncoderManager.putData(data);
+				OpenH264Model.INSTAICE.nativePutLocalDate(data,mWidth,mHeight);
 				mCamera.addCallbackBuffer(mPreviewPuffer);
 			}
 		});
@@ -258,6 +261,7 @@ public class EncoderController {
 		mWidth = para.getPreviewSize().width;
 		mHeight = para.getPreviewSize().height;
 
+		OpenH264Model.INSTAICE.init(mWidth,mHeight);
 
 		List<int[]> fpsRange = para.getSupportedPreviewFpsRange();
 		int[] fps = null;
