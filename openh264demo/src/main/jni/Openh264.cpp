@@ -3,18 +3,21 @@
 #include <stdio.h>
 #include <pthread.h>
 #include "YUVBuffer.h"
-#include "EncoderManager.h"
+#include "Openh264Encoder.h"
 #include "util.h"
 
 
-EncoderManager *manager;
+Openh264Encoder *manager;
 
-void init(JNIEnv *pEnv, jobject pObj,jint width,jint height){
-    manager=new EncoderManager();
-    manager->setParam(width,height);
+void initOpenH264Encoder(JNIEnv *pEnv, jobject pObj,jint width,jint height){
+    manager=new Openh264Encoder();
 }
 
-static void nativePutLocalDate(JNIEnv *env, jobject thiz,jbyteArray yuvData, jint width, jint height) {
+void startOpenH264Encoder(JNIEnv *pEnv, jobject pObj){
+    manager->start();
+}
+
+static void putYUVDate(JNIEnv *env, jobject thiz,jbyteArray yuvData, jint width, jint height) {
     jint len = env->GetArrayLength(yuvData);
     unsigned char *byteBuf = (unsigned char*) env->GetByteArrayElements(
             yuvData, 0);
@@ -22,14 +25,21 @@ static void nativePutLocalDate(JNIEnv *env, jobject thiz,jbyteArray yuvData, jin
     env->ReleaseByteArrayElements(yuvData, (jbyte*) byteBuf, 0);
 }
 
-static void nativeStop(JNIEnv *env, jobject thiz){
+static void stopOpenH264Encoder(JNIEnv *env, jobject thiz){
+    manager->stop();
+}
 
+static void setOpenH264Param(JNIEnv *env, jobject thiz,jint width,jint height,jint frameRate,jint bitrate){
+    manager->setParam(width,height,frameRate,bitrate);
 }
 
 static JNINativeMethod gMethods[] = {
-        { "init", "(II)V",(void *) init },
-        { "nativePutLocalDate", "([BII)V", (void *) nativePutLocalDate },
-        {"nativeStop","()V",(void*)nativeStop}
+        { "nativeInitOpenH264Encoder", "()V",(void *) initOpenH264Encoder },
+        { "nativePutYUVDate", "([BII)V", (void *) putYUVDate },
+        { "nativeStopOpenH264Encoder","()V",(void*)stopOpenH264Encoder},
+        { "nativeStartOpenH264Encoder","()V",(void*)startOpenH264Encoder},
+        { "nativeSetOpenH264Param","(IIII)V",(void*)setOpenH264Param},
+
 };
 
 static const char* const CONNECT_JAVA_PACKAGE =

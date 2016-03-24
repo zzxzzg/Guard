@@ -10,7 +10,9 @@ public enum OpenH264Model {
         System.loadLibrary("openh264");
     }
 
-    public native void init(int width,int height);
-    public native void nativePutLocalDate(byte[] bytes,int width,int height);
-    public native void nativeStop();
+    public native void nativeInitOpenH264Encoder();
+    public native void nativePutYUVDate(byte[] bytes,int width,int height);
+    public native void nativeStopOpenH264Encoder();
+    public native void nativeStartOpenH264Encoder();
+    public native void nativeSetOpenH264Param(int width,int height,int frameRate,int bitrate);
 }

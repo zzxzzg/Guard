@@ -13,5 +13,5 @@ YUVBuffer::YUVBuffer(unsigned char *data, int width_, int height_) {
 }
 
 YUVBuffer::~YUVBuffer() {
-    delete[] byteBuf;
+    delete byteBuf;
 }

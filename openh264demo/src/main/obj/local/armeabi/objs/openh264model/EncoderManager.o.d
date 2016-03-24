@@ -112,13 +112,69 @@
  /home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/sched.h \
  /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/assert.h \
  /home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/../include/assert.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/fstream \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_ioserr.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_fstream.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_streambuf.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_ios_base.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_stdexcept_base.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_exception.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_locale.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_cwchar.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/../include/wchar.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/sys/_wchar_limits.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_mbstate_t.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_threads.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_threads.c \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_ctime.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_string_fwd.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_iosfwd.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/char_traits.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_string.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_string_base.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_string_npos.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_string_operators.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_string.c \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_ctraits_fns.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_function.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_function_adaptors.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_facets_fwd.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_streambuf.c \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_istream.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_ios.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_ctype.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/c_locale.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_numpunct.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_ios.c \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_ostream.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_ostreambuf_iterator.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_ostream.c \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_num_put.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_iostream_string.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_num_put.c \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_limits.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/cfloat \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/float.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_limits.c \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_istreambuf_iterator.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_istream.c \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_num_get.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_num_get.c \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_codecvt.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_fstream.c \
  /home/yxwang/git/Guard/openh264demo/src/main/jni/util.h \
  /home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/android/log.h \
  /home/yxwang/git/Guard/openh264demo/src/main/jni/include/svc/codec_api.h \
  /home/yxwang/git/Guard/openh264demo/src/main/jni/include/svc/codec_app_def.h \
  /home/yxwang/git/Guard/openh264demo/src/main/jni/include/svc/codec_def.h \
  /home/yxwang/git/Guard/openh264demo/src/main/jni/include/svc/codec_ver.h \
- /home/yxwang/git/Guard/openh264demo/src/main/jni/include/svc/codec_app_def.h
+ /home/yxwang/git/Guard/openh264demo/src/main/jni/include/svc/codec_app_def.h \
+ /home/yxwang/git/Guard/openh264demo/src/main/jni/include/svc/codec_def.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/unistd.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/sys/select.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/sys/sysconf.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/linux/capability.h \
+ /home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/pathconf.h
 
 /home/yxwang/git/Guard/openh264demo/src/main/jni/EncoderManager.h:
 
@@ -344,6 +400,106 @@
 
 /home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/../include/assert.h:
 
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/fstream:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_ioserr.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_fstream.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_streambuf.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_ios_base.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_stdexcept_base.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_exception.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_locale.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_cwchar.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/../include/wchar.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/sys/_wchar_limits.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_mbstate_t.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_threads.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_threads.c:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_ctime.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_string_fwd.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_iosfwd.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/char_traits.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_string.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_string_base.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_string_npos.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_string_operators.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_string.c:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_ctraits_fns.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_function.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_function_adaptors.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_facets_fwd.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_streambuf.c:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_istream.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_ios.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_ctype.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/c_locale.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_numpunct.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_ios.c:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_ostream.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_ostreambuf_iterator.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_ostream.c:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_num_put.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_iostream_string.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_num_put.c:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_limits.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/cfloat:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/float.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_limits.c:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_istreambuf_iterator.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_istream.c:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_num_get.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_num_get.c:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_codecvt.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/sources/cxx-stl/stlport/stlport/stl/_fstream.c:
+
 /home/yxwang/git/Guard/openh264demo/src/main/jni/util.h:
 
 /home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/android/log.h:
@@ -357,3 +513,15 @@
 /home/yxwang/git/Guard/openh264demo/src/main/jni/include/svc/codec_ver.h:
 
 /home/yxwang/git/Guard/openh264demo/src/main/jni/include/svc/codec_app_def.h:
+
+/home/yxwang/git/Guard/openh264demo/src/main/jni/include/svc/codec_def.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/unistd.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/sys/select.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/sys/sysconf.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/linux/capability.h:
+
+/home/yxwang/adt-bundle-linux/android-ndk-r10e/platforms/android-15/arch-arm/usr/include/pathconf.h:

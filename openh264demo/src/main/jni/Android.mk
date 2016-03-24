@@ -36,9 +36,10 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := openh264model
 #LOCAL_C_INCLUDES += $(LOCAL_PATH)/include/ \
 
-LOCAL_SRC_FILES:= Openh264.cpp YUVBuffer.cpp EncoderManager.cpp
+LOCAL_SRC_FILES:= Openh264.cpp YUVBuffer.cpp Openh264Encoder.cpp
 LOCAL_SHARED_LIBRARIES := openh264
 LOCAL_STATIC_LIBRARIES := openh264encoder openh264common openh264processing openh264decoder
 LOCAL_LDLIBS +=  -llog
+LOCAL_CPPFLAGS := -std=c++11 -pthread
 
 include $(BUILD_SHARED_LIBRARY)

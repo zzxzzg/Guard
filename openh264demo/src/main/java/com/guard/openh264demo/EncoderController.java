@@ -70,6 +70,7 @@ public class EncoderController {
 		mContext=context;
 		mEncoderTextureView=textureView;
 		mEncoderTextureView.setSurfaceTextureListener(mPreViewListener);
+		OpenH264Model.INSTAICE.nativeInitOpenH264Encoder();
 	}
 
 
@@ -133,7 +134,7 @@ public class EncoderController {
 				}
 			}
 
-			OpenH264Model.INSTAICE.nativeStop();
+			OpenH264Model.INSTAICE.nativeStopOpenH264Encoder();
 //			if(mInstance!=-1){
 //			    NewVideoController.getInstance().nativeStopEncoder(mInstance);
 //			    mInstance=-1;
@@ -150,6 +151,7 @@ public class EncoderController {
 //			}
 			openCamera();
 			setupCamear(surface);
+			OpenH264Model.INSTAICE.nativeStartOpenH264Encoder();
 		}
 	};
 
@@ -235,7 +237,7 @@ public class EncoderController {
 			public void onPreviewFrame(byte[] data, Camera camera) {
 				// mController.setLocalData();
 				// mEncoderManager.putData(data);
-				OpenH264Model.INSTAICE.nativePutLocalDate(data,mWidth,mHeight);
+				OpenH264Model.INSTAICE.nativePutYUVDate(data,mWidth,mHeight);
 				mCamera.addCallbackBuffer(mPreviewPuffer);
 			}
 		});
@@ -261,7 +263,7 @@ public class EncoderController {
 		mWidth = para.getPreviewSize().width;
 		mHeight = para.getPreviewSize().height;
 
-		OpenH264Model.INSTAICE.init(mWidth,mHeight);
+		OpenH264Model.INSTAICE.nativeSetOpenH264Param(mWidth, mHeight, mFramerate, mBitrate);
 
 		List<int[]> fpsRange = para.getSupportedPreviewFpsRange();
 		int[] fps = null;
