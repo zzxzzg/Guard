@@ -3,12 +3,53 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="1.7" />
+        <option name="gradleHome" value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/aidlclient" />
+            <option value="$PROJECT_DIR$/aidlserver" />
+            <option value="$PROJECT_DIR$/animationdemo" />
+            <option value="$PROJECT_DIR$/animationlib" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/bitmapfun" />
+            <option value="$PROJECT_DIR$/bitmapfundemo" />
+            <option value="$PROJECT_DIR$/cleanarchitecture" />
+            <option value="$PROJECT_DIR$/databindingdemo" />
+            <option value="$PROJECT_DIR$/dlopendemo" />
+            <option value="$PROJECT_DIR$/eventbusdemo" />
+            <option value="$PROJECT_DIR$/filechooserdemo" />
+            <option value="$PROJECT_DIR$/filechooserlib" />
+            <option value="$PROJECT_DIR$/gof-example" />
+            <option value="$PROJECT_DIR$/guardlistdemo" />
+            <option value="$PROJECT_DIR$/harddecoderdemo" />
+            <option value="$PROJECT_DIR$/httpstest" />
+            <option value="$PROJECT_DIR$/imageview-zoom-demo" />
+            <option value="$PROJECT_DIR$/imageview-zoom-lib" />
+            <option value="$PROJECT_DIR$/listanimationdemo" />
+            <option value="$PROJECT_DIR$/listcontroldemo" />
+            <option value="$PROJECT_DIR$/listcontrollib" />
+            <option value="$PROJECT_DIR$/listcontrollib-manipulation" />
+            <option value="$PROJECT_DIR$/openh264demo" />
+            <option value="$PROJECT_DIR$/pinnedlistdemo" />
+            <option value="$PROJECT_DIR$/pinnedlistlib" />
+            <option value="$PROJECT_DIR$/puremvc_standard_demo" />
+            <option value="$PROJECT_DIR$/puremvc_standard_lib" />
+            <option value="$PROJECT_DIR$/srclib" />
+            <option value="$PROJECT_DIR$/textmeasure" />
+            <option value="$PROJECT_DIR$/touchdispatchdemo" />
+            <option value="$PROJECT_DIR$/utillib" />
+            <option value="$PROJECT_DIR$/vector-drawable-lib" />
+            <option value="$PROJECT_DIR$/volley" />
+          </set>
+        </option>
+        <option name="myModules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/aidlclient" />
+            <option value="$PROJECT_DIR$/aidlserver" />
             <option value="$PROJECT_DIR$/animationdemo" />
             <option value="$PROJECT_DIR$/animationlib" />
             <option value="$PROJECT_DIR$/app" />
