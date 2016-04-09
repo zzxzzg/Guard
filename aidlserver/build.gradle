@@ -5,7 +5,7 @@ android {
     buildToolsVersion '23.0.2'
 
     defaultConfig {
-        applicationId "zzxzzg.com.aidlserver"
+        applicationId "zzxzzg.com.server"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1

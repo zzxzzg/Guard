@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 public void actionPerformed(int actionId) throws RemoteException {
 
                 }
-    
+
                 @Override
                 public IBinder asBinder() {
                     return null;
