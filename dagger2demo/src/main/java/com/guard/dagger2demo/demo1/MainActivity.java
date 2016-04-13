@@ -2,8 +2,10 @@ package com.guard.dagger2demo.demo1;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.guard.dagger2demo.R;
+import com.guard.dagger2demo.demo2.Customer;
 
 import javax.inject.Inject;
 
@@ -20,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         component.inject(this);
 
         mOSHelp=component.getOSHelp();
-        mOSHelp.getDeviceBrand();
+        Log.d("sss",mOSHelp.getDeviceBrand());
+
+        Customer customer=new Customer();
     }
 }
