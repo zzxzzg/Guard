@@ -1,8 +1,9 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "24.0.0 rc2"
+    buildToolsVersion '24.0.0 rc2'
 
     defaultConfig {
         applicationId "com.guard.dagger2demo"
@@ -23,6 +24,8 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.3.0'
-    compile 'com.google.dagger:dagger:2.3'
-    provided 'com.google.dagger:dagger-compiler:2.3'
+    compile 'com.google.dagger:dagger:2.2'
+    provided 'com.google.dagger:dagger-compiler:2.2'
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+    //    provided 'com.neenbedankt.gradle.plugins:android-apt:1.8'
 }
