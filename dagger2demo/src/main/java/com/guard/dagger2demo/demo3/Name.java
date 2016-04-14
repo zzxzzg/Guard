@@ -1,5 +1,7 @@
 package com.guard.dagger2demo.demo3;
 
+import android.util.Log;
+
 import javax.inject.Inject;
 
 /**
@@ -19,5 +21,13 @@ public class Name {
         mFirstName=firstName;
         mLastName=lastName;
         mMiddleName=middleName;
+    }
+
+    public void printName(){
+        if(mMiddleName==null){
+            Log.d("sss",mFirstName+" "+mLastName);
+        }else{
+            Log.d("sss",mFirstName+" "+mMiddleName+" "+mLastName);
+        }
     }
 }

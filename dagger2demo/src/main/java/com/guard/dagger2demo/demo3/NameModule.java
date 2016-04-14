@@ -8,5 +8,15 @@ import dagger.Provides;
  */
 @Module
 public class NameModule {
+    @Provides
+    @Country("china")
+    Name getChinaName(){
+        return new Name("wang","yxwang");
+    }
 
+    @Provides
+    @Country("foreigner")
+    Name getForeignerName(){
+        return new Name("yxwang","wang","D");
+    }
 }
