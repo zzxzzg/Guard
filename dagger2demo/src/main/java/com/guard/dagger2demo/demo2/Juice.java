@@ -5,15 +5,15 @@ import android.util.Log;
 import javax.inject.Inject;
 
 /**
- * Created by yxwang on 16-4-13.
+ * Created by yxwang on 16-4-14.
  */
-public class Coffee {
+public class Juice {
     @Inject
-    public Coffee(CoffeeBean bean){
-        bean.hot();
+    public Juice(){
+
     }
 
     public void drink(){
-        Log.d("sss","drink");
+        Log.d("sss","drink juice");
     }
 }

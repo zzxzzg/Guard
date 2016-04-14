@@ -8,4 +8,5 @@ import dagger.Component;
 @Component()
 public interface CustomerComponent {
     public void inject(Customer customer);
+    public Juice getJuice();
 }

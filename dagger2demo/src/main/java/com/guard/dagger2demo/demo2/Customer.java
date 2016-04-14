@@ -9,13 +9,17 @@ public class Customer {
     @Inject
     Coffee mCoffee;
 
+    Juice mJuice;
+
     public Customer(){
         CustomerComponent component=DaggerCustomerComponent.builder().build();
         component.inject(this);
+        mJuice=component.getJuice();
         drink();
     }
 
     public void drink(){
         mCoffee.drink();
+        mJuice.drink();
     }
 }
