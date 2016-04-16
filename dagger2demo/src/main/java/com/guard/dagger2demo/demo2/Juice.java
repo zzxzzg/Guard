@@ -4,9 +4,6 @@ import android.util.Log;
 
 import javax.inject.Inject;
 
-/**
- * Created by apple on 16/4/13.
- */
 public class Juice {
     @Inject
     public Juice(){

@@ -9,8 +9,8 @@ import javax.inject.Inject;
  */
 public class Coffee {
     @Inject
-    public Coffee(){
-
+    public Coffee(CoffeeBean bean){
+        bean.hot();
     }
 
     public void drink(){

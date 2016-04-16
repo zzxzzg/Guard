@@ -6,6 +6,7 @@ import android.util.Log;
 
 import com.guard.dagger2demo.R;
 import com.guard.dagger2demo.demo2.Customer;
+import com.guard.dagger2demo.demo3.Person;
 
 import javax.inject.Inject;
 
@@ -25,5 +26,6 @@ public class MainActivity extends AppCompatActivity {
         Log.d("sss",mOSHelp.getDeviceBrand());
 
         Customer customer=new Customer();
+        Person person=new Person();
     }
 }
