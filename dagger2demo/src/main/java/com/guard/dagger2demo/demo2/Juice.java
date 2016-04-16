@@ -4,6 +4,8 @@ import android.util.Log;
 
 import javax.inject.Inject;
 
+import dagger.Provides;
+
 public class Juice {
     @Inject
     public Juice(){

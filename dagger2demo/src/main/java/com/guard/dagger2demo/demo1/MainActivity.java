@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.google.common.util.concurrent.ListenableFuture;
 import com.guard.dagger2demo.R;
 import com.guard.dagger2demo.demo2.Customer;
 import com.guard.dagger2demo.demo3.Person;
@@ -27,5 +28,9 @@ public class MainActivity extends AppCompatActivity {
 
         Customer customer=new Customer();
         Person person=new Person();
+
+        com.guard.dagger2demo.demo6.User user=new com.guard.dagger2demo.demo6.User();
+
+
     }
 }
