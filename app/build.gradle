@@ -1,9 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        release {
+            keyAlias 'zzxzzg'
+            keyPassword '092013'
+            storeFile file('/Users/apple/github/local/Guard/keystore.jks')
+            storePassword 's1ptest'
+        }
+    }
     compileSdkVersion 23
     buildToolsVersion '24.0.0 rc2'
-
     defaultConfig {
         applicationId "com.guard"
         minSdkVersion 15
