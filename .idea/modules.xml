@@ -32,6 +32,7 @@
       <module fileurl="file://$PROJECT_DIR$/pinnedlistlib/pinnedlistlib.iml" filepath="$PROJECT_DIR$/pinnedlistlib/pinnedlistlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/puremvc_standard_demo/puremvc_standard_demo.iml" filepath="$PROJECT_DIR$/puremvc_standard_demo/puremvc_standard_demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/puremvc_standard_lib/puremvc_standard_lib.iml" filepath="$PROJECT_DIR$/puremvc_standard_lib/puremvc_standard_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/recyclerviewdemo/recyclerviewdemo.iml" filepath="$PROJECT_DIR$/recyclerviewdemo/recyclerviewdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxjavademo/rxjavademo.iml" filepath="$PROJECT_DIR$/rxjavademo/rxjavademo.iml" />
       <module fileurl="file://$PROJECT_DIR$/srclib/srclib.iml" filepath="$PROJECT_DIR$/srclib/srclib.iml" />
       <module fileurl="file://$PROJECT_DIR$/textmeasure/textmeasure.iml" filepath="$PROJECT_DIR$/textmeasure/textmeasure.iml" />
