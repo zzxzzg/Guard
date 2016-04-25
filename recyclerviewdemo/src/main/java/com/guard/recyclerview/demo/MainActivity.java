@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
         });
         mRecycleView.setAdapter(adapter);
 
-        mRecycleView.addItemDecoration(new );
     }
 
 
@@ -62,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         }
         @Override
         public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            View view= LayoutInflater.from(MainActivity.this).inflate(android.R.layout.simple_list_item_1,null);
+            View view= LayoutInflater.from(MainActivity.this).inflate(android.R.layout.simple_list_item_1,parent,false);
             MyViewHolder holder=new MyViewHolder(view);
             view.setOnClickListener(new View.OnClickListener() {
                 @Override

@@ -37,6 +37,7 @@
       <module fileurl="file://$PROJECT_DIR$/srclib/srclib.iml" filepath="$PROJECT_DIR$/srclib/srclib.iml" />
       <module fileurl="file://$PROJECT_DIR$/textmeasure/textmeasure.iml" filepath="$PROJECT_DIR$/textmeasure/textmeasure.iml" />
       <module fileurl="file://$PROJECT_DIR$/touchdispatchdemo/touchdispatchdemo.iml" filepath="$PROJECT_DIR$/touchdispatchdemo/touchdispatchdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/transitionframeworkdemo/transitionframeworkdemo.iml" filepath="$PROJECT_DIR$/transitionframeworkdemo/transitionframeworkdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/utillib/utillib.iml" filepath="$PROJECT_DIR$/utillib/utillib.iml" />
       <module fileurl="file://$PROJECT_DIR$/vector-drawable-lib/vector-drawable-lib.iml" filepath="$PROJECT_DIR$/vector-drawable-lib/vector-drawable-lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/volley/volley.iml" filepath="$PROJECT_DIR$/volley/volley.iml" />
