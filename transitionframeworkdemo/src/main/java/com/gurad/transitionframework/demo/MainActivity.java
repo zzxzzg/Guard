@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         BasicTransitionFragment fragment = new BasicTransitionFragment();
-        transaction.replace(R.id.container, fragment);
+        CustomTransitionFragment fragment1=new CustomTransitionFragment();
+        transaction.replace(R.id.container, fragment1);
         transaction.addToBackStack(null);
         transaction.commit();
 
