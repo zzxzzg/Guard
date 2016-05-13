@@ -37,6 +37,8 @@
       <module fileurl="file://$PROJECT_DIR$/recyclerviewdemo/recyclerviewdemo.iml" filepath="$PROJECT_DIR$/recyclerviewdemo/recyclerviewdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxjavademo/rxjavademo.iml" filepath="$PROJECT_DIR$/rxjavademo/rxjavademo.iml" />
       <module fileurl="file://$PROJECT_DIR$/srclib/srclib.iml" filepath="$PROJECT_DIR$/srclib/srclib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/super_recyclerview_lib/super_recyclerview_lib.iml" filepath="$PROJECT_DIR$/super_recyclerview_lib/super_recyclerview_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/super_recyclerview_sample/super_recyclerview_sample.iml" filepath="$PROJECT_DIR$/super_recyclerview_sample/super_recyclerview_sample.iml" />
       <module fileurl="file://$PROJECT_DIR$/textmeasure/textmeasure.iml" filepath="$PROJECT_DIR$/textmeasure/textmeasure.iml" />
       <module fileurl="file://$PROJECT_DIR$/touchdispatchdemo/touchdispatchdemo.iml" filepath="$PROJECT_DIR$/touchdispatchdemo/touchdispatchdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/transitionframeworkdemo/transitionframeworkdemo.iml" filepath="$PROJECT_DIR$/transitionframeworkdemo/transitionframeworkdemo.iml" />
