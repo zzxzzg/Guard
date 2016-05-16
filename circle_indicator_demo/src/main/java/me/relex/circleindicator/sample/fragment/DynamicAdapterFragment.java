@@ -7,6 +7,9 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.imbryk.viewPager.LoopViewPager;
+
 import me.relex.circleindicator.CircleIndicator;
 import me.relex.circleindicator.sample.R;
 import me.relex.circleindicator.sample.SamplePagerAdapter;
@@ -14,6 +17,7 @@ import me.relex.circleindicator.sample.SamplePagerAdapter;
 public class DynamicAdapterFragment extends Fragment implements View.OnClickListener {
 
     private SamplePagerAdapter mAdapter;
+    private LoopViewPager viewpager;
 
     @Nullable @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
@@ -32,7 +36,7 @@ public class DynamicAdapterFragment extends Fragment implements View.OnClickList
             }
         };
 
-        ViewPager viewpager = (ViewPager) view.findViewById(R.id.viewpager);
+        viewpager = (LoopViewPager) view.findViewById(R.id.viewpager);
         CircleIndicator indicator = (CircleIndicator) view.findViewById(R.id.indicator);
         viewpager.setAdapter(mAdapter);
         indicator.setViewPager(viewpager);
@@ -43,9 +47,11 @@ public class DynamicAdapterFragment extends Fragment implements View.OnClickList
         switch (v.getId()) {
             case R.id.add:
                 mAdapter.addItem();
+                viewpager.getRealAdapter().notifyDataSetChanged();
                 break;
             case R.id.remove:
                 mAdapter.removeItem();
+                viewpager.getRealAdapter().notifyDataSetChanged();
                 break;
         }
     }

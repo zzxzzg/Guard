@@ -72,6 +72,10 @@ public class LoopViewPager extends ViewPager {
         setCurrentItem(0, false);
     }
 
+    public PagerAdapter getRealAdapter(){
+        return mAdapter;
+    }
+
     @Override public PagerAdapter getAdapter() {
         return mAdapter != null ? mAdapter.getRealAdapter() : mAdapter;
     }

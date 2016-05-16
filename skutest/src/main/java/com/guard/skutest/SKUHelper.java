@@ -1,8 +1,8 @@
 package com.guard.skutest;
 
-import com.alibaba.fastjson.annotation.JSONField;
-import com.carme.caruser.entity.ProductDetail;
 
+
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -34,7 +34,7 @@ public enum SKUHelper {
         }
 
 
-
+        Random random=new Random(System.currentTimeMillis());
         for(int i=0;i<20;i++){
             ProductDetail.SkusOnsellBean skusOnsellBean=new ProductDetail.SkusOnsellBean();
             skusOnsellBean.setPrice(100f);
@@ -42,12 +42,11 @@ public enum SKUHelper {
             skusOnsellBean.setSkuId(1);
             String str="";
             for(int j=0;j<10;j++){
-                Random random=new Random(System.currentTimeMillis());
                 int result=random.nextInt(10);
                 str=str+(result+j*10)+",";
             }
             if(str.endsWith(",")){
-                str=str.substring(0,str.length());
+                str=str.substring(0,str.length()-1);
             }
             skusOnsellBean.setSkuSpecCode(str);
             TEST_BEAN.add(skusOnsellBean);
@@ -74,7 +73,7 @@ public enum SKUHelper {
             947, 953, 967, 971, 977, 983, 991, 997
     };
 
-    Map<Long,Integer> VALUE_PROME_MAP=new HashMap<>();//<Value, prome>
+    Map<String,String> VALUE_PROME_MAP=new HashMap<>();//<Value, prome>
     List<SKUData> mSKUDatas=new ArrayList<>();
     List<List<Long>> mGroups=new ArrayList<>();
 
@@ -86,7 +85,7 @@ public enum SKUHelper {
                 if(i>PROME_TABLE.length){
                     throw new Exception("sku is to long!");
                 }
-                VALUE_PROME_MAP.put(value.getSpecValueId(),PROME_TABLE[i]);
+                VALUE_PROME_MAP.put(value.getSpecValueId()+"",PROME_TABLE[i]+"");
                 g.add(value.getSpecValueId());
                 i++;
             }
@@ -94,7 +93,7 @@ public enum SKUHelper {
         }
     }
 
-    public void initData(List<ProductDetail.SkusOnsellBean> beans){
+    public void initData(List<ProductDetail.SkusOnsellBean> beans) throws Exception {
         for(ProductDetail.SkusOnsellBean bean:beans){
             String str[]=bean.getSkuSpecCode().split(",");
             SKUData data=new SKUData();
@@ -102,62 +101,74 @@ public enum SKUHelper {
             data.mSkuSpecCode=bean.getSkuSpecCode();
             data.mPrice=bean.getPrice();
             data.mStorage=bean.getStorage();
-            long value=1;
+            BigInteger value=BigInteger.ONE;
             for(int i=0;i<str.length;i++){
-                value=value*VALUE_PROME_MAP.get(Long.parseLong(str[i]));
+                String s=VALUE_PROME_MAP.get(str[i]);
+                if(s==null){
+                    throw new Exception("Data error. the sku on sell bean id is diff with sku bean");
+                }
+                value = value.multiply(new BigInteger(s));
             }
             data.promeValue=value;
             mSKUDatas.add(data);
         }
     }
 
-    public boolean isValueEnable(String currentSpec,Long value){
-        Map<Integer,Long> groupIds=new HashMap<>();
-        String str[]=currentSpec.split(",");
 
-        //查找当前选中项的sku 分组并记录
-        for(int i=0;i<str.length;i++){
-            for(int j=0;j<mGroups.size();j++){
-                List<Long> group=mGroups.get(j);
-                if(group.contains(Long.parseLong(str[i]))){
-                    groupIds.put(j,Long.parseLong(str[i]));
+    public boolean isValueEnable(String currentSpec,Long value){
+        String str[]=null;
+        if(!currentSpec.isEmpty()) {
+            Map<Integer, Long> groupIds = new HashMap<>();
+            str = currentSpec.split(",");
+
+            //查找当前选中项的sku 分组并记录
+            for (int i = 0; i < str.length; i++) {
+                for (int j = 0; j < mGroups.size(); j++) {
+                    List<Long> group = mGroups.get(j);
+                    if (group.contains(Long.parseLong(str[i]))) {
+                        groupIds.put(j, Long.parseLong(str[i]));
+                        break;
+                    }
+                }
+            }
+
+            //查找待判断项是不是在已选择的分组中
+            int groupId = -1;
+            for (int j = 0; j < mGroups.size(); j++) {
+                List<Long> group = mGroups.get(j);
+                if (group.contains(value)) {
+                    groupId = j;
                     break;
                 }
             }
-        }
 
-        //查找待判断项是不是在已选择的分组中
-        int groupId=-1;
-        for(int j=0;j<mGroups.size();j++){
-            List<Long> group=mGroups.get(j);
-            if(group.contains(value)){
-                groupId=j;
-            }
-        }
-
-        //在已选择分组中,那么替换同组选项
-        if(groupIds.containsKey(groupId)){
-            String replace=groupIds.get(groupId)+"";
-            for(int i=0;i<str.length;i++){
-                if(str[i].equals(replace)){
-                    str[i]=value+"";
+            //在已选择分组中,那么替换同组选项
+            if (groupIds.containsKey(groupId)) {
+                String replace = groupIds.get(groupId) + "";
+                for (int i = 0; i < str.length; i++) {
+                    if (str[i].equals(replace)) {
+                        str[i] = value + "";
+                        break;
+                    }
                 }
+            } else {//否则直接添加
+                String temp = currentSpec + "," + value;
+                str = temp.split(",");
             }
-        }else{//否则直接添加
-            String temp=currentSpec+","+value;
-            str=temp.split(",");
+        }else{
+            str=new String[]{value+""};
         }
 
         //计算当前组的质数乘积
-        long promeValue=1;
+        BigInteger promeValue=BigInteger.ONE;
         for(int i=0;i<str.length;i++){
-            promeValue=promeValue*VALUE_PROME_MAP.get(Long.parseLong(str[i]));
+            promeValue=promeValue.multiply(new BigInteger(VALUE_PROME_MAP.get(str[i])));
         }
 
         //寻找是否存在
         SKUData finalSKUData=null;
         for(int i=0;i<mSKUDatas.size();i++){
-            if(mSKUDatas.get(i).promeValue%promeValue==0){
+            if(mSKUDatas.get(i).promeValue.remainder(promeValue).equals(BigInteger.ZERO)){
                 finalSKUData=mSKUDatas.get(i);
                 break;
             }
@@ -171,13 +182,49 @@ public enum SKUHelper {
 
     }
 
+    public int calculateSKUId(String currentSpec){
+        SKUData data=calculatePrice(currentSpec);
+        if(data==null){
+            return -1;
+        }else{
+            return data.mSkuId;
+        }
+    }
+
+    private SKUData calculatePrice(String currentSpec){
+        String[] strs=currentSpec.split(",");
+        if(strs.length<mGroups.size()){
+            return null;
+        }
+
+        //计算当前组的质数乘积
+        BigInteger promeValue=BigInteger.ONE;
+        for(int i=0;i<strs.length;i++){
+            promeValue=promeValue.multiply(new BigInteger(VALUE_PROME_MAP.get(strs[i])));
+        }
+
+        SKUData finalSKUData=null;
+        for(int i=0;i<mSKUDatas.size();i++){
+            if(mSKUDatas.get(i).promeValue.equals(promeValue)){
+                finalSKUData=mSKUDatas.get(i);
+                break;
+            }
+        }
+
+        if(finalSKUData!=null){
+            return finalSKUData;
+        }else{
+            return null;
+        }
+    }
+
 
     private class SKUData{
         public int mSkuId;
         public String mSkuSpecCode;
         public float mPrice;
         public int mStorage;
-        public long promeValue;
+        public BigInteger promeValue;
     }
 
 
@@ -186,8 +233,8 @@ public enum SKUHelper {
 
 
 
-//    static{
-//        System.loadLibrary("skumodel");
-//    }
-    //public native void initSKU(String json);
+    static{
+        System.loadLibrary("skumodel");
+    }
+    public native void initSKUC(String json);
 }

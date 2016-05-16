@@ -7,23 +7,24 @@
 #include "json/json.h"
 
 void initSKU(JNIEnv *env, jobject thiz,jstring json){
-//   const char* str;
-//   str = env->GetStringUTFChars(json, false);
-//   if(str == NULL) {
-//       return ; /* OutOfMemoryError already thrown */
-//   }
+   const char* str;
+   str = env->GetStringUTFChars(json, false);
+   if(str == NULL) {
+   LOGI("str is null");
+       return ; /* OutOfMemoryError already thrown */
+   }
    //TODO for str
-//   LOGI("%s",str);
-//   env->ReleaseStringUTFChars(json, str);
+   LOGI("%s",str);
+   env->ReleaseStringUTFChars(json, str);
 }
 
 static JNINativeMethod gMethods[] = {
-     { "initSKU", "(Ljava/lang/String)V",(void *) initSKU },
+     { "initSKUC", "(Ljava/lang/String;)V",(void *) initSKU },
 
 };
 
 static const char* const CONNECT_JAVA_PACKAGE =
-        "com/carme/caruser/utils/SKUHelper";
+        "com/guard/skutest/SKUHelper";
 
 static int registerMethods(JNIEnv* env) {
     jclass clazz;

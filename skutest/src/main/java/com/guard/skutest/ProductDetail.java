@@ -9,7 +9,7 @@ import java.util.Map;
 /**
  * Created by yxwang on 16/5/3.
  */
-public class ProductDetail extends BaseEntity {
+public class ProductDetail {
 
     /**
      * product_name : 洗车
@@ -336,7 +336,7 @@ public class ProductDetail extends BaseEntity {
         mSkusOnsell = skusOnsell;
     }
 
-    public static class SpecsBean extends BaseEntity {
+    public static class SpecsBean{
         @JSONField(name = "spec_name")
         private String mSpecName;
         /**
@@ -363,7 +363,7 @@ public class ProductDetail extends BaseEntity {
             mValues = values;
         }
 
-        public static class ValuesBean extends BaseEntity {
+        public static class ValuesBean {
             @JSONField(name = "spec_value_name")
             private String mSpecValueName;
             @JSONField(name = "spec_value_id")
@@ -387,7 +387,7 @@ public class ProductDetail extends BaseEntity {
         }
     }
 
-    public static class OptionsBean extends BaseEntity {
+    public static class OptionsBean{
         @JSONField(name = "option_name")
         private String mOptionName;
         /**
@@ -415,7 +415,7 @@ public class ProductDetail extends BaseEntity {
             mProductOptions = productOptions;
         }
 
-        public static class ProductOptionsBean extends BaseEntity {
+        public static class ProductOptionsBean {
             @JSONField(name = "product_option_id")
             private long mProductOptionId;
             @JSONField(name = "product_option_name")

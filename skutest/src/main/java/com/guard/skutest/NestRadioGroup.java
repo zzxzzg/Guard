@@ -41,7 +41,7 @@ public class NestRadioGroup extends LinearLayout {
 
     private void init() {
         mCheckedId = View.NO_ID;
-        setOrientation(VERTICAL);
+        //setOrientation(VERTICAL);
         mChildOnCheckedChangeListener = new CheckedStateTracker();
         mPassThroughListener = new PassThroughHierarchyChangeListener();
         super.setOnHierarchyChangeListener(mPassThroughListener);

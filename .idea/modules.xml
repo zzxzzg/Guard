@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/bitmapfun/bitmapfun.iml" filepath="$PROJECT_DIR$/bitmapfun/bitmapfun.iml" />
       <module fileurl="file://$PROJECT_DIR$/bitmapfundemo/bitmapfundemo.iml" filepath="$PROJECT_DIR$/bitmapfundemo/bitmapfundemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/circle_indicator_demo/circle_indicator_demo.iml" filepath="$PROJECT_DIR$/circle_indicator_demo/circle_indicator_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/circleindicator/circleindicator.iml" filepath="$PROJECT_DIR$/circleindicator/circleindicator.iml" />
       <module fileurl="file://$PROJECT_DIR$/cleanarchitecture/cleanarchitecture.iml" filepath="$PROJECT_DIR$/cleanarchitecture/cleanarchitecture.iml" />
       <module fileurl="file://$PROJECT_DIR$/dagger2demo/dagger2demo.iml" filepath="$PROJECT_DIR$/dagger2demo/dagger2demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/databindingdemo/databindingdemo.iml" filepath="$PROJECT_DIR$/databindingdemo/databindingdemo.iml" />
@@ -36,6 +37,7 @@
       <module fileurl="file://$PROJECT_DIR$/puremvc_standard_lib/puremvc_standard_lib.iml" filepath="$PROJECT_DIR$/puremvc_standard_lib/puremvc_standard_lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/recyclerviewdemo/recyclerviewdemo.iml" filepath="$PROJECT_DIR$/recyclerviewdemo/recyclerviewdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxjavademo/rxjavademo.iml" filepath="$PROJECT_DIR$/rxjavademo/rxjavademo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/skutest/skutest.iml" filepath="$PROJECT_DIR$/skutest/skutest.iml" />
       <module fileurl="file://$PROJECT_DIR$/srclib/srclib.iml" filepath="$PROJECT_DIR$/srclib/srclib.iml" />
       <module fileurl="file://$PROJECT_DIR$/super_recyclerview_lib/super_recyclerview_lib.iml" filepath="$PROJECT_DIR$/super_recyclerview_lib/super_recyclerview_lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/super_recyclerview_sample/super_recyclerview_sample.iml" filepath="$PROJECT_DIR$/super_recyclerview_sample/super_recyclerview_sample.iml" />
