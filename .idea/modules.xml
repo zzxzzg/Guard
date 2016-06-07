@@ -31,6 +31,7 @@
       <module fileurl="file://$PROJECT_DIR$/listcontrollib-manipulation/listcontrollib-manipulation.iml" filepath="$PROJECT_DIR$/listcontrollib-manipulation/listcontrollib-manipulation.iml" />
       <module fileurl="file://$PROJECT_DIR$/looping_viewpager/looping_viewpager.iml" filepath="$PROJECT_DIR$/looping_viewpager/looping_viewpager.iml" />
       <module fileurl="file://$PROJECT_DIR$/openh264demo/openh264demo.iml" filepath="$PROJECT_DIR$/openh264demo/openh264demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/phoenix_lib/phoenix_lib.iml" filepath="$PROJECT_DIR$/phoenix_lib/phoenix_lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/pinnedlistdemo/pinnedlistdemo.iml" filepath="$PROJECT_DIR$/pinnedlistdemo/pinnedlistdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/pinnedlistlib/pinnedlistlib.iml" filepath="$PROJECT_DIR$/pinnedlistlib/pinnedlistlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/puremvc_standard_demo/puremvc_standard_demo.iml" filepath="$PROJECT_DIR$/puremvc_standard_demo/puremvc_standard_demo.iml" />

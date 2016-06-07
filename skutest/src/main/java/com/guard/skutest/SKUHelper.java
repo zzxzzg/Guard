@@ -79,6 +79,7 @@ public enum SKUHelper {
 
     public void initSKU(List<ProductDetail.SpecsBean> skus) throws Exception {
         int i=0;
+        mGroups.clear();
         for(ProductDetail.SpecsBean sku:skus){
             List<Long> g=new ArrayList<>();
             for(ProductDetail.SpecsBean.ValuesBean value:sku.getValues()){
@@ -94,6 +95,7 @@ public enum SKUHelper {
     }
 
     public void initData(List<ProductDetail.SkusOnsellBean> beans) throws Exception {
+        mSKUDatas.clear();
         for(ProductDetail.SkusOnsellBean bean:beans){
             String str[]=bean.getSkuSpecCode().split(",");
             SKUData data=new SKUData();

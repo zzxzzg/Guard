@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/buildings.png",
+        "source": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/build/intermediates/bundles/debug/res/drawable-xxxhdpi-v4/buildings.png"
+    },
+    {
+        "merged": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/sky.png",
+        "source": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/build/intermediates/bundles/debug/res/drawable-xxxhdpi-v4/sky.png"
+    },
+    {
+        "merged": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/sun.png",
+        "source": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/build/intermediates/bundles/debug/res/drawable-xxxhdpi-v4/sun.png"
+    }
+]

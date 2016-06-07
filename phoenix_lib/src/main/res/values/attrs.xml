@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+    <declare-styleable name="RefreshView">
+
+    </declare-styleable>
+
+    <declare-styleable name="BaseRefreshView">
+        <attr name="emptyLayout" format="reference"/>
+        <attr name="progressLayout" format="reference"/>
+        <attr name="loadMoreProgress" format="reference"/>
+        <attr name="loadMoreEnd" format="reference"/>
+        <attr name="loadMoreClick" format="reference"/>
+        <attr name="listViewLayout" format="reference"/>
+        <attr name="anim_type" format="enum">
+            <enum name="sun" value="0"/>
+            <enum name="frame" value="1"/>
+            <enum name="custom" value="2"/>
+        </attr>
+    </declare-styleable>
+</resources>

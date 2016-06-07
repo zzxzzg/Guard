@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BaseRefreshView"><attr format="reference" name="emptyLayout"/><attr format="reference" name="progressLayout"/><attr format="reference" name="loadMoreProgress"/><attr format="reference" name="loadMoreEnd"/><attr format="reference" name="loadMoreClick"/><attr format="reference" name="listViewLayout"/><attr format="enum" name="anim_type"><enum name="sun" value="0"/><enum name="frame" value="1"/><enum name="custom" value="2"/></attr></declare-styleable>
+    <declare-styleable name="RefreshView"/>
+    <style name="PullToRefreshListViewStyle">
+        <item name="android:cacheColorHint">#00000000</item>
+        <item name="android:listSelector">#00000000</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:fastScrollEnabled">false</item>
+        <item name="android:footerDividersEnabled">false</item>
+        <item name="android:headerDividersEnabled">false</item>
+        <item name="android:smoothScrollbar">true</item>
+    </style>
+</resources>

@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/build/intermediates/res/merged/release/layout/layout_end.xml",
+        "source": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/src/main/res/layout/layout_end.xml"
+    },
+    {
+        "merged": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/build/intermediates/res/merged/release/layout/pulltorefresh_listview.xml",
+        "source": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/src/main/res/layout/pulltorefresh_listview.xml"
+    },
+    {
+        "merged": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/build/intermediates/res/merged/release/layout/footer_layout.xml",
+        "source": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/src/main/res/layout/footer_layout.xml"
+    },
+    {
+        "merged": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/build/intermediates/res/merged/release/layout/pulltorefresh_recyclerview.xml",
+        "source": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/src/main/res/layout/pulltorefresh_recyclerview.xml"
+    },
+    {
+        "merged": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/build/intermediates/res/merged/release/layout/layout_progress.xml",
+        "source": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/src/main/res/layout/layout_progress.xml"
+    },
+    {
+        "merged": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/build/intermediates/res/merged/release/layout/list_layout.xml",
+        "source": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/src/main/res/layout/list_layout.xml"
+    },
+    {
+        "merged": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/build/intermediates/res/merged/release/layout/layout_click_load.xml",
+        "source": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/src/main/res/layout/layout_click_load.xml"
+    },
+    {
+        "merged": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/build/intermediates/res/merged/release/layout/layout_empty.xml",
+        "source": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/src/main/res/layout/layout_empty.xml"
+    },
+    {
+        "merged": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/build/intermediates/res/merged/release/layout/recyclerview_layout.xml",
+        "source": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/src/main/res/layout/recyclerview_layout.xml"
+    }
+]

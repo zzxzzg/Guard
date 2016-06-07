@@ -1,0 +1,104 @@
+[
+    {
+        "outputFile": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/build/intermediates/res/merged/debug/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 854,
+                    "endColumn": 74,
+                    "endOffset": 924
+                },
+                "from": {
+                    "file": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.3.0/res/values/values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 327,
+                        "endColumn": 74,
+                        "endOffset": 397
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 929,
+                    "endColumn": 75,
+                    "endOffset": 1000
+                },
+                "from": {
+                    "file": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.3.0/res/values/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 402,
+                        "endColumn": 75,
+                        "endOffset": 473
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 1005,
+                    "endColumn": 71,
+                    "endOffset": 1072
+                },
+                "from": {
+                    "file": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.3.0/res/values/values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 478,
+                        "endColumn": 71,
+                        "endOffset": 545
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 1077,
+                    "endColumn": 65,
+                    "endOffset": 1138
+                },
+                "from": {
+                    "file": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.3.0/res/values/values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 550,
+                        "endColumn": 65,
+                        "endOffset": 611
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 1143,
+                    "endLine": 17,
+                    "endColumn": 12,
+                    "endOffset": 1614
+                },
+                "from": {
+                    "file": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/src/main/res/values/styles.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endLine": 10,
+                        "endColumn": 12,
+                        "endOffset": 526
+                    }
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/buildings.png",
+        "source": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/src/main/res/drawable-xxxhdpi/buildings.png"
+    },
+    {
+        "merged": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/sun.png",
+        "source": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/src/main/res/drawable-xxxhdpi/sun.png"
+    },
+    {
+        "merged": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/sky.png",
+        "source": "/Users/yxwang/workspace/svn/CarAppAs/CarUser/phoenix/src/main/res/drawable-xxxhdpi/sky.png"
+    }
+]
