@@ -42,6 +42,8 @@
       <module fileurl="file://$PROJECT_DIR$/rxjavademo/rxjavademo.iml" filepath="$PROJECT_DIR$/rxjavademo/rxjavademo.iml" />
       <module fileurl="file://$PROJECT_DIR$/skutest/skutest.iml" filepath="$PROJECT_DIR$/skutest/skutest.iml" />
       <module fileurl="file://$PROJECT_DIR$/srclib/srclib.iml" filepath="$PROJECT_DIR$/srclib/srclib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sticky_headers_recyclerview_demo/sticky_headers_recyclerview_demo.iml" filepath="$PROJECT_DIR$/sticky_headers_recyclerview_demo/sticky_headers_recyclerview_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sticky_headers_recyclerview_lib/sticky_headers_recyclerview_lib.iml" filepath="$PROJECT_DIR$/sticky_headers_recyclerview_lib/sticky_headers_recyclerview_lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/super_recyclerview_lib/super_recyclerview_lib.iml" filepath="$PROJECT_DIR$/super_recyclerview_lib/super_recyclerview_lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/super_recyclerview_sample/super_recyclerview_sample.iml" filepath="$PROJECT_DIR$/super_recyclerview_sample/super_recyclerview_sample.iml" />
       <module fileurl="file://$PROJECT_DIR$/textmeasure/textmeasure.iml" filepath="$PROJECT_DIR$/textmeasure/textmeasure.iml" />

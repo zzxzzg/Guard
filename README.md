@@ -158,3 +158,7 @@ CoordinatorLayout Demo 包含{
 1.toolbar相关例子    关于behavior自定义,请参考笔记
 }
 CoordinatorLayout-demo
+
+头部悬浮的分类recyclerview
+sticky_headers_recyclerview_demo
+sticky_headers_recyclerview_lib
