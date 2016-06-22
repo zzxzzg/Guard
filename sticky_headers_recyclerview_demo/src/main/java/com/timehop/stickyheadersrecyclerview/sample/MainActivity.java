@@ -19,6 +19,7 @@ import android.widget.ToggleButton;
 import com.timehop.stickyheadersrecyclerview.StickyRecyclerHeadersAdapter;
 import com.timehop.stickyheadersrecyclerview.StickyRecyclerHeadersDecoration;
 import com.timehop.stickyheadersrecyclerview.StickyRecyclerHeadersTouchListener;
+import com.timehop.stickyheadersrecyclerview.util.StickyDivider;
 
 import java.security.SecureRandom;
 
@@ -66,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     recyclerView.addItemDecoration(headersDecor);
 
     // Add decoration for dividers between list items
-    recyclerView.addItemDecoration(new DividerDecoration(this));
+    recyclerView.addItemDecoration(new StickyDivider(this,adapter,StickyDivider.VERTICAL_LIST));
 
     // Add touch listeners
     StickyRecyclerHeadersTouchListener touchListener =

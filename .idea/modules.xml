@@ -26,6 +26,8 @@
       <module fileurl="file://$PROJECT_DIR$/httpstest/httpstest.iml" filepath="$PROJECT_DIR$/httpstest/httpstest.iml" />
       <module fileurl="file://$PROJECT_DIR$/imageview-zoom-demo/imageview-zoom-demo.iml" filepath="$PROJECT_DIR$/imageview-zoom-demo/imageview-zoom-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/imageview-zoom-lib/imageview-zoom-lib.iml" filepath="$PROJECT_DIR$/imageview-zoom-lib/imageview-zoom-lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jsbirdge-demo/jsbirdge-demo.iml" filepath="$PROJECT_DIR$/jsbirdge-demo/jsbirdge-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jsbridge-library/library.iml" filepath="$PROJECT_DIR$/jsbridge-library/library.iml" />
       <module fileurl="file://$PROJECT_DIR$/listanimationdemo/listanimationdemo.iml" filepath="$PROJECT_DIR$/listanimationdemo/listanimationdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/listcontroldemo/listcontroldemo.iml" filepath="$PROJECT_DIR$/listcontroldemo/listcontroldemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/listcontrollib/listcontrollib.iml" filepath="$PROJECT_DIR$/listcontrollib/listcontrollib.iml" />
