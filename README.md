@@ -166,3 +166,7 @@ sticky_headers_recyclerview_lib
 webview 中 js 和android 交互  https://github.com/lzyzsd/JsBridge
 jsbridge-demo
 jsbridge-library
+
+引导页demo https://github.com/PaoloRotolo/AppIntro
+appintro-demo
+appintro-lib

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/yxwang/workspace/git/Guard/appintro-demo/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_skip_white_24px.xml",
+        "source": "/Users/yxwang/workspace/git/Guard/appintro-demo/build/intermediates/exploded-aar/Guard/appintro-lib/unspecified/res/drawable-anydpi-v21/ic_skip_white_24px.xml"
+    },
+    {
+        "merged": "/Users/yxwang/workspace/git/AppIntro/example/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_skip_white_24px.xml",
+        "source": "/Users/yxwang/workspace/git/AppIntro/example/build/intermediates/exploded-aar/AppIntro/library/unspecified/res/drawable-anydpi-v21/ic_skip_white_24px.xml"
+    }
+]

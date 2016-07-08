@@ -8,6 +8,9 @@
       <module fileurl="file://$PROJECT_DIR$/animationdemo/animationdemo.iml" filepath="$PROJECT_DIR$/animationdemo/animationdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/animationlib/animationlib.iml" filepath="$PROJECT_DIR$/animationlib/animationlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/appintro-demo/appintro-demo.iml" filepath="$PROJECT_DIR$/appintro-demo/appintro-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/appintro-lib/appintro-lib.iml" filepath="$PROJECT_DIR$/appintro-lib/appintro-lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/baseactivity/baseactivity.iml" filepath="$PROJECT_DIR$/baseactivity/baseactivity.iml" />
       <module fileurl="file://$PROJECT_DIR$/bitmapfun/bitmapfun.iml" filepath="$PROJECT_DIR$/bitmapfun/bitmapfun.iml" />
       <module fileurl="file://$PROJECT_DIR$/bitmapfundemo/bitmapfundemo.iml" filepath="$PROJECT_DIR$/bitmapfundemo/bitmapfundemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/circle_indicator_demo/circle_indicator_demo.iml" filepath="$PROJECT_DIR$/circle_indicator_demo/circle_indicator_demo.iml" />
@@ -27,7 +30,8 @@
       <module fileurl="file://$PROJECT_DIR$/imageview-zoom-demo/imageview-zoom-demo.iml" filepath="$PROJECT_DIR$/imageview-zoom-demo/imageview-zoom-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/imageview-zoom-lib/imageview-zoom-lib.iml" filepath="$PROJECT_DIR$/imageview-zoom-lib/imageview-zoom-lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/jsbirdge-demo/jsbirdge-demo.iml" filepath="$PROJECT_DIR$/jsbirdge-demo/jsbirdge-demo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/jsbridge-library/library.iml" filepath="$PROJECT_DIR$/jsbridge-library/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jsbridge-library/jsbridge-library.iml" filepath="$PROJECT_DIR$/jsbridge-library/jsbridge-library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/appintro-lib/library.iml" filepath="$PROJECT_DIR$/appintro-lib/library.iml" />
       <module fileurl="file://$PROJECT_DIR$/listanimationdemo/listanimationdemo.iml" filepath="$PROJECT_DIR$/listanimationdemo/listanimationdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/listcontroldemo/listcontroldemo.iml" filepath="$PROJECT_DIR$/listcontroldemo/listcontroldemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/listcontrollib/listcontrollib.iml" filepath="$PROJECT_DIR$/listcontrollib/listcontrollib.iml" />

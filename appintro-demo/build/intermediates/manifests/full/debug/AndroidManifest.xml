@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="paolorotolo.github.com.appintroexample"
+    android:versionCode="7"
+    android:versionName="4.0.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.github.paolorotolo.appintroexample.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.paolorotolo.appintroexample.DefaultIntro"
+            android:label="@string/title_activity_default_intro"
+            android:theme="@style/FullscreenTheme" >
+        </activity>
+        <activity
+            android:name="com.github.paolorotolo.appintroexample.CustomIntro"
+            android:label="@string/title_activity_custom_intro"
+            android:theme="@style/FullscreenTheme" >
+        </activity>
+        <activity
+            android:name="com.github.paolorotolo.appintroexample.PermissionsIntro"
+            android:label="@string/title_activity_permissions_intro"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name="com.github.paolorotolo.appintroexample.PermissionsIntro2"
+            android:label="@string/title_activity_permissions_intro"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name="com.github.paolorotolo.appintroexample.DefaultIntro2"
+            android:label="@string/title_activity_second_intro"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name="com.github.paolorotolo.appintroexample.DisableSwipeIntro1"
+            android:label="@string/title_activity_default_intro_disable"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name="com.github.paolorotolo.appintroexample.DisableSwipeIntro2"
+            android:label="@string/title_activity_second_intro_disable"
+            android:theme="@style/FullscreenTheme" />
+        <activity android:name="com.github.paolorotolo.appintroexample.animations.CustomAnimation" />
+        <activity android:name="com.github.paolorotolo.appintroexample.animations.FadeAnimation" />
+        <activity android:name="com.github.paolorotolo.appintroexample.animations.ZoomAnimation" />
+        <activity android:name="com.github.paolorotolo.appintroexample.animations.DepthAnimation" />
+        <activity android:name="com.github.paolorotolo.appintroexample.animations.FlowAnimation" />
+        <activity android:name="com.github.paolorotolo.appintroexample.animations.SlideOverAnimation" />
+        <activity android:name="com.github.paolorotolo.appintroexample.animations.ColorAnimation" />
+        <activity android:name="com.github.paolorotolo.appintroexample.indicators.ProgressIndicator" />
+        <activity android:name="com.github.paolorotolo.appintroexample.indicators.CustomIndicator" />
+        <activity android:name="com.github.paolorotolo.appintroexample.indicators.CustomColorIndicator" />
+        <activity
+            android:name="com.github.paolorotolo.appintroexample.IntroWithBackground"
+            android:label="Intro with background"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name="com.github.paolorotolo.appintroexample.IntroDemoPolicy"
+            android:parentActivityName="com.github.paolorotolo.appintroexample.MainActivity"
+            android:theme="@style/FullscreenTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+    </application>
+
+</manifest>

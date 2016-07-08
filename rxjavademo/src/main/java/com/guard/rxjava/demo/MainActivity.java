@@ -15,33 +15,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        Test1 test=new Test1();
+//        //test.test();
+//
+//        //test.test3();
+//
+//        test.test4();
 
-        Observable<String> observable1= Observable.create(new Observable.OnSubscribe<String>() {
-            @Override
-            public void call(Subscriber<? super String> subscriber) {
-                subscriber.onNext("hello world");
-                subscriber.onCompleted();
-            }
-        });
+        Test2 test2=new Test2();
+        test2.test2();
 
-        Subscriber<String> subscriber1=new Subscriber<String>() {
-            @Override
-            public void onCompleted() {
-            }
-
-            @Override
-            public void onError(Throwable e) {
-
-            }
-
-            @Override
-            public void onNext(String s) {
-                Log.d("sss",s);
-            }
-        };
-
-        observable1.subscribe(subscriber1);
-
+//        Test3 test3=new Test3();
+//        test3.test2();
 
     }
 }
