@@ -1,11 +1,14 @@
 package com.guard.rxjava.demo;
 
+import android.os.Handler;
 import android.util.Log;
 
 import rx.Observable;
 import rx.Scheduler;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
+import rx.android.schedulers.HandlerScheduler;
+import rx.functions.Action0;
 import rx.schedulers.Schedulers;
 
 /**
@@ -135,6 +138,69 @@ public class Test2 {
 
     }
 
+    public void test3() {
+
+        //subscribeOn doOnSubscribe 可以替代onStart方法初始化observable  但是他会在下方最近的subscribeOn定义的线程中运行.
+
+        final Observable<String> observable1 = Observable.create(new Observable.OnSubscribe<String>() {
+            @Override
+            public void call(Subscriber<? super String> subscriber) {
+                String name=Thread.currentThread().getName();
+                Log.d("sss","call thread is "+name);
+                subscriber.onNext("hello");
+                subscriber.onNext("  haha ");
+                subscriber.onNext("I am yxwang!");
+                subscriber.onCompleted();
+            }
+        }).subscribeOn(Schedulers.io()).observeOn(Schedulers.newThread()).doOnSubscribe(new Action0() {
+            @Override
+            public void call() {
+                String name=Thread.currentThread().getName();
+                Log.d("sss","doOnSubscribe thread is "+name);
+            }
+        }).subscribeOn(AndroidSchedulers.mainThread());
+
+        final Subscriber<String> subscriber1 = new Subscriber<String>() {
+
+            //this method is called in current thread!!
+            @Override
+            public void onStart() {
+                super.onStart();
+                Log.d("sss", "onStart");
+            }
+
+            @Override
+            public void onCompleted() {
+                Log.d("sss", "onCompleted");
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                Log.d("sss", "onError");
+            }
+
+            @Override
+            public void onNext(String s) {
+                String name=Thread.currentThread().getName();
+                Log.d("sss","do data thread is "+name);
+                Log.d("sss", s);
+
+//                String t="123a3";
+//                Log.d("sss",Integer.parseInt(t)+"");
+            }
+        };
+        Thread thread=new Thread(){
+            @Override
+            public void run() {
+                super.run();
+                Thread.currentThread().setName("subscribe_thread");
+                observable1.subscribe(subscriber1);
+            }
+        };
+
+        thread.start();
+
+    }
 
 
 }

@@ -21,7 +21,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    tools:context="com.example.android.customtransition.CustomTransitionFragment">
+    tools:context="com.omapper.android.customtransition.CustomTransitionFragment">
 
     <View
         android:id="@+id/view_1"

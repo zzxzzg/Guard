@@ -170,3 +170,8 @@ jsbridge-library
 引导页demo https://github.com/PaoloRotolo/AppIntro
 appintro-demo
 appintro-lib
+
+
+omapperlib omapperdemo
+omapper实现对象映射的库以及使用demo
+

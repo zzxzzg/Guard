@@ -14,6 +14,7 @@ import rx.Observable;
 import rx.Subscriber;
 import rx.functions.Action0;
 import rx.functions.Action1;
+import rx.functions.Func1;
 
 /**
  * Created by yxwang on 16/7/1.
@@ -178,5 +179,57 @@ public class Test1 {
         Observable<String> observable1=Observable.from(strs);
 
         observable1.subscribe(nextAction,errorAction,completeAction);
+    }
+
+    public void test5(){
+
+        Observable<String> observable1= Observable.create(new Observable.OnSubscribe<String>() {
+            @Override
+            public void call(Subscriber<? super String> subscriber) {
+                subscriber.onNext("hello");
+                subscriber.onNext("  haha ");
+                subscriber.onNext("I am yxwang!");
+                subscriber.onCompleted();
+            }
+        });
+
+        Subscriber<String> subscriber1=new Subscriber<String>() {
+
+            //this method is called in current thread!!
+            @Override
+            public void onStart() {
+                super.onStart();
+                Log.d("sss","onStart");
+            }
+
+            @Override
+            public void onCompleted() {
+                Log.d("sss","onCompleted");
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                Log.d("sss","onError");
+            }
+
+            @Override
+            public void onNext(String s) {
+                Log.d("sss",s);
+//                String t="123a3";
+//                Log.d("sss",Integer.parseInt(t)+"");
+            }
+        };
+
+        observable1.filter(new Func1<String, Boolean>() {
+            @Override
+            public Boolean call(String s) {
+                if(s.contains("haha")){
+                    return false;
+                }
+                return true;
+            }
+        }).subscribe(subscriber1);
+
+        Log.d("sss",subscriber1.isUnsubscribed()+"");//true
     }
 }

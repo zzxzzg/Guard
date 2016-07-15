@@ -25,4 +25,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.3.0'
     compile 'io.reactivex:rxjava:1.1.6'
     compile 'io.reactivex:rxandroid:1.2.1'
+
+    compile 'com.trello:rxlifecycle:0.6.1'
+    compile 'com.trello:rxlifecycle-components:0.6.1'
 }

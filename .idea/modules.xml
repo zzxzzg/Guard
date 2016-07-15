@@ -31,7 +31,6 @@
       <module fileurl="file://$PROJECT_DIR$/imageview-zoom-lib/imageview-zoom-lib.iml" filepath="$PROJECT_DIR$/imageview-zoom-lib/imageview-zoom-lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/jsbirdge-demo/jsbirdge-demo.iml" filepath="$PROJECT_DIR$/jsbirdge-demo/jsbirdge-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/jsbridge-library/jsbridge-library.iml" filepath="$PROJECT_DIR$/jsbridge-library/jsbridge-library.iml" />
-      <module fileurl="file://$PROJECT_DIR$/appintro-lib/library.iml" filepath="$PROJECT_DIR$/appintro-lib/library.iml" />
       <module fileurl="file://$PROJECT_DIR$/listanimationdemo/listanimationdemo.iml" filepath="$PROJECT_DIR$/listanimationdemo/listanimationdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/listcontroldemo/listcontroldemo.iml" filepath="$PROJECT_DIR$/listcontroldemo/listcontroldemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/listcontrollib/listcontrollib.iml" filepath="$PROJECT_DIR$/listcontrollib/listcontrollib.iml" />
@@ -39,12 +38,15 @@
       <module fileurl="file://$PROJECT_DIR$/looping_viewpager/looping_viewpager.iml" filepath="$PROJECT_DIR$/looping_viewpager/looping_viewpager.iml" />
       <module fileurl="file://$PROJECT_DIR$/multipicker/multipicker.iml" filepath="$PROJECT_DIR$/multipicker/multipicker.iml" />
       <module fileurl="file://$PROJECT_DIR$/multipicker-demo/multipicker-demo.iml" filepath="$PROJECT_DIR$/multipicker-demo/multipicker-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/omapperdemo/omapperdemo.iml" filepath="$PROJECT_DIR$/omapperdemo/omapperdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/omapperlib/omapperlib.iml" filepath="$PROJECT_DIR$/omapperlib/omapperlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/openh264demo/openh264demo.iml" filepath="$PROJECT_DIR$/openh264demo/openh264demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/pinnedlistdemo/pinnedlistdemo.iml" filepath="$PROJECT_DIR$/pinnedlistdemo/pinnedlistdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/pinnedlistlib/pinnedlistlib.iml" filepath="$PROJECT_DIR$/pinnedlistlib/pinnedlistlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/puremvc_standard_demo/puremvc_standard_demo.iml" filepath="$PROJECT_DIR$/puremvc_standard_demo/puremvc_standard_demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/puremvc_standard_lib/puremvc_standard_lib.iml" filepath="$PROJECT_DIR$/puremvc_standard_lib/puremvc_standard_lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/recyclerviewdemo/recyclerviewdemo.iml" filepath="$PROJECT_DIR$/recyclerviewdemo/recyclerviewdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/retrofitdemo/retrofitdemo.iml" filepath="$PROJECT_DIR$/retrofitdemo/retrofitdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxjavademo/rxjavademo.iml" filepath="$PROJECT_DIR$/rxjavademo/rxjavademo.iml" />
       <module fileurl="file://$PROJECT_DIR$/skutest/skutest.iml" filepath="$PROJECT_DIR$/skutest/skutest.iml" />
       <module fileurl="file://$PROJECT_DIR$/srclib/srclib.iml" filepath="$PROJECT_DIR$/srclib/srclib.iml" />
