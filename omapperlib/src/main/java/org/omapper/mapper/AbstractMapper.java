@@ -326,6 +326,26 @@ public abstract class AbstractMapper {
 	}
 	}
 
+	public void mapCollectionBean(Collection targetCollection, Class targetClass,
+								  Collection sourceCollection, Class sourceClass) {
+		try {
+			if (targetClass == sourceClass) {
+				targetCollection.addAll(sourceCollection);
+			} else {
+				Iterator sourceIterator = sourceCollection.iterator();
+				while (sourceIterator.hasNext()) {
+					Object targetCollectionElementObject = targetClass.newInstance();
+					mapBeanDefault(targetCollectionElementObject, sourceIterator.next());
+					targetCollection.add(targetCollectionElementObject);
+				}
+			}
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		}
+	}
+
 	/**
 	 * Map bean.
 	 * 
@@ -340,6 +360,7 @@ public abstract class AbstractMapper {
 	}
 
 		try {
+
 			Map<String, Object> sourceObjectMap = new HashMap<String, Object>();
 
 			for (Object sourceObject : source) {

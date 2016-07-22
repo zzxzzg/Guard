@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import org.omapper.mapper.CollatingMapper;
+import org.omapper.mapper.CollectionMapper;
 import org.omapper.mapper.SimpleMapper;
 
 import java.util.ArrayList;
@@ -17,9 +18,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //method1();
-        method2();
-        method3();
-
+        //method2();
+        //method3();
+        method4();
     }
 
     public void method1(){
@@ -81,5 +82,25 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d("sss","wait for method1 debug");
 
+    }
+
+    public void method4(){
+        Bean1 bean1=new Bean1();
+        bean1.setName("aa");
+        bean1.setAddress("haha");
+        bean1.setAge(10);
+        bean1.setEmp_id(16);
+
+        List<Bean1> bean1List=new ArrayList<>();
+        bean1List.add(bean1);
+
+
+        List<Bean2> bean2List=new ArrayList<>();
+
+        CollectionMapper mapper=new CollectionMapper(Bean2.class,Bean1.class);
+
+        mapper.mapBean(bean2List, bean1List);
+
+        Log.d("sss","wait for method1 debug");
     }
 }

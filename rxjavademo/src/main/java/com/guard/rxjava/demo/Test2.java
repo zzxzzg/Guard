@@ -1,6 +1,9 @@
 package com.guard.rxjava.demo;
 
 import android.os.Handler;
+import android.os.HandlerThread;
+import android.os.Looper;
+import android.os.Message;
 import android.util.Log;
 
 import rx.Observable;
@@ -200,6 +203,12 @@ public class Test2 {
 
         thread.start();
 
+    }
+
+    public void test4(){
+        HandlerThread handlerThread=new HandlerThread("test");
+        handlerThread.start();
+        AndroidSchedulers.from(handlerThread.getLooper());
     }
 
 
