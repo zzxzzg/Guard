@@ -16,10 +16,10 @@
 package com.guard.cleanarchitecture.data.repository.datasource;
 
 import android.content.Context;
-import com.fernandocejas.android10.sample.data.cache.UserCache;
-import com.fernandocejas.android10.sample.data.entity.mapper.UserEntityJsonMapper;
-import com.fernandocejas.android10.sample.data.net.RestApi;
-import com.fernandocejas.android10.sample.data.net.RestApiImpl;
+import com.guard.cleanarchitecture.data.cache.UserCache;
+import com.guard.cleanarchitecture.data.entity.mapper.UserEntityJsonMapper;
+import com.guard.cleanarchitecture.data.net.RestApi;
+import com.guard.cleanarchitecture.data.net.RestApiImpl;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 

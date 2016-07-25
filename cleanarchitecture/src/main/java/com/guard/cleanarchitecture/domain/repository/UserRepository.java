@@ -13,9 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fernandocejas.android10.sample.domain.repository;
+package com.guard.cleanarchitecture.domain.repository;
 
-import com.fernandocejas.android10.sample.domain.User;
+import com.guard.cleanarchitecture.domain.User;
+
 import java.util.List;
 import rx.Observable;
 

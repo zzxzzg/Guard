@@ -15,11 +15,13 @@
  */
 package com.guard.cleanarchitecture.data.entity.mapper;
 
-import com.fernandocejas.android10.sample.data.entity.UserEntity;
-import com.fernandocejas.android10.sample.domain.User;
+import com.guard.cleanarchitecture.data.entity.UserEntity;
+import com.guard.cleanarchitecture.domain.User;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+
 import javax.inject.Inject;
 import javax.inject.Singleton;
 

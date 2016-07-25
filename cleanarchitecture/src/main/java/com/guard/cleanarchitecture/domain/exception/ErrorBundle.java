@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fernandocejas.android10.sample.domain.exception;
+package com.guard.cleanarchitecture.domain.exception;
 
 /**
  * Interface to represent a wrapper around an {@link Exception} to manage errors.

@@ -15,7 +15,8 @@
  */
 package com.guard.cleanarchitecture.data.exception;
 
-import com.fernandocejas.android10.sample.domain.exception.ErrorBundle;
+
+import com.guard.cleanarchitecture.domain.exception.ErrorBundle;
 
 /**
  * Wrapper around Exceptions used to manage errors in the repository.

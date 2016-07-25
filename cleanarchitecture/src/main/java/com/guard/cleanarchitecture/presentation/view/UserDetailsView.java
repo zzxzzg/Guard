@@ -4,7 +4,7 @@
  */
 package com.guard.cleanarchitecture.presentation.view;
 
-import com.fernandocejas.android10.sample.presentation.model.UserModel;
+import com.guard.cleanarchitecture.presentation.model.UserModel;
 
 /**
  * Interface representing a View in a model view presenter (MVP) pattern.

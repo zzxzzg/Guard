@@ -15,11 +15,11 @@
  */
 package com.guard.cleanarchitecture.data.repository;
 
-import com.fernandocejas.android10.sample.data.entity.mapper.UserEntityDataMapper;
-import com.fernandocejas.android10.sample.data.repository.datasource.UserDataStore;
-import com.fernandocejas.android10.sample.data.repository.datasource.UserDataStoreFactory;
-import com.fernandocejas.android10.sample.domain.User;
-import com.fernandocejas.android10.sample.domain.repository.UserRepository;
+import com.guard.cleanarchitecture.data.entity.mapper.UserEntityDataMapper;
+import com.guard.cleanarchitecture.data.repository.datasource.UserDataStore;
+import com.guard.cleanarchitecture.data.repository.datasource.UserDataStoreFactory;
+import com.guard.cleanarchitecture.domain.User;
+import com.guard.cleanarchitecture.domain.repository.UserRepository;
 import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Singleton;

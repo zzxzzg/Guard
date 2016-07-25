@@ -16,11 +16,11 @@
 package com.guard.cleanarchitecture.presentation.internal.di.components;
 
 import android.content.Context;
-import com.fernandocejas.android10.sample.domain.executor.PostExecutionThread;
-import com.fernandocejas.android10.sample.domain.executor.ThreadExecutor;
-import com.fernandocejas.android10.sample.domain.repository.UserRepository;
-import com.fernandocejas.android10.sample.presentation.internal.di.modules.ApplicationModule;
-import com.fernandocejas.android10.sample.presentation.view.activity.BaseActivity;
+import com.guard.cleanarchitecture.domain.executor.PostExecutionThread;
+import com.guard.cleanarchitecture.domain.executor.ThreadExecutor;
+import com.guard.cleanarchitecture.domain.repository.UserRepository;
+import com.guard.cleanarchitecture.presentation.internal.di.modules.ApplicationModule;
+import com.guard.cleanarchitecture.presentation.view.activity.BaseActivity;
 import dagger.Component;
 import javax.inject.Singleton;
 

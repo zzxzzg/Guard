@@ -4,7 +4,7 @@
  */
 package com.guard.cleanarchitecture.presentation.view;
 
-import com.fernandocejas.android10.sample.presentation.model.UserModel;
+import com.guard.cleanarchitecture.presentation.model.UserModel;
 import java.util.Collection;
 
 /**

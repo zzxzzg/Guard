@@ -17,8 +17,8 @@ package com.guard.cleanarchitecture.presentation.navigation;
 
 import android.content.Context;
 import android.content.Intent;
-import com.fernandocejas.android10.sample.presentation.view.activity.UserDetailsActivity;
-import com.fernandocejas.android10.sample.presentation.view.activity.UserListActivity;
+import com.guard.cleanarchitecture.presentation.view.activity.UserDetailsActivity;
+import com.guard.cleanarchitecture.presentation.view.activity.UserListActivity;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 

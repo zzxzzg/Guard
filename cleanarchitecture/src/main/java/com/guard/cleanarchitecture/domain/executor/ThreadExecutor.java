@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fernandocejas.android10.sample.domain.executor;
+package com.guard.cleanarchitecture.domain.executor;
 
 import java.util.concurrent.Executor;
 
 /**
  * Executor implementation can be based on different frameworks or techniques of asynchronous
  * execution, but every implementation will execute the
- * {@link com.fernandocejas.android10.sample.domain.interactor.UseCase} out of the UI thread.
+ * {@link } out of the UI thread.
  */
 public interface ThreadExecutor extends Executor {}

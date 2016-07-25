@@ -14,16 +14,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RelativeLayout;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import com.fernandocejas.android10.sample.presentation.R;
-import com.fernandocejas.android10.sample.presentation.internal.di.components.UserComponent;
-import com.fernandocejas.android10.sample.presentation.model.UserModel;
-import com.fernandocejas.android10.sample.presentation.presenter.UserListPresenter;
-import com.fernandocejas.android10.sample.presentation.view.UserListView;
-import com.fernandocejas.android10.sample.presentation.view.adapter.UsersAdapter;
-import com.fernandocejas.android10.sample.presentation.view.adapter.UsersLayoutManager;
+import com.guard.cleanarchitecture.presentation.R;
+import com.guard.cleanarchitecture.presentation.internal.di.components.UserComponent;
+import com.guard.cleanarchitecture.presentation.model.UserModel;
+import com.guard.cleanarchitecture.presentation.presenter.UserListPresenter;
+import com.guard.cleanarchitecture.presentation.view.UserListView;
+import com.guard.cleanarchitecture.presentation.view.adapter.UsersAdapter;
+import com.guard.cleanarchitecture.presentation.view.adapter.UsersLayoutManager;
 import java.util.Collection;
 import javax.inject.Inject;
 
@@ -42,10 +42,10 @@ public class UserListFragment extends BaseFragment implements UserListView {
   @Inject UserListPresenter userListPresenter;
   @Inject UsersAdapter usersAdapter;
 
-  @Bind(R.id.rv_users) RecyclerView rv_users;
-  @Bind(R.id.rl_progress) RelativeLayout rl_progress;
-  @Bind(R.id.rl_retry) RelativeLayout rl_retry;
-  @Bind(R.id.bt_retry) Button bt_retry;
+  @BindView(R.id.rv_users) RecyclerView rv_users;
+  @BindView(R.id.rl_progress) RelativeLayout rl_progress;
+  @BindView(R.id.rl_retry) RelativeLayout rl_retry;
+  @BindView(R.id.bt_retry) Button bt_retry;
 
   private UserListListener userListListener;
 
@@ -94,7 +94,6 @@ public class UserListFragment extends BaseFragment implements UserListView {
   @Override public void onDestroyView() {
     super.onDestroyView();
     rv_users.setAdapter(null);
-    ButterKnife.unbind(this);
   }
 
   @Override public void onDestroy() {

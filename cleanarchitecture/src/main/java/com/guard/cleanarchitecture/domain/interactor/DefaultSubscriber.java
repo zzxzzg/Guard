@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fernandocejas.android10.sample.domain.interactor;
+package com.guard.cleanarchitecture.domain.interactor;
 
 /**
  * Default subscriber base class to be used whenever you want default error handling.

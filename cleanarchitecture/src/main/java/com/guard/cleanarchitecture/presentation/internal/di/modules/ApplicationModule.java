@@ -16,16 +16,16 @@
 package com.guard.cleanarchitecture.presentation.internal.di.modules;
 
 import android.content.Context;
-import com.fernandocejas.android10.sample.data.cache.UserCache;
-import com.fernandocejas.android10.sample.data.cache.UserCacheImpl;
-import com.fernandocejas.android10.sample.data.executor.JobExecutor;
-import com.fernandocejas.android10.sample.data.repository.UserDataRepository;
-import com.fernandocejas.android10.sample.domain.executor.PostExecutionThread;
-import com.fernandocejas.android10.sample.domain.executor.ThreadExecutor;
-import com.fernandocejas.android10.sample.domain.repository.UserRepository;
-import com.fernandocejas.android10.sample.presentation.AndroidApplication;
-import com.fernandocejas.android10.sample.presentation.UIThread;
-import com.fernandocejas.android10.sample.presentation.navigation.Navigator;
+import com.guard.cleanarchitecture.data.cache.UserCache;
+import com.guard.cleanarchitecture.data.cache.UserCacheImpl;
+import com.guard.cleanarchitecture.data.executor.JobExecutor;
+import com.guard.cleanarchitecture.data.repository.UserDataRepository;
+import com.guard.cleanarchitecture.domain.executor.PostExecutionThread;
+import com.guard.cleanarchitecture.domain.executor.ThreadExecutor;
+import com.guard.cleanarchitecture.domain.repository.UserRepository;
+import com.guard.cleanarchitecture.presentation.AndroidApplication;
+import com.guard.cleanarchitecture.presentation.UIThread;
+import com.guard.cleanarchitecture.presentation.navigation.Navigator;
 import dagger.Module;
 import dagger.Provides;
 import javax.inject.Singleton;

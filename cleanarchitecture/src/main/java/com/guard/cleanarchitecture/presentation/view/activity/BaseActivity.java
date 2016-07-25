@@ -4,10 +4,10 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
-import com.fernandocejas.android10.sample.presentation.AndroidApplication;
-import com.fernandocejas.android10.sample.presentation.internal.di.components.ApplicationComponent;
-import com.fernandocejas.android10.sample.presentation.internal.di.modules.ActivityModule;
-import com.fernandocejas.android10.sample.presentation.navigation.Navigator;
+import com.guard.cleanarchitecture.presentation.AndroidApplication;
+import com.guard.cleanarchitecture.presentation.internal.di.components.ApplicationComponent;
+import com.guard.cleanarchitecture.presentation.internal.di.modules.ActivityModule;
+import com.guard.cleanarchitecture.presentation.navigation.Navigator;
 import javax.inject.Inject;
 
 /**
@@ -38,7 +38,7 @@ public abstract class BaseActivity extends Activity {
   /**
    * Get the Main Application component for dependency injection.
    *
-   * @return {@link com.fernandocejas.android10.sample.presentation.internal.di.components.ApplicationComponent}
+   * @return {@link com.guard.cleanarchitecture.presentation.internal.di.components.ApplicationComponent}
    */
   protected ApplicationComponent getApplicationComponent() {
     return ((AndroidApplication)getApplication()).getApplicationComponent();
@@ -47,7 +47,7 @@ public abstract class BaseActivity extends Activity {
   /**
    * Get an Activity module for dependency injection.
    *
-   * @return {@link com.fernandocejas.android10.sample.presentation.internal.di.modules.ActivityModule}
+   * @return {@link com.guard.cleanarchitecture.presentation.internal.di.modules.ActivityModule}
    */
   protected ActivityModule getActivityModule() {
     return new ActivityModule(this);

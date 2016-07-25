@@ -16,17 +16,16 @@
 package com.guard.cleanarchitecture.presentation.presenter;
 
 import android.support.annotation.NonNull;
-import com.fernandocejas.android10.sample.domain.User;
-import com.fernandocejas.android10.sample.domain.exception.DefaultErrorBundle;
-import com.fernandocejas.android10.sample.domain.exception.ErrorBundle;
-import com.fernandocejas.android10.sample.domain.interactor.DefaultSubscriber;
-import com.fernandocejas.android10.sample.domain.interactor.UseCase;
-import com.fernandocejas.android10.sample.presentation.exception.ErrorMessageFactory;
-import com.fernandocejas.android10.sample.presentation.internal.di.PerActivity;
-import com.fernandocejas.android10.sample.presentation.mapper.UserModelDataMapper;
-import com.fernandocejas.android10.sample.presentation.model.UserModel;
-import com.fernandocejas.android10.sample.presentation.view.UserDetailsView;
-import com.fernandocejas.frodo.annotation.RxLogSubscriber;
+import com.guard.cleanarchitecture.domain.User;
+import com.guard.cleanarchitecture.domain.exception.DefaultErrorBundle;
+import com.guard.cleanarchitecture.domain.exception.ErrorBundle;
+import com.guard.cleanarchitecture.domain.interactor.DefaultSubscriber;
+import com.guard.cleanarchitecture.domain.interactor.UseCase;
+import com.guard.cleanarchitecture.presentation.exception.ErrorMessageFactory;
+import com.guard.cleanarchitecture.presentation.internal.di.PerActivity;
+import com.guard.cleanarchitecture.presentation.mapper.UserModelDataMapper;
+import com.guard.cleanarchitecture.presentation.model.UserModel;
+import com.guard.cleanarchitecture.presentation.view.UserDetailsView;
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -109,7 +108,6 @@ public class UserDetailsPresenter implements Presenter {
     this.getUserDetailsUseCase.execute(new UserDetailsSubscriber());
   }
 
-  @RxLogSubscriber
   private final class UserDetailsSubscriber extends DefaultSubscriber<User> {
 
     @Override public void onCompleted() {

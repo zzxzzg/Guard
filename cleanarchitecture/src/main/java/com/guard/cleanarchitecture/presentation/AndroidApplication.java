@@ -16,9 +16,9 @@
 package com.guard.cleanarchitecture.presentation;
 
 import android.app.Application;
-import com.fernandocejas.android10.sample.presentation.internal.di.components.ApplicationComponent;
-import com.fernandocejas.android10.sample.presentation.internal.di.components.DaggerApplicationComponent;
-import com.fernandocejas.android10.sample.presentation.internal.di.modules.ApplicationModule;
+import com.guard.cleanarchitecture.presentation.internal.di.components.ApplicationComponent;
+import com.guard.cleanarchitecture.presentation.internal.di.components.DaggerApplicationComponent;
+import com.guard.cleanarchitecture.presentation.internal.di.modules.ApplicationModule;
 import com.squareup.leakcanary.LeakCanary;
 
 /**

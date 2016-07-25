@@ -15,9 +15,9 @@
  */
 package com.guard.cleanarchitecture.presentation.mapper;
 
-import com.fernandocejas.android10.sample.domain.User;
-import com.fernandocejas.android10.sample.presentation.internal.di.PerActivity;
-import com.fernandocejas.android10.sample.presentation.model.UserModel;
+import com.guard.cleanarchitecture.domain.User;
+import com.guard.cleanarchitecture.presentation.internal.di.PerActivity;
+import com.guard.cleanarchitecture.presentation.model.UserModel;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;

@@ -15,7 +15,9 @@
  */
 package com.guard.cleanarchitecture.data.net;
 
-import com.fernandocejas.android10.sample.data.entity.UserEntity;
+
+import com.guard.cleanarchitecture.data.entity.UserEntity;
+
 import java.util.List;
 import rx.Observable;
 

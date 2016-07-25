@@ -15,13 +15,13 @@
  */
 package com.guard.cleanarchitecture.presentation.internal.di.modules;
 
-import com.fernandocejas.android10.sample.domain.executor.PostExecutionThread;
-import com.fernandocejas.android10.sample.domain.executor.ThreadExecutor;
-import com.fernandocejas.android10.sample.domain.interactor.GetUserDetails;
-import com.fernandocejas.android10.sample.domain.interactor.GetUserList;
-import com.fernandocejas.android10.sample.domain.interactor.UseCase;
-import com.fernandocejas.android10.sample.domain.repository.UserRepository;
-import com.fernandocejas.android10.sample.presentation.internal.di.PerActivity;
+import com.guard.cleanarchitecture.domain.executor.PostExecutionThread;
+import com.guard.cleanarchitecture.domain.executor.ThreadExecutor;
+import com.guard.cleanarchitecture.domain.interactor.GetUserDetails;
+import com.guard.cleanarchitecture.domain.interactor.GetUserList;
+import com.guard.cleanarchitecture.domain.interactor.UseCase;
+import com.guard.cleanarchitecture.domain.repository.UserRepository;
+import com.guard.cleanarchitecture.presentation.internal.di.PerActivity;
 import dagger.Module;
 import dagger.Provides;
 import javax.inject.Named;

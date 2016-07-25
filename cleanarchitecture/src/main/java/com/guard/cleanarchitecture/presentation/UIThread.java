@@ -15,7 +15,7 @@
  */
 package com.guard.cleanarchitecture.presentation;
 
-import com.fernandocejas.android10.sample.domain.executor.PostExecutionThread;
+import com.guard.cleanarchitecture.domain.executor.PostExecutionThread;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 import rx.Scheduler;

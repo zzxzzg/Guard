@@ -16,9 +16,9 @@
 package com.guard.cleanarchitecture.presentation.exception;
 
 import android.content.Context;
-import com.fernandocejas.android10.sample.data.exception.NetworkConnectionException;
-import com.fernandocejas.android10.sample.data.exception.UserNotFoundException;
-import com.fernandocejas.android10.sample.presentation.R;
+import com.guard.cleanarchitecture.data.exception.NetworkConnectionException;
+import com.guard.cleanarchitecture.data.exception.UserNotFoundException;
+import com.guard.cleanarchitecture.presentation.R;
 
 /**
  * Factory used to create error messages from an Exception as a condition.

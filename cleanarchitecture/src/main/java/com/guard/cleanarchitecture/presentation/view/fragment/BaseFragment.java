@@ -7,7 +7,7 @@ package com.guard.cleanarchitecture.presentation.view.fragment;
 
 import android.app.Fragment;
 import android.widget.Toast;
-import com.fernandocejas.android10.sample.presentation.internal.di.HasComponent;
+import com.guard.cleanarchitecture.presentation.internal.di.HasComponent;
 
 /**
  * Base {@link Fragment} class for every fragment in this application.

@@ -16,10 +16,12 @@
 package com.guard.cleanarchitecture.data.cache;
 
 import android.content.Context;
-import com.fernandocejas.android10.sample.data.cache.serializer.JsonSerializer;
-import com.fernandocejas.android10.sample.data.entity.UserEntity;
-import com.fernandocejas.android10.sample.data.exception.UserNotFoundException;
-import com.fernandocejas.android10.sample.domain.executor.ThreadExecutor;
+
+import com.guard.cleanarchitecture.data.cache.serializer.JsonSerializer;
+import com.guard.cleanarchitecture.data.entity.UserEntity;
+import com.guard.cleanarchitecture.data.exception.UserNotFoundException;
+import com.guard.cleanarchitecture.domain.executor.ThreadExecutor;
+
 import java.io.File;
 import javax.inject.Inject;
 import javax.inject.Singleton;

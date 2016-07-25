@@ -16,8 +16,8 @@
 package com.guard.cleanarchitecture.presentation.internal.di.components;
 
 import android.app.Activity;
-import com.fernandocejas.android10.sample.presentation.internal.di.PerActivity;
-import com.fernandocejas.android10.sample.presentation.internal.di.modules.ActivityModule;
+import com.guard.cleanarchitecture.presentation.internal.di.PerActivity;
+import com.guard.cleanarchitecture.presentation.internal.di.modules.ActivityModule;
 import dagger.Component;
 
 /**
@@ -25,7 +25,7 @@ import dagger.Component;
  * Activity-level components should extend this component.
  *
  * Subtypes of ActivityComponent should be decorated with annotation:
- * {@link com.fernandocejas.android10.sample.presentation.internal.di.PerActivity}
+ * {@link com.guard.cleanarchitecture.presentation.internal.di.PerActivity}
  */
 @PerActivity
 @Component(dependencies = ApplicationComponent.class, modules = ActivityModule.class)

@@ -10,10 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import com.fernandocejas.android10.sample.presentation.R;
-import com.fernandocejas.android10.sample.presentation.model.UserModel;
+import com.guard.cleanarchitecture.presentation.R;
+import com.guard.cleanarchitecture.presentation.model.UserModel;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
@@ -82,7 +82,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserViewHold
   }
 
   static class UserViewHolder extends RecyclerView.ViewHolder {
-    @Bind(R.id.title) TextView textViewTitle;
+    @BindView(R.id.title) TextView textViewTitle;
 
     public UserViewHolder(View itemView) {
       super(itemView);

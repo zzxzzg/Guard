@@ -15,10 +15,11 @@
  */
 package com.guard.cleanarchitecture.data.entity.mapper;
 
-import com.fernandocejas.android10.sample.data.entity.UserEntity;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
+import com.guard.cleanarchitecture.data.entity.UserEntity;
+
 import java.lang.reflect.Type;
 import java.util.List;
 import javax.inject.Inject;

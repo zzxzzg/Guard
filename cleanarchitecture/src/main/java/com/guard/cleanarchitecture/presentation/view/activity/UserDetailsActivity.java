@@ -9,12 +9,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
-import com.fernandocejas.android10.sample.presentation.R;
-import com.fernandocejas.android10.sample.presentation.internal.di.HasComponent;
-import com.fernandocejas.android10.sample.presentation.internal.di.components.DaggerUserComponent;
-import com.fernandocejas.android10.sample.presentation.internal.di.components.UserComponent;
-import com.fernandocejas.android10.sample.presentation.internal.di.modules.UserModule;
-import com.fernandocejas.android10.sample.presentation.view.fragment.UserDetailsFragment;
+import com.guard.cleanarchitecture.presentation.R;
+import com.guard.cleanarchitecture.presentation.internal.di.HasComponent;
+import com.guard.cleanarchitecture.presentation.internal.di.components.DaggerUserComponent;
+import com.guard.cleanarchitecture.presentation.internal.di.components.UserComponent;
+import com.guard.cleanarchitecture.presentation.internal.di.modules.UserModule;
+import com.guard.cleanarchitecture.presentation.view.fragment.UserDetailsFragment;
 
 /**
  * Activity that shows details of a certain user.

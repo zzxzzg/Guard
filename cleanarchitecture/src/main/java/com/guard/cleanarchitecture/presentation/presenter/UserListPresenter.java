@@ -16,16 +16,16 @@
 package com.guard.cleanarchitecture.presentation.presenter;
 
 import android.support.annotation.NonNull;
-import com.fernandocejas.android10.sample.domain.User;
-import com.fernandocejas.android10.sample.domain.exception.DefaultErrorBundle;
-import com.fernandocejas.android10.sample.domain.exception.ErrorBundle;
-import com.fernandocejas.android10.sample.domain.interactor.DefaultSubscriber;
-import com.fernandocejas.android10.sample.domain.interactor.UseCase;
-import com.fernandocejas.android10.sample.presentation.exception.ErrorMessageFactory;
-import com.fernandocejas.android10.sample.presentation.internal.di.PerActivity;
-import com.fernandocejas.android10.sample.presentation.mapper.UserModelDataMapper;
-import com.fernandocejas.android10.sample.presentation.model.UserModel;
-import com.fernandocejas.android10.sample.presentation.view.UserListView;
+import com.guard.cleanarchitecture.domain.User;
+import com.guard.cleanarchitecture.domain.exception.DefaultErrorBundle;
+import com.guard.cleanarchitecture.domain.exception.ErrorBundle;
+import com.guard.cleanarchitecture.domain.interactor.DefaultSubscriber;
+import com.guard.cleanarchitecture.domain.interactor.UseCase;
+import com.guard.cleanarchitecture.presentation.exception.ErrorMessageFactory;
+import com.guard.cleanarchitecture.presentation.internal.di.PerActivity;
+import com.guard.cleanarchitecture.presentation.mapper.UserModelDataMapper;
+import com.guard.cleanarchitecture.presentation.model.UserModel;
+import com.guard.cleanarchitecture.presentation.view.UserListView;
 import java.util.Collection;
 import java.util.List;
 import javax.inject.Inject;

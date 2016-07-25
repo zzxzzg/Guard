@@ -15,8 +15,9 @@
  */
 package com.guard.cleanarchitecture.data.cache.serializer;
 
-import com.fernandocejas.android10.sample.data.entity.UserEntity;
 import com.google.gson.Gson;
+import com.guard.cleanarchitecture.data.entity.UserEntity;
+
 import javax.inject.Inject;
 import javax.inject.Singleton;
 

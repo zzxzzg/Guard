@@ -13,12 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fernandocejas.android10.sample.domain.interactor;
+package com.guard.cleanarchitecture.domain.interactor;
 
-import com.fernandocejas.android10.sample.domain.User;
-import com.fernandocejas.android10.sample.domain.executor.PostExecutionThread;
-import com.fernandocejas.android10.sample.domain.executor.ThreadExecutor;
-import com.fernandocejas.android10.sample.domain.repository.UserRepository;
+import com.guard.cleanarchitecture.domain.User;
+import com.guard.cleanarchitecture.domain.executor.PostExecutionThread;
+import com.guard.cleanarchitecture.domain.executor.ThreadExecutor;
+import com.guard.cleanarchitecture.domain.repository.UserRepository;
+
 import javax.inject.Inject;
 import rx.Observable;
 
@@ -33,7 +34,7 @@ public class GetUserDetails extends UseCase {
 
   @Inject
   public GetUserDetails(int userId, UserRepository userRepository,
-      ThreadExecutor threadExecutor, PostExecutionThread postExecutionThread) {
+                        ThreadExecutor threadExecutor, PostExecutionThread postExecutionThread) {
     super(threadExecutor, postExecutionThread);
     this.userId = userId;
     this.userRepository = userRepository;

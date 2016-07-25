@@ -15,9 +15,10 @@
  */
 package com.guard.cleanarchitecture.data.repository.datasource;
 
-import com.fernandocejas.android10.sample.data.cache.UserCache;
-import com.fernandocejas.android10.sample.data.entity.UserEntity;
-import com.fernandocejas.android10.sample.data.net.RestApi;
+import com.guard.cleanarchitecture.data.cache.UserCache;
+import com.guard.cleanarchitecture.data.entity.UserEntity;
+import com.guard.cleanarchitecture.data.net.RestApi;
+
 import java.util.List;
 import rx.Observable;
 import rx.functions.Action1;

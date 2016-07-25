@@ -16,7 +16,7 @@
 package com.guard.cleanarchitecture.presentation.internal.di.modules;
 
 import android.app.Activity;
-import com.fernandocejas.android10.sample.presentation.internal.di.PerActivity;
+import com.guard.cleanarchitecture.presentation.internal.di.PerActivity;
 import dagger.Module;
 import dagger.Provides;
 

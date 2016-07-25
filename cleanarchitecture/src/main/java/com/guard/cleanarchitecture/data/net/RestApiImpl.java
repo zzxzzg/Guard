@@ -18,10 +18,11 @@ package com.guard.cleanarchitecture.data.net;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import com.fernandocejas.android10.sample.data.entity.UserEntity;
-import com.fernandocejas.android10.sample.data.entity.mapper.UserEntityJsonMapper;
-import com.fernandocejas.android10.sample.data.exception.NetworkConnectionException;
-import com.fernandocejas.frodo.annotation.RxLogObservable;
+
+import com.guard.cleanarchitecture.data.entity.UserEntity;
+import com.guard.cleanarchitecture.data.entity.mapper.UserEntityJsonMapper;
+import com.guard.cleanarchitecture.data.exception.NetworkConnectionException;
+
 import java.net.MalformedURLException;
 import java.util.List;
 import rx.Observable;
@@ -48,7 +49,6 @@ public class RestApiImpl implements RestApi {
     this.userEntityJsonMapper = userEntityJsonMapper;
   }
 
-  @RxLogObservable
   @Override public Observable<List<UserEntity>> userEntityList() {
     return Observable.create(subscriber -> {
       if (isThereInternetConnection()) {
@@ -70,7 +70,6 @@ public class RestApiImpl implements RestApi {
     });
   }
 
-  @RxLogObservable
   @Override public Observable<UserEntity> userEntityById(final int userId) {
     return Observable.create(subscriber -> {
       if (isThereInternetConnection()) {
