@@ -160,6 +160,65 @@ public class Test3 {
 
     }
 
+    public void switchMap(){
+        //switchMap 和 flatMap 类似,不同点在于 如果第二个observable开始发送数据,那么前一个observable中的数据会被丢弃
+        Course course1=new Course("语文",90);
+        Course course2=new Course("数学",89);
+        Course course3=new Course("英语",91);
+        Course course4=new Course("物理",92);
+        Course course5=new Course("生物",93);
+        Course course6=new Course("化学",94);
+        Course course7=new Course("地理",95);
+
+        List<Course> list1=new ArrayList<>();
+        list1.add(course1);
+        list1.add(course3);
+        list1.add(course4);
+        list1.add(course5);
+
+        List<Course> list2=new ArrayList<>();
+        list2.add(course2);
+        list2.add(course4);
+        list2.add(course5);
+        list2.add(course7);
+
+        List<Course> list3=new ArrayList<>();
+        list3.add(course1);
+        list3.add(course5);
+        list3.add(course6);
+        list3.add(course7);
+
+        Student student1=new Student("小张",list1);
+        Student student2=new Student("小王",list2);
+        Student student3=new Student("小龙",list3);
+
+        Subscriber<Course> subscribe=new Subscriber<Course>() {
+            @Override
+            public void onCompleted() {
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+
+            }
+
+            @Override
+            public void onNext(Course course) {
+                Log.d("sss",course.name +" is "+course.score);
+            }
+        };
+
+        Observable.just(student1,student2,student3).
+                switchMap(new Func1<Student, Observable<Course>>() {
+                    @Override
+                    public Observable<Course> call(Student student) {
+                        Log.d("sss",student.name+":");
+                        return Observable.from(student.mCourses);
+                    }
+                }).subscribe(subscribe);
+    }
+
     public void concatMapOperation(){
         //concatMap 和 flatMap 类似,不通电在于 严格按照顺序来进行
         Course course1=new Course("语文",90);
@@ -582,6 +641,7 @@ public class Test3 {
                 });
             }
         });
+
     }
 
     public void groupByOperation(){
@@ -1506,8 +1566,8 @@ public class Test3 {
         //timeout有很多重载方法,大致分为以下几种(很多方面和delay类似)
         //timeout(时间),当两个数据之间的间隔大于指定时间,抛出timeout异常
         //timeout(时间,Observable) 不抛出异常,而使用observable发射数据
-        //time(func1,..)等待到返回的Observable发射第一个数据
-        //time(func0,func1,..) 当从subscriber到发射第一个数据超过func0,算作超时,两个数据之间间隔超过func1表示超时!
+        //timeout(func1,..)等待到返回的Observable发射第一个数据
+        //timeout(func0,func1,..) 当从subscriber到发射第一个数据超过func0,算作超时,两个数据之间间隔超过func1表示超时!
         Observable.create(new Observable.OnSubscribe<Integer>() {
             @Override
             public void call(Subscriber<? super Integer> subscriber) {
@@ -1529,7 +1589,7 @@ public class Test3 {
         }, new Func1<Integer, Observable<Long>>() {
             @Override
             public Observable<Long> call(Integer integer) {
-                return Observable.interval(20,TimeUnit.MILLISECONDS).take(3);
+                return Observable.interval(200,TimeUnit.MILLISECONDS).take(3);
             }
         },Observable.create(new Observable.OnSubscribe<Integer>() {
             @Override

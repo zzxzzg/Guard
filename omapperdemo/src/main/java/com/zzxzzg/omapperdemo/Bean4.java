@@ -37,4 +37,52 @@ public class Bean4 {
     /** The company name. */
     @Source(type = Bean3.class, property = "companyName")
     private String companyName;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public Integer getEmp_id() {
+        return emp_id;
+    }
+
+    public void setEmp_id(Integer emp_id) {
+        this.emp_id = emp_id;
+    }
+
+    public List<String> getPositionsList() {
+        return positionsList;
+    }
+
+    public void setPositionsList(List<String> positionsList) {
+        this.positionsList = positionsList;
+    }
+
+    public String getCompanyName() {
+        return companyName;
+    }
+
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
+    }
 }

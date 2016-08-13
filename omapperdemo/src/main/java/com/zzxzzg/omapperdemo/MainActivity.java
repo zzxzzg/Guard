@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         //method1();
         //method2();
         //method3();
-        method4();
+        method5();
     }
 
     public void method1(){
@@ -102,5 +102,33 @@ public class MainActivity extends AppCompatActivity {
         mapper.mapBean(bean2List, bean1List);
 
         Log.d("sss","wait for method1 debug");
+    }
+
+    //将不同的对象映射到同一个对象
+    public void method5(){
+        Bean8 bean2=new Bean8();
+        bean2.setName("aa");
+        bean2.setAddress("haha");
+        bean2.setAge(10);
+        bean2.setEmp_id(16);
+
+
+        Bean9 bean4=new Bean9();
+        bean4.setName("aa");
+        bean4.setAddress("haha");
+        bean4.setAge(10);
+        bean4.setEmp_id(16);
+
+        Bean7 bean1a=new Bean7();
+        SimpleMapper mapper=new SimpleMapper(Bean7.class,Bean8.class);
+        mapper.mapBean(bean1a, bean2);
+
+
+        Bean7 bean1b=new Bean7();
+        SimpleMapper mapper2=new SimpleMapper(Bean7.class,Bean9.class);
+        mapper2.mapBean(bean1b, bean4);
+
+        Log.d("sss","wait for method1 debug");
+
     }
 }

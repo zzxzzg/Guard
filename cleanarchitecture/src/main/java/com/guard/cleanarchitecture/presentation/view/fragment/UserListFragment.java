@@ -42,10 +42,10 @@ public class UserListFragment extends BaseFragment implements UserListView {
   @Inject UserListPresenter userListPresenter;
   @Inject UsersAdapter usersAdapter;
 
-  @BindView(R.id.rv_users) RecyclerView rv_users;
-  @BindView(R.id.rl_progress) RelativeLayout rl_progress;
-  @BindView(R.id.rl_retry) RelativeLayout rl_retry;
-  @BindView(R.id.bt_retry) Button bt_retry;
+  RecyclerView rv_users;
+  RelativeLayout rl_progress;
+  RelativeLayout rl_retry;
+  Button bt_retry;
 
   private UserListListener userListListener;
 
@@ -69,6 +69,18 @@ public class UserListFragment extends BaseFragment implements UserListView {
       Bundle savedInstanceState) {
     final View fragmentView = inflater.inflate(R.layout.fragment_user_list, container, false);
     ButterKnife.bind(this, fragmentView);
+
+    rv_users= (RecyclerView) fragmentView.findViewById(R.id.rv_users);
+    rl_progress= (RelativeLayout) fragmentView.findViewById(R.id.rl_progress);
+    rl_retry= (RelativeLayout) fragmentView.findViewById(R.id.rl_retry);
+    bt_retry= (Button) fragmentView.findViewById(R.id.bt_retry);
+    bt_retry.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        onButtonRetryClick();
+      }
+    });
+
     setupRecyclerView();
     return fragmentView;
   }
@@ -157,7 +169,7 @@ public class UserListFragment extends BaseFragment implements UserListView {
     this.userListPresenter.initialize();
   }
 
-  @OnClick(R.id.bt_retry) void onButtonRetryClick() {
+  void onButtonRetryClick() {
     UserListFragment.this.loadUserList();
   }
 

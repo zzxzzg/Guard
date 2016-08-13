@@ -93,8 +93,9 @@ recyclerview demo 现包含{
 recyclerviewdemo
 
 
-rxjava demo(未完成)
-rxjavademo
+rxjava demo
+rxjavademo 
+包含部分操作符的使用demo和解释
 
 sku选择demo
 skutest
@@ -175,3 +176,8 @@ appintro-lib
 omapperlib omapperdemo
 omapper实现对象映射的库以及使用demo
 
+AndroidTestDemo 包含{
+Local junit test
+Instrumented tests
+}
+android中测试功能的demo
