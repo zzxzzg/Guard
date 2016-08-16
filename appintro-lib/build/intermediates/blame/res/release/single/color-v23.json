@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/Users/yxwang/workspace/git/AppIntro/library/build/intermediates/res/merged/release/color-v23/abc_color_highlight_material.xml",
-        "source": "/Users/yxwang/workspace/git/AppIntro/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/color-v23/abc_color_highlight_material.xml"
-    },
-    {
         "merged": "/Users/yxwang/workspace/git/Guard/appintro-lib/build/intermediates/res/merged/release/color-v23/abc_color_highlight_material.xml",
         "source": "/Users/yxwang/workspace/git/Guard/appintro-lib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/color-v23/abc_color_highlight_material.xml"
     }

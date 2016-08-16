@@ -8,19 +8,7 @@
         "source": "/Users/yxwang/workspace/git/Guard/appintro-demo/src/main/res/menu/menu_default_intro.xml"
     },
     {
-        "merged": "/Users/yxwang/workspace/git/AppIntro/example/build/intermediates/res/merged/debug/menu/menu_base_intro.xml",
-        "source": "/Users/yxwang/workspace/git/AppIntro/example/src/main/res/menu/menu_base_intro.xml"
-    },
-    {
         "merged": "/Users/yxwang/workspace/git/Guard/appintro-demo/build/intermediates/res/merged/debug/menu/menu_base_intro.xml",
         "source": "/Users/yxwang/workspace/git/Guard/appintro-demo/src/main/res/menu/menu_base_intro.xml"
-    },
-    {
-        "merged": "/Users/yxwang/workspace/git/AppIntro/example/build/intermediates/res/merged/debug/menu/menu_default_intro.xml",
-        "source": "/Users/yxwang/workspace/git/AppIntro/example/src/main/res/menu/menu_default_intro.xml"
-    },
-    {
-        "merged": "/Users/yxwang/workspace/git/AppIntro/example/build/intermediates/res/merged/debug/menu/menu_main.xml",
-        "source": "/Users/yxwang/workspace/git/AppIntro/example/src/main/res/menu/menu_main.xml"
     }
 ]

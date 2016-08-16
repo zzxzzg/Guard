@@ -2,9 +2,5 @@
     {
         "merged": "/Users/yxwang/workspace/git/Guard/appintro-demo/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/ic_launcher.png",
         "source": "/Users/yxwang/workspace/git/Guard/appintro-demo/src/main/res/mipmap-xhdpi/ic_launcher.png"
-    },
-    {
-        "merged": "/Users/yxwang/workspace/git/AppIntro/example/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/ic_launcher.png",
-        "source": "/Users/yxwang/workspace/git/AppIntro/example/src/main/res/mipmap-xhdpi/ic_launcher.png"
     }
 ]
