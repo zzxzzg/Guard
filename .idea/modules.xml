@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/appintro-demo/appintro-demo.iml" filepath="$PROJECT_DIR$/appintro-demo/appintro-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/appintro-lib/appintro-lib.iml" filepath="$PROJECT_DIR$/appintro-lib/appintro-lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aspectJdemo/aspectJdemo.iml" filepath="$PROJECT_DIR$/aspectJdemo/aspectJdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/baseactivity/baseactivity.iml" filepath="$PROJECT_DIR$/baseactivity/baseactivity.iml" />
       <module fileurl="file://$PROJECT_DIR$/bitmapfun/bitmapfun.iml" filepath="$PROJECT_DIR$/bitmapfun/bitmapfun.iml" />
       <module fileurl="file://$PROJECT_DIR$/bitmapfundemo/bitmapfundemo.iml" filepath="$PROJECT_DIR$/bitmapfundemo/bitmapfundemo.iml" />
@@ -24,6 +25,7 @@
       <module fileurl="file://$PROJECT_DIR$/eventbusdemo/eventbusdemo.iml" filepath="$PROJECT_DIR$/eventbusdemo/eventbusdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/filechooserdemo/filechooserdemo.iml" filepath="$PROJECT_DIR$/filechooserdemo/filechooserdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/filechooserlib/filechooserlib.iml" filepath="$PROJECT_DIR$/filechooserlib/filechooserlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gintonic/gintonic.iml" filepath="$PROJECT_DIR$/gintonic/gintonic.iml" />
       <module fileurl="file://$PROJECT_DIR$/gof-example/gof-example.iml" filepath="$PROJECT_DIR$/gof-example/gof-example.iml" />
       <module fileurl="file://$PROJECT_DIR$/guardlistdemo/guardlistdemo.iml" filepath="$PROJECT_DIR$/guardlistdemo/guardlistdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/harddecoderdemo/harddecoderdemo.iml" filepath="$PROJECT_DIR$/harddecoderdemo/harddecoderdemo.iml" />
