@@ -184,5 +184,5 @@ android中测试功能的demo
 
 AspectJ aop库demo{
     aspectJdemo
-    gintonic
+    aspectjlib
 }

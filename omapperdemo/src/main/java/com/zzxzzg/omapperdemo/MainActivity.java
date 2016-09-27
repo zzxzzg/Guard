@@ -4,11 +4,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.zzxzzg.omapperdemo.necessary.TestBean1;
+import com.zzxzzg.omapperdemo.necessary.TestBean2;
+import com.zzxzzg.omapperdemo.necessary.TestBean3;
+import com.zzxzzg.omapperdemo.necessary.TestBean4;
+
+import org.omapper.exception.NecessaryFieldEmptyException;
 import org.omapper.mapper.CollatingMapper;
 import org.omapper.mapper.CollectionMapper;
 import org.omapper.mapper.SimpleMapper;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,10 +25,83 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Bean9 bean=new Bean9();
+        Field[] fields=bean.getClass().getDeclaredFields();
+        for(Field field:fields){
+            field.setAccessible(true);
+            Log.d("sss",field.getType().getCanonicalName()+"   "+field.getDeclaringClass().getCanonicalName()+"  "+field.getGenericType().toString());
+        }
+
         //method1();
         //method2();
         //method3();
-        method5();
+        //method5();
+        //method6();
+
+        try{
+            necessaryTest2();
+        }catch (NecessaryFieldEmptyException e){
+            e.printStackTrace();
+            Log.d("sss","wait for method1 debug");
+        }
+
+    }
+
+    public void necessaryTest(){
+        TestBean1 bean1=new TestBean1();
+
+        TestBean2 bean2=new TestBean2();
+        bean2.setName("yxwang");
+        //bean2.setNick("xiaochou");
+        bean2.setAge(11);
+        bean2.setEmp_id("fck");
+
+        SimpleMapper mapper=new SimpleMapper(TestBean1.class,TestBean2.class);
+        mapper.mapBean(bean1, bean2);
+
+        Log.d("sss","wait for method1 debug");
+    }
+
+    public void necessaryTest2(){
+        TestBean3 bean3=new TestBean3();
+
+        TestBean4 bean4=new TestBean4();
+        bean4.bean2s=new ArrayList<>();
+
+        TestBean2 bean2_1=new TestBean2();
+        bean2_1.setName("yxwang");
+        bean2_1.setNick("xiaochou");
+        bean2_1.setAge(11);
+        bean2_1.setEmp_id("fck");
+
+        TestBean2 bean2_2=new TestBean2();
+        bean2_2.setName("yxwang");
+        //bean2_2.setNick("xiaochou");
+        bean2_2.setAge(11);
+        bean2_2.setEmp_id("fck");
+
+        TestBean2 bean2_3=new TestBean2();
+        bean2_3.setName("yxwang");
+        bean2_3.setNick("xiaochou");
+        bean2_3.setAge(11);
+        bean2_3.setEmp_id("fck");
+
+        TestBean2 bean2_4=new TestBean2();
+        bean2_4.setName("yxwang");
+        bean2_4.setNick("xiaochou");
+        bean2_4.setAge(11);
+        bean2_4.setEmp_id("fck");
+
+        bean4.bean2s.add(bean2_1);
+        bean4.bean2s.add(bean2_2);
+        bean4.bean2s.add(bean2_3);
+        bean4.bean2s.add(bean2_4);
+
+        SimpleMapper mapper=new SimpleMapper(TestBean3.class,TestBean4.class);
+        mapper.mapBean(bean3, bean4);
+
+        Log.d("sss","wait for method1 debug");
     }
 
     public void method1(){
@@ -130,5 +211,31 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d("sss","wait for method1 debug");
 
+    }
+
+    public void method6(){
+        Bean10 bean10=new Bean10();
+        bean10.mMap=new HashMap<>();
+
+        Bean1 bean1_0=new Bean1();
+        bean1_0.setName("aa");
+        bean1_0.setAddress("haha");
+        bean1_0.setAge(10);
+        bean1_0.setEmp_id(16);
+
+        Bean1 bean1_1=new Bean1();
+        bean1_1.setName("kk");
+        bean1_1.setAddress("ttt");
+        bean1_1.setAge(11);
+        bean1_1.setEmp_id(18);
+
+        bean10.mMap.put("first",bean1_0);
+        bean10.mMap.put("second",bean1_1);
+
+        Bean11 bean11=new Bean11();
+        SimpleMapper mapper2=new SimpleMapper(Bean11.class,Bean10.class);
+        mapper2.mapBean(bean11, bean10);
+
+        Log.d("sss","wait for method1 debug");
     }
 }

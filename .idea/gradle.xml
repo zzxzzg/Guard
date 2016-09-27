@@ -18,6 +18,7 @@
             <option value="$PROJECT_DIR$/appintro-demo" />
             <option value="$PROJECT_DIR$/appintro-lib" />
             <option value="$PROJECT_DIR$/aspectJdemo" />
+            <option value="$PROJECT_DIR$/aspectjlib" />
             <option value="$PROJECT_DIR$/baseactivity" />
             <option value="$PROJECT_DIR$/bitmapfun" />
             <option value="$PROJECT_DIR$/bitmapfundemo" />
@@ -31,7 +32,6 @@
             <option value="$PROJECT_DIR$/eventbusdemo" />
             <option value="$PROJECT_DIR$/filechooserdemo" />
             <option value="$PROJECT_DIR$/filechooserlib" />
-            <option value="$PROJECT_DIR$/gintonic" />
             <option value="$PROJECT_DIR$/gof-example" />
             <option value="$PROJECT_DIR$/guardlistdemo" />
             <option value="$PROJECT_DIR$/harddecoderdemo" />
@@ -83,6 +83,7 @@
             <option value="$PROJECT_DIR$/appintro-demo" />
             <option value="$PROJECT_DIR$/appintro-lib" />
             <option value="$PROJECT_DIR$/aspectJdemo" />
+            <option value="$PROJECT_DIR$/aspectjlib" />
             <option value="$PROJECT_DIR$/baseactivity" />
             <option value="$PROJECT_DIR$/bitmapfun" />
             <option value="$PROJECT_DIR$/bitmapfundemo" />
@@ -96,7 +97,6 @@
             <option value="$PROJECT_DIR$/eventbusdemo" />
             <option value="$PROJECT_DIR$/filechooserdemo" />
             <option value="$PROJECT_DIR$/filechooserlib" />
-            <option value="$PROJECT_DIR$/gintonic" />
             <option value="$PROJECT_DIR$/gof-example" />
             <option value="$PROJECT_DIR$/guardlistdemo" />
             <option value="$PROJECT_DIR$/harddecoderdemo" />

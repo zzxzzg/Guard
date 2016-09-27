@@ -14,11 +14,13 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 import org.omapper.annotations.Mappable;
+import org.omapper.annotations.Necessary;
 import org.omapper.annotations.Sink;
 import org.omapper.annotations.Source;
 import org.omapper.enums.FieldType;
 import org.omapper.enums.MappingType;
 import org.omapper.exception.IncompatibleFieldsException;
+import org.omapper.exception.NecessaryFieldEmptyException;
 import org.omapper.exception.UnableToMapException;
 import org.omapper.exception.UnknownPropertyException;
 import org.omapper.exception.UnknownTypeException;
@@ -39,6 +41,8 @@ public abstract class AbstractMapper {
 	/** The field mapping map. */
 	protected final Map<String, MapEntry> fieldMappingMap;
 
+	protected final Map<String, Field> necessaryField;
+
 	/**
 	 * Instantiates a new abstract mapper.
 	 * 
@@ -50,7 +54,10 @@ public abstract class AbstractMapper {
 	public AbstractMapper(Class targetClass, Class... sourceClass) {
 
 		fieldMappingMap = new HashMap<String, MapEntry>();
+		necessaryField = new HashMap<>();
 		initFieldMaps(targetClass, sourceClass);
+
+		//initNecessaryField(targetClass,null);
 
 	}
 
@@ -100,8 +107,61 @@ public abstract class AbstractMapper {
 	}
 	}
 
+//	private void initNecessaryField(Class targetClass,String parentKey){
+//		Field[] targetFieldArray = targetClass.getDeclaredFields();
+//		for(Field targetField:targetFieldArray){
+//			targetField.setAccessible(true);
+//			if(!targetField.isAnnotationPresent(Necessary.class)){
+//				continue;
+//			}
+//			Necessary necessary=targetField.getAnnotation(Necessary.class);
+//			if(necessary == null){
+//				continue;
+//			}
+//			boolean isNecessary=necessary.value();
+//			if(!isNecessary){
+//				continue;
+//			}
+//			String fieldMappingKey = MapperUtil
+//					.constructFieldMappingKey(targetField);
+//			if(parentKey!=null && !parentKey.trim().equals("")){
+//				fieldMappingKey=parentKey+"#"+fieldMappingKey;
+//			}
+//			necessaryField.put(fieldMappingKey,targetField);
+//
+//			if (targetField.getType().isAnnotationPresent(
+//					Mappable.class)) {//如果sink类字段或者目标类字段是mappable,那么递归之!
+//				initNecessaryField(targetField.getType(),
+//						fieldMappingKey);
+//			} else if (Collection.class.isAssignableFrom(targetField
+//					.getType())
+//					|| Map.class
+//					.isAssignableFrom(targetField.getType())) {//如果目标字段是collection或者是map
+//				if ((targetField.getGenericType() == targetField
+//						.getType())) {//没有指定List或者Map的模板类型,不支持!
+//					if (logger.isDebugEnabled()) {
+//						logger.debug("initFieldMapFromSource(Class, Map<String,Class>) - Found non parameterized collections field:" + targetField + " skipping it as not supported yet"); //$NON-NLS-1$ //$NON-NLS-2$
+//					}
+//				} else {
+//					initNecessaryField(
+//							(ParameterizedType) targetField
+//									.getGenericType(),fieldMappingKey);
+//				}
+//
+//			} else if (targetField.getType().isArray()) {
+//				if (!targetField.getType().getComponentType()
+//						.isPrimitive()
+//						&& (!targetField.getType().getComponentType()
+//						.equals(String.class))) {
+//					initNecessaryField(targetField.getType()
+//							.getComponentType(),fieldMappingKey);
+//				}
+//			}
+//		}
+//	}
+
 	private void initFieldMapFromSource(Class targetClass,
-			Map<String, Class> sourceClassMap) {
+			Map<String, Class> sourceClassMap) {  //sourceClassMap <SinkclassName ,Class>
 		if (logger.isDebugEnabled()) {
 			logger.debug("initFieldMapFromSource(Class, Map<String,Class>) - start"); //$NON-NLS-1$
 	}
@@ -110,7 +170,7 @@ public abstract class AbstractMapper {
 
 		for (Map.Entry<String, Class> entry : sourceClassMap.entrySet()) {
 			Field[] sourceFieldArray = entry.getValue().getDeclaredFields();
-			for (Field sourceField : sourceFieldArray) {
+			for (Field sourceField : sourceFieldArray) { //SinkClassField
 				String sourceFieldName = sourceField.getName();
 				sourceField.setAccessible(true);
 
@@ -139,7 +199,7 @@ public abstract class AbstractMapper {
 				String targetFieldName = targetAnnotation.property();
 				Class targetClassName = targetAnnotation.type();
 				if (!targetClassName.getCanonicalName().equals(
-						targetClass.getCanonicalName())) {
+						targetClass.getCanonicalName())) {//如果目标类的类名和当前注解中定义的目标类不同
 					if (logger.isDebugEnabled()) {
 						logger.debug("initFieldMapFromSource(Class, Map<String,Class>) - Target Class specified is different from parameters for field:" + sourceFieldName + " Specified:" + targetClassName.getCanonicalName() + " Allowed Target Class:" + targetClass.getCanonicalName() + " so skipping it"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
 					}
@@ -148,30 +208,33 @@ public abstract class AbstractMapper {
 
 				try {
 					Field targetField = targetClassName
-							.getDeclaredField(targetFieldName);
+							.getDeclaredField(targetFieldName);//目标类对应的字段
 
 					targetField.setAccessible(true);
 					MapEntry entryFieldMap = new MapEntry(sourceField,
-							targetField);
+							targetField);//MapEntry<Sink类字段,对应的目标字段>
 					String fieldMappingKey = MapperUtil
-							.constructFieldMappingKey(targetField);
+							.constructFieldMappingKey(targetField);//Target.fieldName
+					if(fieldMappingMap.containsKey(fieldMappingKey)){
+						return;
+					}
 					if (!fieldMappingMap.containsKey(fieldMappingKey)) {
 						fieldMappingMap.put(fieldMappingKey, entryFieldMap);
 					}
 					if (sourceField.getType().isAnnotationPresent(
 							Mappable.class)
 							|| targetField.getType().isAnnotationPresent(
-									Mappable.class)) {
+									Mappable.class)) {//如果sink类字段或者目标类字段是mappable,那么递归之!
 						initFieldMaps(targetField.getType(),
 								sourceField.getType());
 					} else if (Collection.class.isAssignableFrom(targetField
 							.getType())
 							|| Map.class
-									.isAssignableFrom(targetField.getType())) {
+									.isAssignableFrom(targetField.getType())) {//如果目标字段是collection或者是map
 						if ((targetField.getGenericType() == targetField
 								.getType())
 								&& (sourceField.getGenericType() == sourceField
-										.getType())) {
+										.getType())) {//没有指定List或者Map的模板类型,不支持!
 							if (logger.isDebugEnabled()) {
 								logger.debug("initFieldMapFromSource(Class, Map<String,Class>) - Found non parameterized collections field:" + targetField + " skipping it as not supported yet"); //$NON-NLS-1$ //$NON-NLS-2$
 							}
@@ -268,6 +331,9 @@ public abstract class AbstractMapper {
 						MapEntry entry = new MapEntry(sourceField, targetField);
 						String fieldMappingKey = MapperUtil
 								.constructFieldMappingKey(targetField);
+						if(fieldMappingMap.containsKey(fieldMappingKey)){
+							return;
+						}
 						if (!fieldMappingMap.containsKey(fieldMappingKey)) {
 							fieldMappingMap.put(fieldMappingKey, entry);
 						}
@@ -358,10 +424,9 @@ public abstract class AbstractMapper {
 		if (logger.isDebugEnabled()) {
 			logger.debug("mapBeanDefault(Object, Object) - start"); //$NON-NLS-1$
 	}
-
 		try {
 
-			Map<String, Object> sourceObjectMap = new HashMap<String, Object>();
+			Map<String, Object> sourceObjectMap = new HashMap<String, Object>();//<SourceClass,SourceClassObj>
 
 			for (Object sourceObject : source) {
 				sourceObjectMap.put(sourceObject.getClass().getCanonicalName(),
@@ -371,17 +436,36 @@ public abstract class AbstractMapper {
 			Field[] targetFields = target.getClass().getDeclaredFields();
 			for (Field targetField : targetFields) {
 				targetField.setAccessible(true);
-				MapEntry entry = fieldMappingMap.get(MapperUtil
-						.constructFieldMappingKey(targetField));
+				boolean isNecessary=false;
+				boolean isNullable=true;
+				String key=MapperUtil
+						.constructFieldMappingKey(targetField);
+				MapEntry entry = fieldMappingMap.get(key);//MapEntry<Sink类字段,对应的目标字段>
+
+				if(targetField.isAnnotationPresent(Necessary.class)){
+					Necessary necessary=targetField.getAnnotation(Necessary.class);
+					if(necessary!=null){
+						isNecessary=necessary.necessary();
+						isNullable=necessary.nullable();
+					}
+				}
+
+				if(isNecessary && entry==null){
+					throw new NecessaryFieldEmptyException(key+"------ Necessary Field is unmap");
+				}
+
 				if (entry != null) {
 					Field sourceField = entry.getSourceField();
 
 					Object sourceObject = sourceObjectMap.get(sourceField
-							.getDeclaringClass().getCanonicalName());
+							.getDeclaringClass().getCanonicalName());//获取source字段对应的类所对应的对象
 
-					if (!isSourceFieldSet(sourceField, sourceObject)) {
+					if (!isSourceFieldSet(sourceField, sourceObject)) {//如果source字段为空,那么跳过该字段
 						if (logger.isDebugEnabled()) {
 							logger.debug("mapBeanDefault(Object, Object) - Source Field:" + sourceField.getName() + " not set so skipping it"); //$NON-NLS-1$ //$NON-NLS-2$
+						}
+						if(!isNullable){
+							throw new NecessaryFieldEmptyException(key+"------ Necessary Field is empty");
 						}
 						continue;
 					}
@@ -389,7 +473,7 @@ public abstract class AbstractMapper {
 					if (targetField.getType().isAnnotationPresent(
 							Mappable.class)
 							|| sourceField.getType().isAnnotationPresent(
-									Mappable.class)) {
+									Mappable.class)) {//如果目标字段是mappable,那么递归赋值
 						Object targetObject = MapperUtil
 								.createTargetFieldInstance(targetField);
 						mapBeanDefault(targetObject, sourceField.get(sourceObject));
@@ -397,7 +481,7 @@ public abstract class AbstractMapper {
 					} else if (Collection.class.isAssignableFrom(targetField
 							.getType())
 							|| Map.class
-									.isAssignableFrom(targetField.getType())) {
+									.isAssignableFrom(targetField.getType())) {//如果是容器
 						Object targetObject = MapperUtil
 								.createTargetFieldInstance(targetField);
 						mapCollectionBeans(targetObject, sourceObject,
@@ -504,13 +588,32 @@ public abstract class AbstractMapper {
 
 		for (int typeCount = 0; typeCount < targetFieldTypes.length; typeCount++) {
 			initFieldMaps((Class) targetFieldTypes[typeCount],
-					(Class) sourceFieldTypes[typeCount]);
+					(Class) sourceFieldTypes[typeCount]);//递归所有模板参数类型
 		}
 
 		if (logger.isDebugEnabled()) {
 			logger.debug("initFieldMaps(ParameterizedType, ParameterizedType) - end"); //$NON-NLS-1$
 	}
 	}
+
+
+//	private void initNecessaryField(ParameterizedType genericTypeTarget,
+//					   String parentKey) {
+//		if (logger.isDebugEnabled()) {
+//			logger.debug("initFieldMaps(ParameterizedType, ParameterizedType) - start"); //$NON-NLS-1$
+//		}
+//
+//		Type[] targetFieldTypes = genericTypeTarget.getActualTypeArguments();
+//
+//		for (int typeCount = 0; typeCount < targetFieldTypes.length; typeCount++) {
+//			initNecessaryField((Class) targetFieldTypes[typeCount],
+//					parentKey);//递归所有模板参数类型
+//		}
+//
+//		if (logger.isDebugEnabled()) {
+//			logger.debug("initFieldMaps(ParameterizedType, ParameterizedType) - end"); //$NON-NLS-1$
+//		}
+//	}
 
 	/**
 	 * This method maps collection fields.
@@ -543,22 +646,76 @@ public abstract class AbstractMapper {
 		ParameterizedType sourceFieldType = (ParameterizedType) sourceField
 				.getGenericType();
 
+		if(Collection.class.isAssignableFrom(targetField
+				.getType())) {
+			Collection targetCollection = (Collection) targetObject;
+			Collection sourceCollection = (Collection) sourceField
+					.get(sourceObject);
 
-		Collection targetCollection = (Collection) targetObject;
-		Collection sourceCollection = (Collection) sourceField
-				.get(sourceObject);
+			if (((Class) targetFieldType
+					.getActualTypeArguments()[0]) == ((Class) sourceFieldType
+					.getActualTypeArguments()[0])) {
+				targetCollection.addAll(sourceCollection);
+			} else {
+				Iterator sourceIterator = sourceCollection.iterator();
+				while (sourceIterator.hasNext()) {
+					Object targetCollectionElementObject = ((Class) targetFieldType
+							.getActualTypeArguments()[0]).newInstance();
+					mapBeanDefault(targetCollectionElementObject, sourceIterator.next());
+					targetCollection.add(targetCollectionElementObject);
+				}
+			}
+		}else if(Map.class
+				.isAssignableFrom(targetField.getType())){
+			Map targetCollection = (Map) targetObject;
+			Map sourceCollection = (Map) sourceField
+					.get(sourceObject);
+			if (((Class) targetFieldType
+					.getActualTypeArguments()[0]) == ((Class) sourceFieldType
+					.getActualTypeArguments()[0]) && (Class)targetFieldType.getActualTypeArguments()[1]
+					==(Class)sourceFieldType.getActualTypeArguments()[1]){
+				targetCollection.putAll(sourceCollection);
+			}else if(((Class) targetFieldType
+					.getActualTypeArguments()[0]) != ((Class) sourceFieldType
+					.getActualTypeArguments()[0]) && (Class)targetFieldType.getActualTypeArguments()[1]
+					==(Class)sourceFieldType.getActualTypeArguments()[1]) {
+				//错误,map的键不同
+				Iterator sourceIterator = sourceCollection.keySet().iterator();
+				while (sourceIterator.hasNext()) {
+					Object key=sourceIterator.next();
+					Object value = sourceCollection.get(key);
+					Object targetCollectionKey = ((Class) targetFieldType
+							.getActualTypeArguments()[0]).newInstance();
+					mapBeanDefault(targetCollectionKey, key);
+					targetCollection.put(targetCollectionKey,value);
+				}
+			}else if(((Class) targetFieldType
+					.getActualTypeArguments()[0]) == ((Class) sourceFieldType
+					.getActualTypeArguments()[0]) && (Class)targetFieldType.getActualTypeArguments()[1]
+					!=(Class)sourceFieldType.getActualTypeArguments()[1]){
+				Iterator sourceIterator = sourceCollection.keySet().iterator();
+				while (sourceIterator.hasNext()) {
+					Object key=sourceIterator.next();
+					Object targetCollectionElementObject = ((Class) targetFieldType
+							.getActualTypeArguments()[1]).newInstance();
+					mapBeanDefault(targetCollectionElementObject, sourceCollection.get(key));
+					targetCollection.put(key,targetCollectionElementObject);
+				}
+			}else{
+				Iterator sourceIterator = sourceCollection.keySet().iterator();
+				while (sourceIterator.hasNext()) {
+					Object key=sourceIterator.next();
+					Object value = sourceCollection.get(key);
+					Object targetCollectionKey = ((Class) targetFieldType
+							.getActualTypeArguments()[0]).newInstance();
+					mapBeanDefault(targetCollectionKey, key);
 
-		if(((Class) targetFieldType
-				.getActualTypeArguments()[0])==((Class) sourceFieldType
-				.getActualTypeArguments()[0])){
-			targetCollection.addAll(sourceCollection);
-		}else {
-			Iterator sourceIterator = sourceCollection.iterator();
-			while (sourceIterator.hasNext()) {
-				Object targetCollectionElementObject = ((Class) targetFieldType
-						.getActualTypeArguments()[0]).newInstance();
-				mapBeanDefault(targetCollectionElementObject, sourceIterator.next());
-				targetCollection.add(targetCollectionElementObject);
+					Object targetCollectionElementObject = ((Class) targetFieldType
+							.getActualTypeArguments()[1]).newInstance();
+					mapBeanDefault(targetCollectionElementObject, value);
+
+					targetCollection.put(targetCollectionKey,targetCollectionElementObject);
+				}
 			}
 		}
 		if (logger.isDebugEnabled()) {

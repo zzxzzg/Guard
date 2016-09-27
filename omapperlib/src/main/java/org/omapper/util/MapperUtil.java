@@ -105,7 +105,7 @@ public class MapperUtil {
 		}
 
 		StringBuilder key = new StringBuilder(targetField.getDeclaringClass()
-				.getCanonicalName()).append('.').append(targetField.getName());
+				.getCanonicalName()).append('.').append(targetField.getName());//Target.fieldName
 		String returnString = key.toString();
 		if (logger.isDebugEnabled()) {
 			logger.debug("constructFieldMappingKey(Field) - end"); //$NON-NLS-1$
@@ -150,6 +150,7 @@ public class MapperUtil {
 			logger.debug("getFieldType(Field) - start"); //$NON-NLS-1$
 		}
 
+
 		Class<?> fieldType = field.getType();
 		FieldType fieldTypeEnum = null;
 		if (Collection.class.isAssignableFrom(fieldType)) {
@@ -163,7 +164,7 @@ public class MapperUtil {
 		} else if (field.getType().isAnnotationPresent(Mappable.class)) {
 			fieldTypeEnum = FieldType.USER;
 		} else if (fieldType.isInterface()
-				|| Modifier.isAbstract(fieldType.getModifiers())) {
+				|| Modifier.isAbstract(fieldType.getModifiers())) {//获取类的修辞符,public static final 等
 			fieldTypeEnum = FieldType.TEMPLATE;
 		}
 
@@ -275,7 +276,7 @@ public class MapperUtil {
 			targetObject = targetField.getType().getComponentType()
 					.newInstance();
 		} else if (targetField.getType().isInterface()
-				|| Modifier.isAbstract(targetField.getType().getModifiers())) {
+				|| Modifier.isAbstract(targetField.getType().getModifiers())) {//如果是接口或者虚类,查看是否定义了Implementation,否则报错
 			if (targetField.isAnnotationPresent(Implementation.class)) {
 				Implementation interfaceAnnot = targetField
 						.getAnnotation(Implementation.class);
