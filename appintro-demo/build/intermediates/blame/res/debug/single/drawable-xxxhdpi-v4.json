@@ -8,12 +8,12 @@
         "source": "/Users/yxwang/workspace/git/Guard/appintro-demo/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable-xxxhdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png"
     },
     {
-        "merged": "/Users/yxwang/workspace/git/Guard/appintro-demo/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png",
-        "source": "/Users/yxwang/workspace/git/Guard/appintro-demo/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable-xxxhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png"
-    },
-    {
         "merged": "/Users/yxwang/workspace/git/Guard/appintro-demo/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/ic_slide1.png",
         "source": "/Users/yxwang/workspace/git/Guard/appintro-demo/src/main/res/drawable-xxxhdpi/ic_slide1.png"
+    },
+    {
+        "merged": "/Users/yxwang/workspace/git/Guard/appintro-demo/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png",
+        "source": "/Users/yxwang/workspace/git/Guard/appintro-demo/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable-xxxhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png"
     },
     {
         "merged": "/Users/yxwang/workspace/git/Guard/appintro-demo/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png",

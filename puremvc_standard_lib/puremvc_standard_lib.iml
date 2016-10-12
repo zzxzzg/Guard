@@ -27,6 +27,5 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="puremvc_standard_lib.puremvc_standard_lib" level="project" />
   </component>
 </module>

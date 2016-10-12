@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Guard.iml" filepath="$PROJECT_DIR$/Guard.iml" />
       <module fileurl="file://$PROJECT_DIR$/aidlclient/aidlclient.iml" filepath="$PROJECT_DIR$/aidlclient/aidlclient.iml" />
       <module fileurl="file://$PROJECT_DIR$/aidlserver/aidlserver.iml" filepath="$PROJECT_DIR$/aidlserver/aidlserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/alihotfixtest/alihotfixtest.iml" filepath="$PROJECT_DIR$/alihotfixtest/alihotfixtest.iml" />
       <module fileurl="file://$PROJECT_DIR$/animationdemo/animationdemo.iml" filepath="$PROJECT_DIR$/animationdemo/animationdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/animationlib/animationlib.iml" filepath="$PROJECT_DIR$/animationlib/animationlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/anroidtestdemo/anroidtestdemo.iml" filepath="$PROJECT_DIR$/anroidtestdemo/anroidtestdemo.iml" />
@@ -26,7 +27,6 @@
       <module fileurl="file://$PROJECT_DIR$/eventbusdemo/eventbusdemo.iml" filepath="$PROJECT_DIR$/eventbusdemo/eventbusdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/filechooserdemo/filechooserdemo.iml" filepath="$PROJECT_DIR$/filechooserdemo/filechooserdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/filechooserlib/filechooserlib.iml" filepath="$PROJECT_DIR$/filechooserlib/filechooserlib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/aspectjlib/gintonic.iml" filepath="$PROJECT_DIR$/aspectjlib/gintonic.iml" />
       <module fileurl="file://$PROJECT_DIR$/gof-example/gof-example.iml" filepath="$PROJECT_DIR$/gof-example/gof-example.iml" />
       <module fileurl="file://$PROJECT_DIR$/guardlistdemo/guardlistdemo.iml" filepath="$PROJECT_DIR$/guardlistdemo/guardlistdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/harddecoderdemo/harddecoderdemo.iml" filepath="$PROJECT_DIR$/harddecoderdemo/harddecoderdemo.iml" />

@@ -7,7 +7,7 @@ buildscript {
     mavenCentral()
   }
   dependencies {
-    classpath 'org.aspectj:aspectjtools:1.8.1'
+    classpath 'org.aspectj:aspectjtools:1.8.9'
   }
 }
 
@@ -19,7 +19,7 @@ repositories {
 
 dependencies {
   compile project(':aspectjlib')
-  compile 'org.aspectj:aspectjrt:1.8.1'
+  compile 'org.aspectj:aspectjrt:1.8.9'
 }
 
 android {

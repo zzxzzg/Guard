@@ -4,7 +4,7 @@
     <!-- Background Drawable of View's -->
     <attr name="backgroundCompat" format="reference" />
     <!-- Drawable used to show image in ImageView. -->
-    <attr name="srcCompat" format="reference" />
+    <!-- <attr name="srcCompat" format="reference" /> -->
     <!-- Extra attribute for RippleDrawable, to add support of scroll containers -->
     <attr name="isInScrollContainer" format="boolean" />
 

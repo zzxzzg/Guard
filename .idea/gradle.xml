@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/aidlclient" />
             <option value="$PROJECT_DIR$/aidlserver" />
+            <option value="$PROJECT_DIR$/alihotfixtest" />
             <option value="$PROJECT_DIR$/animationdemo" />
             <option value="$PROJECT_DIR$/animationlib" />
             <option value="$PROJECT_DIR$/anroidtestdemo" />
@@ -71,71 +72,7 @@
             <option value="$PROJECT_DIR$/volley" />
           </set>
         </option>
-        <option name="myModules">
-          <set>
-            <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/aidlclient" />
-            <option value="$PROJECT_DIR$/aidlserver" />
-            <option value="$PROJECT_DIR$/animationdemo" />
-            <option value="$PROJECT_DIR$/animationlib" />
-            <option value="$PROJECT_DIR$/anroidtestdemo" />
-            <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/appintro-demo" />
-            <option value="$PROJECT_DIR$/appintro-lib" />
-            <option value="$PROJECT_DIR$/aspectJdemo" />
-            <option value="$PROJECT_DIR$/aspectjlib" />
-            <option value="$PROJECT_DIR$/baseactivity" />
-            <option value="$PROJECT_DIR$/bitmapfun" />
-            <option value="$PROJECT_DIR$/bitmapfundemo" />
-            <option value="$PROJECT_DIR$/circle_indicator_demo" />
-            <option value="$PROJECT_DIR$/circleindicator" />
-            <option value="$PROJECT_DIR$/cleanarchitecture" />
-            <option value="$PROJECT_DIR$/coordinatorlayout-demo" />
-            <option value="$PROJECT_DIR$/dagger2demo" />
-            <option value="$PROJECT_DIR$/databindingdemo" />
-            <option value="$PROJECT_DIR$/dlopendemo" />
-            <option value="$PROJECT_DIR$/eventbusdemo" />
-            <option value="$PROJECT_DIR$/filechooserdemo" />
-            <option value="$PROJECT_DIR$/filechooserlib" />
-            <option value="$PROJECT_DIR$/gof-example" />
-            <option value="$PROJECT_DIR$/guardlistdemo" />
-            <option value="$PROJECT_DIR$/harddecoderdemo" />
-            <option value="$PROJECT_DIR$/httpstest" />
-            <option value="$PROJECT_DIR$/imageview-zoom-demo" />
-            <option value="$PROJECT_DIR$/imageview-zoom-lib" />
-            <option value="$PROJECT_DIR$/jsbirdge-demo" />
-            <option value="$PROJECT_DIR$/jsbridge-library" />
-            <option value="$PROJECT_DIR$/listanimationdemo" />
-            <option value="$PROJECT_DIR$/listcontroldemo" />
-            <option value="$PROJECT_DIR$/listcontrollib" />
-            <option value="$PROJECT_DIR$/listcontrollib-manipulation" />
-            <option value="$PROJECT_DIR$/looping_viewpager" />
-            <option value="$PROJECT_DIR$/multipicker" />
-            <option value="$PROJECT_DIR$/multipicker-demo" />
-            <option value="$PROJECT_DIR$/omapperdemo" />
-            <option value="$PROJECT_DIR$/omapperlib" />
-            <option value="$PROJECT_DIR$/openh264demo" />
-            <option value="$PROJECT_DIR$/pinnedlistdemo" />
-            <option value="$PROJECT_DIR$/pinnedlistlib" />
-            <option value="$PROJECT_DIR$/puremvc_standard_demo" />
-            <option value="$PROJECT_DIR$/puremvc_standard_lib" />
-            <option value="$PROJECT_DIR$/recyclerviewdemo" />
-            <option value="$PROJECT_DIR$/retrofitdemo" />
-            <option value="$PROJECT_DIR$/rxjavademo" />
-            <option value="$PROJECT_DIR$/skutest" />
-            <option value="$PROJECT_DIR$/srclib" />
-            <option value="$PROJECT_DIR$/sticky_headers_recyclerview_demo" />
-            <option value="$PROJECT_DIR$/sticky_headers_recyclerview_lib" />
-            <option value="$PROJECT_DIR$/super_recyclerview_lib" />
-            <option value="$PROJECT_DIR$/super_recyclerview_sample" />
-            <option value="$PROJECT_DIR$/textmeasure" />
-            <option value="$PROJECT_DIR$/touchdispatchdemo" />
-            <option value="$PROJECT_DIR$/transitionframeworkdemo" />
-            <option value="$PROJECT_DIR$/utillib" />
-            <option value="$PROJECT_DIR$/vector-drawable-lib" />
-            <option value="$PROJECT_DIR$/volley" />
-          </set>
-        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>
   </component>

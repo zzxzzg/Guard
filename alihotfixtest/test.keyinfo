@@ -1,0 +1,4 @@
+store.file=/Users/yxwang/workspace/git/Guard/keystore.jks
+store.password=s1ptest
+key.alias=zzxzzg
+key.password=092013

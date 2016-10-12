@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
+
+    defaultConfig {
+        applicationId "com.zzxzzg.alihotfixtest"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'zzxzzg'
+            keyPassword '092013'
+            storeFile file('/Users/yxwang/workspace/git/Guard/keystore.jks')
+            storePassword 's1ptest'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+}
+
+dependencies {
+    repositories {
+        maven {
+            url "http://repo.baichuan-android.taobao.com/content/groups/public/"
+        }
+    }
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.alibaba.sdk.android.plugins:alisdk-hotfix:1.2.0'
+    compile 'com.alibaba.sdk.android.plugins.jar:alisdk-utdid:0.0.1'
+}

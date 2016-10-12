@@ -186,3 +186,5 @@ AspectJ aop库demo{
     aspectJdemo
     aspectjlib
 }
+
+alihotfixtest 阿里百川热修复demo

@@ -8,28 +8,28 @@
         "source": "/Users/yxwang/workspace/git/Guard/appintro-lib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable-xxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
-        "merged": "/Users/yxwang/workspace/git/Guard/appintro-lib/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_015.png",
-        "source": "/Users/yxwang/workspace/git/Guard/appintro-lib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_015.png"
-    },
-    {
         "merged": "/Users/yxwang/workspace/git/Guard/appintro-lib/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_ic_star_black_36dp.png",
         "source": "/Users/yxwang/workspace/git/Guard/appintro-lib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable-xxhdpi-v4/abc_ic_star_black_36dp.png"
     },
     {
-        "merged": "/Users/yxwang/workspace/git/Guard/appintro-lib/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/ic_navigate_next_white_24dp.png",
-        "source": "/Users/yxwang/workspace/git/Guard/appintro-lib/build/intermediates/bundles/debug/res/drawable-xxhdpi-v4/ic_navigate_next_white_24dp.png"
+        "merged": "/Users/yxwang/workspace/git/Guard/appintro-lib/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_015.png",
+        "source": "/Users/yxwang/workspace/git/Guard/appintro-lib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_015.png"
     },
     {
-        "merged": "/Users/yxwang/workspace/git/Guard/appintro-lib/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png",
-        "source": "/Users/yxwang/workspace/git/Guard/appintro-lib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable-xxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
+        "merged": "/Users/yxwang/workspace/git/Guard/appintro-lib/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png",
+        "source": "/Users/yxwang/workspace/git/Guard/appintro-lib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
     },
     {
         "merged": "/Users/yxwang/workspace/git/Guard/appintro-lib/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_ic_star_black_16dp.png",
         "source": "/Users/yxwang/workspace/git/Guard/appintro-lib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable-xxhdpi-v4/abc_ic_star_black_16dp.png"
     },
     {
-        "merged": "/Users/yxwang/workspace/git/Guard/appintro-lib/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png",
-        "source": "/Users/yxwang/workspace/git/Guard/appintro-lib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
+        "merged": "/Users/yxwang/workspace/git/Guard/appintro-lib/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png",
+        "source": "/Users/yxwang/workspace/git/Guard/appintro-lib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable-xxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
+    },
+    {
+        "merged": "/Users/yxwang/workspace/git/Guard/appintro-lib/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/ic_navigate_next_white_24dp.png",
+        "source": "/Users/yxwang/workspace/git/Guard/appintro-lib/build/intermediates/bundles/debug/res/drawable-xxhdpi-v4/ic_navigate_next_white_24dp.png"
     },
     {
         "merged": "/Users/yxwang/workspace/git/Guard/appintro-lib/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/abc_ic_clear_mtrl_alpha.png",

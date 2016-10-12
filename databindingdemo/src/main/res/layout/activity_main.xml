@@ -8,10 +8,15 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <TextView android:layout_width="wrap_content"
+        <TextView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:kkk="@{user.hintTextColor}"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{user.firstName}"
+            android:hint="@{user.firstName}"
+            android:textColorHint="@{user.hintTextColor}"
             android:clickable="true"
+            android:paddingLeft="@{user.padding}"
             android:onLongClick="@{user.isFriend ? handlers.onLongFriend : handlers.onLongEnemy}"
             android:onClick="@{user.isFriend ? handlers.onClickFriend : handlers.onClickEnemy}"
             android:onTouch="@{user.isFriend ? handlers.onTouchFriend : handlers.onTouchEnemy}"
@@ -20,9 +25,23 @@
             android:layout_height="wrap_content"
             android:text="@{user.lastName}"
             android:clickable="true"
+                  android:paddingTop="@{user.padding}"
+                  android:paddingBottom="@{user.padding}"
             android:onLongClick="@{user.isFriend ? handlers.onLongFriend : handlers.onLongEnemy}"
             android:onClick="@{user.isFriend ? handlers.onClickFriend : handlers.onClickEnemy}"
             android:onTouch="@{user.isFriend ? handlers.onTouchFriend : handlers.onTouchEnemy}"
             />
+
+        <com.guard.databindingdemo.CustomeView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:customeValue="@{@string/app_name}"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:clickable="true"
+                  android:onLongClick="@{user.isFriend ? handlers.onLongFriend : handlers.onLongEnemy}"
+                  android:onClick="@{user.isFriend ? handlers.onClickFriend : handlers.onClickEnemy}"
+                  android:onTouch="@{user.isFriend ? handlers.onTouchFriend : handlers.onTouchEnemy}"
+        />
+
     </LinearLayout>
 </layout>
