@@ -10,6 +10,7 @@ import java.util.concurrent.TimeUnit;
 import rx.Notification;
 import rx.Observable;
 import rx.Subscriber;
+import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action0;
 import rx.functions.Action1;
@@ -22,6 +23,8 @@ import rx.observables.GroupedObservable;
 import rx.schedulers.Schedulers;
 import rx.schedulers.TimeInterval;
 import rx.schedulers.Timestamped;
+import rx.subscriptions.CompositeSubscription;
+import rx.subscriptions.Subscriptions;
 
 /**
  * Created by yxwang on 16/7/7.
@@ -1782,6 +1785,38 @@ public class Test3 {
 
             }
         });
+    }
+
+    //CompositeSubscription 测试
+    //CompositeSubscription 相当于一个集合,unsubscribe会对其中包含的所有Subscription起作用。
+    public void compositeSubTest(){
+        CompositeSubscription subscription = new CompositeSubscription();
+        Subscription s1 = Observable.just(1L,2L,3L,4L,5L).count().subscribe(new Action1<Integer>() {
+            @Override
+            public void call(Integer integer) {
+
+            }
+        });
+
+        Subscription s2 = Observable.just(1L,2L,3L,4L,5L).count().subscribe(new Action1<Integer>() {
+            @Override
+            public void call(Integer integer) {
+
+            }
+        });
+
+        Subscription s3 = Observable.just(1L,2L,3L,4L,5L).count().subscribe(new Action1<Integer>() {
+            @Override
+            public void call(Integer integer) {
+
+            }
+        });
+
+        subscription.add(s1);
+        subscription.add(s2);
+        subscription.add(s3);
+
+        subscription.unsubscribe();
     }
 
 

@@ -188,3 +188,5 @@ AspectJ aop库demo{
 }
 
 alihotfixtest 阿里百川热修复demo
+
+rxpreference RxPreference的使用

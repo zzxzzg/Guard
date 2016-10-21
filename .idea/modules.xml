@@ -52,6 +52,7 @@
       <module fileurl="file://$PROJECT_DIR$/recyclerviewdemo/recyclerviewdemo.iml" filepath="$PROJECT_DIR$/recyclerviewdemo/recyclerviewdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/retrofitdemo/retrofitdemo.iml" filepath="$PROJECT_DIR$/retrofitdemo/retrofitdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxjavademo/rxjavademo.iml" filepath="$PROJECT_DIR$/rxjavademo/rxjavademo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rxpreference/rxpreference.iml" filepath="$PROJECT_DIR$/rxpreference/rxpreference.iml" />
       <module fileurl="file://$PROJECT_DIR$/skutest/skutest.iml" filepath="$PROJECT_DIR$/skutest/skutest.iml" />
       <module fileurl="file://$PROJECT_DIR$/srclib/srclib.iml" filepath="$PROJECT_DIR$/srclib/srclib.iml" />
       <module fileurl="file://$PROJECT_DIR$/sticky_headers_recyclerview_demo/sticky_headers_recyclerview_demo.iml" filepath="$PROJECT_DIR$/sticky_headers_recyclerview_demo/sticky_headers_recyclerview_demo.iml" />

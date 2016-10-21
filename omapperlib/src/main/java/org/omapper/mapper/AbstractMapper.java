@@ -505,6 +505,7 @@ public abstract class AbstractMapper {
 				}
 			}
 		} catch (IllegalArgumentException e) {
+			e.printStackTrace();
 			logger.error("mapBeanDefault(Object, Object)", e); //$NON-NLS-1$
 
 			throw new UnableToMapException(
