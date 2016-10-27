@@ -1,0 +1,72 @@
+ <!--<LinearLayout-->
+        <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--xmlns:tools="http://schemas.android.com/tools"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="vertical"-->
+        <!--tools:context=".MainActivity"-->
+    <!--&gt;-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btnRelativeLayout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="11111"-->
+        <!--/>-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btnLinearLayout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="22222"-->
+        <!--/>-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btnFrameLayout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="33333"-->
+        <!--/>-->
+
+    <!--</LinearLayout>-->
+
+    <layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable name="bean" type="com.zzxzzg.aspectjx_demo.TextBean"/>
+
+    </data>
+
+    <LinearLayout
+                  xmlns:tools="http://schemas.android.com/tools"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+                  tools:context=".MainActivity"
+    >
+
+        <Button
+            android:id="@+id/btnRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{bean.text1}"
+        />
+
+        <Button
+            android:id="@+id/btnLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{bean.text2}"
+        />
+
+        <Button
+            android:id="@+id/btnFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{bean.text3}"
+        />
+
+    </LinearLayout>
+
+</layout>
+

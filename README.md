@@ -187,6 +187,16 @@ AspectJ aop库demo{
     aspectjlib
 }
 
+AspectJX aop库demo{   https://github.com/HujiangTechnology/AspectJX-Demo
+https://github.com/HujiangTechnology/gradle_plugin_android_aspectjx
+    aspectjx_demo
+    aspectjx_lib
+}
+note: 如果编译失败,可能需要关闭instant run 功能, 被指定注入的方法不能被混淆 , 如果开启databinding将会报错
+( 需要加入  aspectjx {
+ excludeJarFilter 'databinding'})
+
+
 alihotfixtest 阿里百川热修复demo
 
 rxpreference RxPreference的使用

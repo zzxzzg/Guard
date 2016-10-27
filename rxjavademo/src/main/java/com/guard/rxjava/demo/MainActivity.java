@@ -26,8 +26,8 @@ public class MainActivity extends RxAppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Test3 test3=new Test3();
-        test3.collectOperation();
+//        Test3 test3=new Test3();
+//        test3.collectOperation();
 
 
 //        requestTimerPingHost();
@@ -42,8 +42,8 @@ public class MainActivity extends RxAppCompatActivity {
 //        Test2 test2=new Test2();
 //        test2.test3();
 
-//        Test3 test3=new Test3();
-//        test3.test2();
+        Test3 test3=new Test3();
+        test3.mapOperation();
 //
 //        Test4 test4=new Test4();
 //        test4.test();

@@ -33,6 +33,7 @@ public class Test3 {
     public void mapOperation(){
 
         //两个接受不同类型的Subscriber 组件 通过一个map(func1)的中间件竟然都注册到同一个Observable上了.
+        //以下这种写法数据竟然被发送了三次……
 
         Integer []nums=new Integer[]{1,2,3,4};
 
@@ -44,7 +45,7 @@ public class Test3 {
 
             @Override
             public void onError(Throwable e) {
-
+                e.printStackTrace();
             }
 
             @Override
@@ -61,7 +62,7 @@ public class Test3 {
 
             @Override
             public void onError(Throwable e) {
-
+                e.printStackTrace();
             }
 
             @Override
@@ -70,7 +71,14 @@ public class Test3 {
             }
         };
 
-        Observable<Integer> observable=Observable.from(nums);
+        Observable<Integer> observable=Observable.create(new Observable.OnSubscribe<Integer>() {
+            @Override
+            public void call(Subscriber<? super Integer> subscriber) {
+                Log.d("sss","send data");
+                subscriber.onNext(1);
+                subscriber.onCompleted();
+            }
+        });
 
         observable.subscribe(subscriber2);
 

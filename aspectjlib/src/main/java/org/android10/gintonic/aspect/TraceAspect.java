@@ -4,11 +4,14 @@
  */
 package org.android10.gintonic.aspect;
 
+import android.util.Log;
+
 import org.android10.gintonic.internal.DebugLog;
 import org.android10.gintonic.internal.StopWatch;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 
@@ -24,11 +27,17 @@ public class TraceAspect {
   private static final String POINTCUT_CONSTRUCTOR =
       "execution(@org.android10.gintonic.annotation.DebugTrace *.new(..))";
 
+  private static final String CALL_CALLTEST =
+          "call(* *..callTest())";
+
   @Pointcut(POINTCUT_METHOD)
   public void methodAnnotatedWithDebugTrace() {}
 
   @Pointcut(POINTCUT_CONSTRUCTOR)
   public void constructorAnnotatedDebugTrace() {}
+
+  @Pointcut(CALL_CALLTEST)
+  public void callAnnotatedDebugTrace() {}
 
   @Around("methodAnnotatedWithDebugTrace() || constructorAnnotatedDebugTrace()")
   public Object weaveJoinPoint(ProceedingJoinPoint joinPoint) throws Throwable {
@@ -44,6 +53,11 @@ public class TraceAspect {
     DebugLog.log(className, buildLogMessage(methodName, stopWatch.getTotalTimeMillis()));
 
     return result;
+  }
+
+  @Before("callAnnotatedDebugTrace()")
+  public void beforeCall() throws Throwable {
+    Log.d("sss","beforeCall");
   }
 
   /**

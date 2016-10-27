@@ -14,6 +14,8 @@
       <module fileurl="file://$PROJECT_DIR$/appintro-lib/appintro-lib.iml" filepath="$PROJECT_DIR$/appintro-lib/appintro-lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/aspectJdemo/aspectJdemo.iml" filepath="$PROJECT_DIR$/aspectJdemo/aspectJdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/aspectjlib/aspectjlib.iml" filepath="$PROJECT_DIR$/aspectjlib/aspectjlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aspectjx-demo/aspectjx-demo.iml" filepath="$PROJECT_DIR$/aspectjx-demo/aspectjx-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aspectjx_lib/aspectjx_lib.iml" filepath="$PROJECT_DIR$/aspectjx_lib/aspectjx_lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/baseactivity/baseactivity.iml" filepath="$PROJECT_DIR$/baseactivity/baseactivity.iml" />
       <module fileurl="file://$PROJECT_DIR$/bitmapfun/bitmapfun.iml" filepath="$PROJECT_DIR$/bitmapfun/bitmapfun.iml" />
       <module fileurl="file://$PROJECT_DIR$/bitmapfundemo/bitmapfundemo.iml" filepath="$PROJECT_DIR$/bitmapfundemo/bitmapfundemo.iml" />
