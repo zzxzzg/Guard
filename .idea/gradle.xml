@@ -35,6 +35,7 @@
             <option value="$PROJECT_DIR$/eventbusdemo" />
             <option value="$PROJECT_DIR$/filechooserdemo" />
             <option value="$PROJECT_DIR$/filechooserlib" />
+            <option value="$PROJECT_DIR$/flux" />
             <option value="$PROJECT_DIR$/gof-example" />
             <option value="$PROJECT_DIR$/guardlistdemo" />
             <option value="$PROJECT_DIR$/harddecoderdemo" />
@@ -68,6 +69,7 @@
             <option value="$PROJECT_DIR$/super_recyclerview_lib" />
             <option value="$PROJECT_DIR$/super_recyclerview_sample" />
             <option value="$PROJECT_DIR$/textmeasure" />
+            <option value="$PROJECT_DIR$/todo_app" />
             <option value="$PROJECT_DIR$/touchdispatchdemo" />
             <option value="$PROJECT_DIR$/transitionframeworkdemo" />
             <option value="$PROJECT_DIR$/utillib" />

@@ -426,7 +426,7 @@ public class Test3 {
         Observable.just(1,2,3,4,5,6,7).skip(3).subscribe(new Action1<Integer>() {
             @Override
             public void call(Integer integer) {
-
+                Log.d("sss","the int is "+integer);
             }
         });
     }

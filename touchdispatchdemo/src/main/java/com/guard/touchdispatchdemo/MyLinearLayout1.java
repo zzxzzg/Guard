@@ -45,23 +45,23 @@ public class MyLinearLayout1 extends LinearLayout {
     public boolean onTouchEvent(MotionEvent event) {
         String name= (String) getTag();
         Log.d("sss", name +"-----> onTouchEvent --------------   "+Util.actionToString(event));
-        super.onTouchEvent(event);
-        return true;
+        boolean b = super.onTouchEvent(event);
+        return b;
     }
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
         String name= (String) getTag();
         Log.d("sss", name +"-----> dispatchTouchEvent --------------   "+Util.actionToString(ev));
-        super.dispatchTouchEvent(ev);
-        return  false;
+        boolean b = super.dispatchTouchEvent(ev);
+        return  b;
     }
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         String name= (String) getTag();
         Log.d("sss", name +"-----> onInterceptTouchEvent --------------   "+Util.actionToString(ev));
-        super.onInterceptTouchEvent(ev);
-        return false;
+        boolean b = super.onInterceptTouchEvent(ev);
+        return b;
     }
 }

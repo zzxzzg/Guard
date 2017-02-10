@@ -29,6 +29,7 @@
       <module fileurl="file://$PROJECT_DIR$/eventbusdemo/eventbusdemo.iml" filepath="$PROJECT_DIR$/eventbusdemo/eventbusdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/filechooserdemo/filechooserdemo.iml" filepath="$PROJECT_DIR$/filechooserdemo/filechooserdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/filechooserlib/filechooserlib.iml" filepath="$PROJECT_DIR$/filechooserlib/filechooserlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flux/flux.iml" filepath="$PROJECT_DIR$/flux/flux.iml" />
       <module fileurl="file://$PROJECT_DIR$/gof-example/gof-example.iml" filepath="$PROJECT_DIR$/gof-example/gof-example.iml" />
       <module fileurl="file://$PROJECT_DIR$/guardlistdemo/guardlistdemo.iml" filepath="$PROJECT_DIR$/guardlistdemo/guardlistdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/harddecoderdemo/harddecoderdemo.iml" filepath="$PROJECT_DIR$/harddecoderdemo/harddecoderdemo.iml" />
@@ -62,6 +63,7 @@
       <module fileurl="file://$PROJECT_DIR$/super_recyclerview_lib/super_recyclerview_lib.iml" filepath="$PROJECT_DIR$/super_recyclerview_lib/super_recyclerview_lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/super_recyclerview_sample/super_recyclerview_sample.iml" filepath="$PROJECT_DIR$/super_recyclerview_sample/super_recyclerview_sample.iml" />
       <module fileurl="file://$PROJECT_DIR$/textmeasure/textmeasure.iml" filepath="$PROJECT_DIR$/textmeasure/textmeasure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/todo_app/todo_app.iml" filepath="$PROJECT_DIR$/todo_app/todo_app.iml" />
       <module fileurl="file://$PROJECT_DIR$/touchdispatchdemo/touchdispatchdemo.iml" filepath="$PROJECT_DIR$/touchdispatchdemo/touchdispatchdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/transitionframeworkdemo/transitionframeworkdemo.iml" filepath="$PROJECT_DIR$/transitionframeworkdemo/transitionframeworkdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/utillib/utillib.iml" filepath="$PROJECT_DIR$/utillib/utillib.iml" />

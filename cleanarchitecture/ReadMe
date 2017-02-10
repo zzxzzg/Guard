@@ -1,0 +1,3 @@
+presentation: 展示层的Android模块
+domain: 一个没有android依赖的java模块
+data: 一个数据获取来源的android模块。

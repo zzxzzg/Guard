@@ -43,7 +43,7 @@ public class MainActivity extends RxAppCompatActivity {
 //        test2.test3();
 
         Test3 test3=new Test3();
-        test3.mapOperation();
+        test3.skipOperation();
 //
 //        Test4 test4=new Test4();
 //        test4.test();

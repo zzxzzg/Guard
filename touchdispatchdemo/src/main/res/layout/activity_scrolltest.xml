@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <com.guard.touchdispatchdemo.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.guard.touchdispatchdemo.MyLinearLayout1
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.guard.touchdispatchdemo.MyLinearLayout2 android:layout_width="match_parent"
+                                                         android:layout_height="150dp">
+
+            </com.guard.touchdispatchdemo.MyLinearLayout2>
+
+            <com.guard.touchdispatchdemo.MyViewPager android:layout_width="match_parent"
+                                                     android:layout_height="150dp"
+                                                     android:background="@android:color/holo_blue_light"
+                                                     android:id="@+id/viewpager"
+            ></com.guard.touchdispatchdemo.MyViewPager>
+
+            <com.guard.touchdispatchdemo.MyLinearLayout2 android:layout_width="match_parent"
+                                                         android:layout_height="800dp">
+
+            </com.guard.touchdispatchdemo.MyLinearLayout2>
+
+        </com.guard.touchdispatchdemo.MyLinearLayout1>
+
+
+    </com.guard.touchdispatchdemo.MyScrollView>
+
+</LinearLayout>

@@ -19,6 +19,20 @@ circleidicator
 clean architecture架构
 cleanarchitecture
 
+todo_app 
+另一个使用 clean architecture 的例子
+源码地址 https://github.com/googlesamples/android-architecture/tree/todo-mvp-clean/
+并且对clean architecture有比较直观的说明。
+另外包含了各个模块单元测试的代码，很有用
+
+flux flux的一个android版本。
+https://github.com/androidflux/flux
+可能是我理解不够深刻，但是感觉flux作为一个app的整体架构是偏薄弱的，它主要是承担了数据传递的流程，
+但是对于数据获取和业务逻辑处理并没有比较特别的设计，全部内容一股脑放入ActionCreator. 如果实际使用，
+需要在这部分使用其他架构来填补。 仅个人所见。
+
+
+
 dagger2 例子
 dagger2demo
 
@@ -200,3 +214,6 @@ note: 如果编译失败,可能需要关闭instant run 功能, 被指定注入�
 alihotfixtest 阿里百川热修复demo
 
 rxpreference RxPreference的使用
+
+MPAndroidChart  图表类的优秀第三方库，自定义功能强大。
+https://github.com/PhilJay/MPAndroidChart
