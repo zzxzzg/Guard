@@ -8,6 +8,9 @@
       <module fileurl="file://$PROJECT_DIR$/alihotfixtest/alihotfixtest.iml" filepath="$PROJECT_DIR$/alihotfixtest/alihotfixtest.iml" />
       <module fileurl="file://$PROJECT_DIR$/animationdemo/animationdemo.iml" filepath="$PROJECT_DIR$/animationdemo/animationdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/animationlib/animationlib.iml" filepath="$PROJECT_DIR$/animationlib/animationlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/annotation-app/annotation-app.iml" filepath="$PROJECT_DIR$/annotation-app/annotation-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/annotation-compiler/annotation-compiler.iml" filepath="$PROJECT_DIR$/annotation-compiler/annotation-compiler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/annotation-library/annotation-library.iml" filepath="$PROJECT_DIR$/annotation-library/annotation-library.iml" />
       <module fileurl="file://$PROJECT_DIR$/anroidtestdemo/anroidtestdemo.iml" filepath="$PROJECT_DIR$/anroidtestdemo/anroidtestdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/appintro-demo/appintro-demo.iml" filepath="$PROJECT_DIR$/appintro-demo/appintro-demo.iml" />

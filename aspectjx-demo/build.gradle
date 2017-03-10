@@ -2,8 +2,8 @@ apply plugin: 'com.android.application'
 apply plugin: 'android-aspectjx'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.2"
+    compileSdkVersion Integer.parseInt(COMPILE_SDK_VERSION)
+    buildToolsVersion BUILDTOOLS_VERSION
 
     defaultConfig {
         applicationId "com.zzxzzg.aspectjx_demo"

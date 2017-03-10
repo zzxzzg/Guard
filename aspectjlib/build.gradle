@@ -23,8 +23,8 @@ dependencies {
 }
 
 android {
-  compileSdkVersion 21
-  buildToolsVersion '21.1.2'
+  compileSdkVersion Integer.parseInt(COMPILE_SDK_VERSION)
+  buildToolsVersion BUILDTOOLS_VERSION
 
   lintOptions {
     abortOnError false
